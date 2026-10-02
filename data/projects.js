@@ -1,0 +1,3476 @@
+window.PROJECTS = [
+  {
+    "id": "rws-sebayeng-dikgale",
+    "name": "Sebayeng/Dikgale Regional Water Scheme",
+    "short": "Sebayeng/Dikgale RWS",
+    "sector": "Water",
+    "status": "in_progress",
+    "statusNote": "Phase 10 was 64% complete in mid-2024; later plans repeat that figure unchanged",
+    "progress": "64%",
+    "due": "2024-07",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "32",
+    "village": "Sebayeng and Dikgale villages",
+    "lat": -23.7701551,
+    "lon": 29.698348,
+    "pin": "village",
+    "route": null,
+    "note": "Multi-phase bulk scheme running since 2011, supplying 30+ villages from the Ebenezer bulk line. Phase 10 targeted Sebayeng, Dikgale, Potse, Ntsima and Syferkuil (118 households, 34 jobs). Map pin marks Sebayeng; the scheme covers a wide area.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane Municipality: RWS Phase 10 progress update (2024)",
+        "url": "https://www.polokwane.gov.za/reagapolokwane-sebayeng-dikgale-regional-water-supply-rws-phase-10-project-by-polokwane-municipality-has-reached-64-completion-and-is-on-schedule-to-be-finished-by-19-july-2024/"
+      },
+      {
+        "label": "MSW: Sebayeng/Dikgale Regional Water Schemes",
+        "url": "https://www.msw.za.com/water-and-sanitation-previous-project.php"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 5973406,
+        "adjusted": 1027332,
+        "label": "IUDG"
+      },
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 5000000,
+        "label": "Own funds (CRR), work-in-progress top-up"
+      },
+      {
+        "fy": "2026/27",
+        "original": 6389414,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      },
+      {
+        "fy": "2027/28",
+        "original": 7130435,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25 – 2022/23 IUDG status table",
+        "fy": "2022/23",
+        "amount": 5000000,
+        "vat": "not stated",
+        "progress": "Technical report stage",
+        "note": "IUDG; 'Sebayeng/Dikgale RWS Phase 10'; consultant reviewed designs; p.460"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 4142658,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A MTREF p.1142 (also IDP table p.705)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 2869417,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A MTREF p.1142 (also IDP table p.705)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 4347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A MTREF p.1142 (also IDP table p.705)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2869417,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.7"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 4347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.7"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 2200000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.7"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "64%",
+        "note": "Phase 10 reached 64%; p.329"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 4764057,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; printed R4.764.056,56 (= 2024/25 incl figure); p.549"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 5973406,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 6389414,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2027/28",
+        "amount": 7130435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 5973406,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; with transfer of funds already cut to 1 027 332; Annexure A p.23"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 1027332,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.23"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 5000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR 'WIP Sebayeng Dikgale RWS 233600' new line; p.16, p.23"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2026/27",
+        "amount": 6389414,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG outer year; p.23"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2027/28",
+        "amount": 7130435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG outer year (column mislabelled 2026/27); p.23"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "64%",
+        "note": "repeats 2024 Phase 10 64% text; p.346"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 5556012,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2027/28",
+        "amount": 6200378,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 7710453,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 5556012,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2027/28",
+        "amount": 6200378,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 7710453,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      }
+    ],
+    "mapWard": 32
+  },
+  {
+    "id": "sport-complex-sebayeng-dikgale",
+    "name": "Construction of Sebayeng/Dikgale Sport Complex",
+    "short": "Sport complex",
+    "sector": "Sport",
+    "status": "funded",
+    "statusNote": "Delayed: no contractor appointed yet (2025 and 2026 budgets). R4.7m, R5.3m and R4.3m planned for 2026/27 to 2028/29",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "24, 29 to 33",
+    "village": "Sebayeng/Dikgale",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Site not published. The IDP lists the project for the whole cluster (wards 24, 29, 30, 31, 32 and 33) with no GPS point. The budget's coordinates (-23.891, 29.382) are west of Polokwane city, outside the cluster, so they are an error. The 2026/31 draft IDP still lists it, with R5.4m and R5m in later years.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane 2025/26 Draft IDP, projects phase",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/03/2025-2026-Draft-IDP-Projects-Phase-for-inputs-and-Comments-IDP-REP-FORUM.pdf"
+      },
+      {
+        "label": "Polokwane 2026/31 Draft 5-year IDP",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Draft-5-year-IDP-26-March-2026.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 3024130,
+        "adjusted": 3024130,
+        "label": "IUDG"
+      },
+      {
+        "fy": "2026/27",
+        "original": 3478261,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25 – 2022/23 IUDG status table",
+        "fy": "2022/23",
+        "amount": 1361000,
+        "vat": "not stated",
+        "progress": "Design review",
+        "note": "IUDG; consultant busy with design review; p.461"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 5672945,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1151 (also p.852)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 4347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1151 (also p.852)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 3391304,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1151 (also p.852)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft budget 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Delayed",
+        "note": "delayed due to non-appointment of contractor; p.90"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.249"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 2391304,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.249"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 1750000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.249"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 6523887,
+        "vat": "not stated",
+        "progress": "Not started",
+        "note": "IUDG; negotiating priced BOQ with contractor; p.551"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 3024130,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.103; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 3478261,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.103; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 3024130,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.26"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 3024130,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.26"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2026/27",
+        "amount": 3478261,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG outer year; p.26"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 4729236,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2027/28",
+        "amount": 5304348,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 4347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 4729236,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2027/28",
+        "amount": 5304348,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 4347826,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "paving-dikgale-moshate",
+    "name": "Paving of internal street in Ga-Dikgale Moshate",
+    "short": "Moshate paving",
+    "sector": "Roads",
+    "status": "deferred",
+    "statusNote": "Budget removed in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "29",
+    "village": "Ga-Dikgale",
+    "lat": -23.7620556,
+    "lon": 29.7897222,
+    "pin": "site",
+    "route": null,
+    "note": "Pin uses the coordinates the municipality gives for this project in the budget's capital project table (SA36, ward 29). The table drops the minus sign on the latitude. Esri's 'Ga-Dikgale' point is 0.6 km away. The exact street is not confirmed.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 869565,
+        "adjusted": 0,
+        "label": "IUDG"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 1833649,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1139 (also p.755)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 2476370,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1139 (also p.755)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 1626087,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1139 (also p.755)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2476370,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.115"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft budget 2025/26",
+        "fy": "2025/26",
+        "amount": 1000000,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG; 'with VAT' table; p.25"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 1626087,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.115"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 4000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.115"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 2108696,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.546"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; cut by 869 565; p.22"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "paving-solomondale-d3997",
+    "name": "Paving of internal street from Solomondale to D3997",
+    "short": "Solomondale paving",
+    "sector": "Roads",
+    "status": "deferred",
+    "statusNote": "Budget removed in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "32",
+    "village": "Solomondale",
+    "lat": -23.76194,
+    "lon": 29.67167,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Solomondale (the old Solomondale railway station point in OpenStreetMap), not the street. The budget's capital project table (SA36, 2025/26 and 2026/27) gives 23.7746, 29.6988 for this project (minus sign dropped on the latitude), which also falls in ward 32.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 869565,
+        "adjusted": 0,
+        "label": "IUDG"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25 – 2022/23 IUDG status table",
+        "fy": "2022/23",
+        "amount": 655226,
+        "vat": "not stated",
+        "progress": "On design",
+        "note": "IUDG; p.457"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 3671407,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1139 (also p.769)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 2227337,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; Annexure A p.1139 (also p.769)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2227337,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.145"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 2500000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.145"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 5500000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.145"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 4222118,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.546"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; cut by 869 565; p.22"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1375; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1375"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1488; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1488"
+      }
+    ],
+    "mapWard": 32
+  },
+  {
+    "id": "road-tshware-mamotshwa",
+    "name": "Upgrading of arterial road in Tshware from taxi rank via Tshware village to Mamotshwa clinic",
+    "short": "Tshware road",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "Budget reduced in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "30",
+    "village": "Tshware / Ga-Makgaba",
+    "lat": -23.8516719,
+    "lon": 29.8061646,
+    "pin": "site",
+    "route": null,
+    "note": "Pin is at Mamotshwa clinic, the road's end point.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 4495843,
+        "adjusted": 1115360,
+        "label": "IUDG"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 2863483,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 3448509,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 2173913,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2448509,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.142"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft budget 2025/26",
+        "fy": "2025/26",
+        "amount": 6240000,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG; 'with VAT' table; p.25"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 2173913,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.142"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 5500000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.142"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 3293006,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.549"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 4495843,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 4495843,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 1115360,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; cut by 3 380 483; p.22"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads list; p.1400; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1400"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504"
+      }
+    ],
+    "mapWard": 30
+  },
+  {
+    "id": "road-sekoala-mehlakong",
+    "name": "Paving of Sekoala Primary School road to Mehlakong",
+    "short": "Sekoala road",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "Topped up in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality (RAL roads list)",
+    "level": "municipal",
+    "ward": "29",
+    "village": "Mehlakong",
+    "lat": -23.79912,
+    "lon": 29.82464,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks the centre of Mehlakong village (Census 2011 boundary). The road's exact route is not confirmed.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Census 2011 village boundary (Adrian Frith)",
+        "url": "https://census2011.adrianfrith.com/place/974032"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 7130435,
+        "adjusted": 8030435,
+        "label": "IUDG, RAL list"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25 – 2022/23 IUDG status table",
+        "fy": "2022/23",
+        "amount": 766579,
+        "vat": "not stated",
+        "progress": "On design",
+        "note": "IUDG; p.458"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 2216651,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 2681023,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 2608696,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2681023,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.141"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 2608696,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.141"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 4500000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.141"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 2549149,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.548"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 7130435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.106; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 7130435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.28"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 8030435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; +900 000; p.28"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1376; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1376"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1489; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1489"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "road-titibe-makgoba",
+    "name": "Upgrading of road from Titibe to Marobala and Makgoba",
+    "short": "Titibe road",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "In the 2025/26 budget",
+    "progress": "",
+    "due": "",
+    "dataIssue": "The May 2025 budget gave R9,452,567 for 2025/26, but the adjustments budget lists the original as R10,564,322.",
+    "implementer": "Polokwane Municipality (RAL roads list)",
+    "level": "municipal",
+    "ward": "33",
+    "village": "Titibe",
+    "lat": -23.7204268,
+    "lon": 29.7917217,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Titibe village, not the project site.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 10564322,
+        "adjusted": 10564322,
+        "label": "IUDG, RAL list"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 2608696,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 2681023,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 3478261,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2681023,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.125"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft budget 2025/26",
+        "fy": "2025/26",
+        "amount": 10870452,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG; 'with VAT' table; p.25"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 1478261,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.125"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 6500000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.125"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 3000000,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.548"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 9452567,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.106 (incl 10 870 452); same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 10564322,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.28; differs from May 2025 original (9 452 567)"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 10564322,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; unchanged; p.28"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1400; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1400"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504"
+      }
+    ],
+    "mapWard": 33
+  },
+  {
+    "id": "bridge-titibe-mogabane",
+    "name": "Construction of low-level bridge linking Titibe and Mogabane",
+    "short": "Titibe bridge",
+    "sector": "Bridges",
+    "status": "funded",
+    "statusNote": "Added in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "33",
+    "village": "Titibe",
+    "lat": -23.7204268,
+    "lon": 29.7917217,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Titibe village, not the project site.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 1080000,
+        "label": "Own funds (CRR), moved from operating budget"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; not in original budget; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 1080000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; new low-level bridge (Titibe and Mogabane) moved from operating budget; p.16, p.22"
+      }
+    ],
+    "mapWard": 33
+  },
+  {
+    "id": "housing-ntsima",
+    "name": "House built and handed over at Ntsima village",
+    "short": "Ntsima house",
+    "sector": "Housing",
+    "status": "complete",
+    "statusNote": "Handed over 20 December 2024",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Limpopo CoGHSTA with Polokwane Municipality",
+    "level": "provincial",
+    "ward": "30",
+    "village": "Ntsima, Ga-Dikgale",
+    "lat": -23.82708,
+    "lon": 29.73264,
+    "pin": "village",
+    "route": null,
+    "note": "Delivered after a petition to the provincial legislature's Petitions Committee. Pin marks the centre of Ntsima village (Census 2011 boundary), not the house itself.",
+    "sources": [
+      {
+        "label": "Capricorn District Municipality: Ntsima house handover",
+        "url": "https://www.cdm.org.za/?p=18033"
+      },
+      {
+        "label": "Census 2011 village boundary (Adrian Frith)",
+        "url": "https://census2011.adrianfrith.com/place/974059"
+      }
+    ],
+    "budget": [],
+    "history": [
+      {
+        "date": "2024-12",
+        "document": "CDM news: Ntsima house handover",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Handed over",
+        "note": "House handed over on 20 Dec 2024 by the CoGHSTA MEC and the CDM executive mayor to Mme Makgato; the MEC had promised the provincial Petitions Committee on 24 Oct 2024 to deliver it before Christmas; no cost given; cdm.org.za/?p=18033 (23 Dec 2024)"
+      }
+    ],
+    "mapWard": 30
+  },
+  {
+    "id": "bridge-ga-mailula",
+    "name": "Construction of low-level bridge in Ga-Mailula",
+    "short": "Ga-Mailula bridge",
+    "sector": "Bridges",
+    "status": "funded",
+    "statusNote": "Added in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "30",
+    "village": "Ga-Mailula",
+    "lat": -23.82043,
+    "lon": 29.839584,
+    "pin": "site",
+    "route": null,
+    "note": "Pin is from the coordinates in the budget's capital project table (SA36).",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 540000,
+        "label": "Own funds (CRR), moved from operating budget"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; not in original budget; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 540000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; new low-level bridge (Ga Mailula) moved from operating budget; p.16, p.22"
+      }
+    ],
+    "mapWard": 30
+  },
+  {
+    "id": "water-sebayeng-diepriver",
+    "name": "Polokwane Bulk Water Supply (Sebayeng Diepriver wellfields)",
+    "short": "Diepriver wellfields",
+    "sector": "Water",
+    "status": "funded",
+    "statusNote": "Slightly reduced in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "32",
+    "village": "Sebayeng (Diepriver)",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Bulk water supply to Polokwane from boreholes at Diepriver near Sebayeng. The draft IDP 2025/26 (p.41) describes equipping boreholes and building bulk pumping mains, with a rising main from Sebayeng to Mankweng; the Final IDP 2026/31 (p.293) says land acquisition and the water use licence were still pending. The budget gives the city office coordinates, and no document or OpenStreetMap feature shows where the wellfield is, so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 2000000,
+        "adjusted": 1917084,
+        "label": "Own funds (CRR)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 5000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "RBIG; p.49"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 100000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "RBIG; p.49"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 279000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "RBIG; p.49"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR planning and design; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 69565217,
+        "vat": "excl",
+        "progress": "",
+        "note": "RBIG line (construction); p.100"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2027/28",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "RBIG line; p.100"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.23"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 1917084,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; cut by 82 916; p.23"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR co-funding; no RBIG line any more; p.1380; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 1739130,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR co-funding; p.1380"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.1491; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 1739130,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.1491"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "road-ga-makgoba-access",
+    "name": "Upgrading of access road in Ga-Makgoba",
+    "short": "Ga-Makgoba road",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "Budget roughly halved in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "The May 2025 budget gave R2,285,337 for 2025/26, but the adjustments budget lists the original as R285,337, apparently missing a leading 2. The R142k cut is measured against the smaller figure.",
+    "implementer": "Polokwane Municipality (RAL roads list)",
+    "level": "municipal",
+    "ward": "33",
+    "village": "Ga-Makgoba",
+    "lat": -23.73037,
+    "lon": 29.81062,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Ga-Makgoba village (next to Ga-Dikgale) at Mamphoku school (EMIS: ward 33), not the road itself. A second Ga-Makgoba lies near Tshware in ward 30; the RAL list does not say which, but the Titibe road also ends at this one.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 285337,
+        "adjusted": 143677,
+        "label": "IUDG, RAL list"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25 – 2022/23 IUDG status table",
+        "fy": "2022/23",
+        "amount": 978192,
+        "vat": "not stated",
+        "progress": "On design",
+        "note": "IUDG; '(planning)'; p.458"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 2662119,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156 (no VAT label; IDP table p.758 says excl)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 2400000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.122"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft budget 2025/26",
+        "fy": "2025/26",
+        "amount": 2628138,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG; 'with VAT' table; p.25"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 2600000,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.122"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26 – 2024/25 project status table",
+        "fy": "2024/25",
+        "amount": 3061437,
+        "vat": "not stated",
+        "progress": "Construction",
+        "note": "IUDG; = 2024/25 incl figure; p.548"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 2285337,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.106 (incl 2 628 138); same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 285337,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.28; May 2025 original was 2 285 337"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 143677,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; cut by 141 660; p.28"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1400; same in Draft budget 2026/27"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31 (Annexure B draft MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1400"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31 (Annexure B final MTREF)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; p.1504"
+      }
+    ],
+    "mapWard": 33
+  },
+  {
+    "id": "bridge-segopye-mahlohlo",
+    "name": "Construction of low-level bridge linking Segopye and Mahlohlo",
+    "short": "Segopye bridge",
+    "sector": "Bridges",
+    "status": "funded",
+    "statusNote": "Added in Feb 2026 adjustments",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "29",
+    "village": "Segopye",
+    "lat": -23.79687,
+    "lon": 29.8209,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Segopje village at Maribe school (EMIS: ward 29, village 'Segopje'), not the project site. The budget cuts the name off at 'Mahlohl', so the second village name may differ.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 680000,
+        "label": "Own funds (CRR), moved from operating budget"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; not in original budget; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 680000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; new low-level bridge (Segopye and Mahlohl[o]) moved from operating budget; p.16, p.22"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "centre-segopje-mobile",
+    "name": "Construction of Segopje Mobile Service Centre",
+    "short": "Segopje service centre",
+    "sector": "Community services",
+    "status": "funded",
+    "statusNote": "The 2026/31 IDP describes the centre as established, with no further money",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "29",
+    "village": "Segopje",
+    "lat": -23.79687,
+    "lon": 29.8209,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Segopje village at Maribe school (EMIS: ward 29, village 'Segopje'), not the project site.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 2000000,
+        "adjusted": 2000000,
+        "label": "Own funds (CRR)"
+      },
+      {
+        "fy": "2026/27",
+        "original": 2200000,
+        "adjusted": null,
+        "label": "Own funds (CRR) (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 1196554,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; Annexure A p.1153 (also p.990)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 1280952,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; Annexure A p.1153 (also p.990)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 360000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; Annexure A p.1153 (also p.990)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 1280952,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.400"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 1360000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.400"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 1496000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.400"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2025/26",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.104; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 2200000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.104; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.26"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.26"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2026/27",
+        "amount": 2200000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR outer year; p.26"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Established",
+        "note": "centre established; implementation to conclude in 2025/26; no 2026-29 budget line; p.542"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Established",
+        "note": "same text; p.542"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "library-dikgale",
+    "name": "Construction of library facility for Dikgale",
+    "short": "Dikgale library",
+    "sector": "Community services",
+    "status": "deferred",
+    "statusNote": "Listed in the 2024/25 and draft 2025/26 plans, then missing from every later budget",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "32",
+    "village": "Dikgale",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Listed in the draft IDP projects phase. Site not published. 'Dikgale' covers villages in wards 29, 32 and 33, so there is no single village to pin.",
+    "sources": [
+      {
+        "label": "Polokwane 2025/26 Draft IDP, projects phase",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/03/2025-2026-Draft-IDP-Projects-Phase-for-inputs-and-Comments-IDP-REP-FORUM.pdf"
+      },
+      {
+        "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
+        "url": "https://www.polokwane.gov.za/budget/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 1800000,
+        "adjusted": null,
+        "label": "Own funds (CRR) (planned)"
+      },
+      {
+        "fy": "2027/28",
+        "original": 2000000,
+        "adjusted": null,
+        "label": "Own funds (CRR) (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; Annexure A p.1151 (also p.884)"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 800000,
+        "vat": "excl",
+        "progress": "Planning",
+        "note": "CRR; planning target 2025/26; p.1151"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "Planning (2025/26), designs (2026/27)",
+        "note": "CRR; p.280"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2026/27",
+        "amount": 1800000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.280"
+      },
+      {
+        "date": "2025-03",
+        "document": "Draft IDP 2025/26 (projects phase)",
+        "fy": "2027/28",
+        "amount": 2000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; p.280"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "prov-ral-d844-mankweng-sebayeng",
+    "name": "RAL/T1134 Preventative maintenance of road D844 from Mankweng to Sebayeng",
+    "short": "D844 maintenance",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "Design stage (3%); money in 2026/27 and 2027/28",
+    "progress": "3%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Roads Agency Limpopo",
+    "level": "provincial",
+    "ward": "25 to 32",
+    "village": "Mankweng to Sebayeng",
+    "lat": -23.824172,
+    "lon": 29.719139,
+    "pin": "route",
+    "route": [
+      [
+        [
+          -23.88366,
+          29.70789
+        ],
+        [
+          -23.87125,
+          29.70603
+        ],
+        [
+          -23.8691,
+          29.70622
+        ],
+        [
+          -23.83365,
+          29.72087
+        ],
+        [
+          -23.83129,
+          29.72133
+        ],
+        [
+          -23.82841,
+          29.72114
+        ],
+        [
+          -23.82468,
+          29.7195
+        ],
+        [
+          -23.77202,
+          29.68195
+        ]
+      ]
+    ],
+    "note": "Provincial project. Total cost R24.6m, R7.3m spent in earlier years (EPRE). The RAL plan gives different yearly figures: R6.43m in 2026/27 and R22.53m in 2027/28. Drawn as a line along road D844 in OpenStreetMap, from D617 in Mankweng to the D3997 junction in Sebayeng; the pin is the line's midpoint. The EPRE point (-23.8809, 29.7259) is at the Mankweng end, about 1.8 km off the road. The ward list is the wards the road runs through or along.",
+    "sources": [
+      {
+        "label": "Limpopo EPRE 2025/26, Table B5",
+        "url": "https://www.limtreasury.gov.za/lim_admin_trea/pages/sites/treasury_lim/documents/budget_statement/Limpopo%20Estimates%20of%20Provincial%20Revenue%20and%20Expenditure%202025-26.PDF"
+      },
+      {
+        "label": "RAL Annual Performance Plan 2025/26",
+        "url": "https://www.ral.co.za/wp-content/uploads/2025/08/RAL-Annual-Performance-Plan-2025-2026.pdf"
+      },
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "OpenStreetMap (road geometry)",
+        "url": "https://www.openstreetmap.org/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 7317000,
+        "adjusted": null,
+        "label": "RAL equitable share (planned)"
+      },
+      {
+        "fy": "2027/28",
+        "original": 19093000,
+        "adjusted": null,
+        "label": "RAL equitable share (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.607"
+      },
+      {
+        "date": "2025-03",
+        "document": "RAL APP 2025/26",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "Design documentation",
+        "note": "T1134 EQS road maintenance; p.63"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2026/27",
+        "amount": 7317000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.607"
+      },
+      {
+        "date": "2025-03",
+        "document": "RAL APP 2025/26",
+        "fy": "2026/27",
+        "amount": 6426000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "T1134 EQS road maintenance; p.63"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2027/28",
+        "amount": 19093000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.607"
+      },
+      {
+        "date": "2025-03",
+        "document": "RAL APP 2025/26",
+        "fy": "2027/28",
+        "amount": 22533000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "T1134 EQS road maintenance; p.63"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "total",
+        "amount": 24595000,
+        "vat": "not stated",
+        "progress": "Design documentation",
+        "note": "Table B5 total project cost; R7 334 000 spent to date; R thousand converted; p.607"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 24595044,
+        "vat": "not stated",
+        "progress": "3% (design)",
+        "note": "sector projects table; R7 334 059 spent; p.1191"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Site establishment",
+        "note": "now listed as RAL T1412 D844 Mankweng to Sebayeng; p.1233"
+      }
+    ],
+    "mapWard": 30,
+    "routeNote": "OSM road ref D844, clipped from its junction with D617 in Mankweng north to its junction with D3997 in Sebayeng. The project says 'Mankweng to Sebayeng' but gives no chainage, so the end points are an interpretation: D844 continues north of Sebayeng towards the R81."
+  },
+  {
+    "id": "prov-ral-d3997-sebayeng-gamoswedi",
+    "name": "RAL/T1009B Preventative maintenance of road D3997 from Sebayeng (D844) to Ga-Moswedi (D617)",
+    "short": "D3997 maintenance",
+    "sector": "Roads",
+    "status": "complete",
+    "statusNote": "Final completion 100% (IDP 2025/26)",
+    "progress": "100%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Roads Agency Limpopo",
+    "level": "provincial",
+    "ward": "29, 30, 32, 33",
+    "village": "Sebayeng, Solomondale, Ga-Dikgale",
+    "lat": -23.770213,
+    "lon": 29.792385,
+    "pin": "route",
+    "route": [
+      [
+        [
+          -23.77202,
+          29.68195
+        ],
+        [
+          -23.76771,
+          29.68912
+        ],
+        [
+          -23.76887,
+          29.69184
+        ],
+        [
+          -23.76685,
+          29.69459
+        ],
+        [
+          -23.76606,
+          29.69655
+        ],
+        [
+          -23.76545,
+          29.70936
+        ],
+        [
+          -23.76504,
+          29.71192
+        ],
+        [
+          -23.75917,
+          29.72755
+        ],
+        [
+          -23.75866,
+          29.73138
+        ],
+        [
+          -23.75558,
+          29.74282
+        ],
+        [
+          -23.75463,
+          29.74768
+        ],
+        [
+          -23.75291,
+          29.75321
+        ],
+        [
+          -23.75263,
+          29.75478
+        ],
+        [
+          -23.75425,
+          29.75709
+        ],
+        [
+          -23.75352,
+          29.75841
+        ],
+        [
+          -23.7529,
+          29.76138
+        ],
+        [
+          -23.75005,
+          29.76629
+        ],
+        [
+          -23.74993,
+          29.76796
+        ],
+        [
+          -23.75213,
+          29.77753
+        ],
+        [
+          -23.75692,
+          29.78595
+        ],
+        [
+          -23.76005,
+          29.7864
+        ],
+        [
+          -23.76174,
+          29.78759
+        ],
+        [
+          -23.76234,
+          29.78945
+        ],
+        [
+          -23.76453,
+          29.78979
+        ],
+        [
+          -23.76673,
+          29.79192
+        ],
+        [
+          -23.77106,
+          29.79249
+        ],
+        [
+          -23.7729,
+          29.7934
+        ],
+        [
+          -23.77657,
+          29.79737
+        ],
+        [
+          -23.78593,
+          29.81202
+        ],
+        [
+          -23.78763,
+          29.81323
+        ],
+        [
+          -23.7896,
+          29.81352
+        ],
+        [
+          -23.79115,
+          29.81308
+        ],
+        [
+          -23.79328,
+          29.8116
+        ],
+        [
+          -23.79604,
+          29.80893
+        ],
+        [
+          -23.79817,
+          29.806
+        ],
+        [
+          -23.80326,
+          29.80253
+        ],
+        [
+          -23.80524,
+          29.80053
+        ],
+        [
+          -23.80579,
+          29.80043
+        ],
+        [
+          -23.80791,
+          29.79615
+        ],
+        [
+          -23.81361,
+          29.79046
+        ],
+        [
+          -23.83461,
+          29.78256
+        ],
+        [
+          -23.83777,
+          29.78014
+        ],
+        [
+          -23.84459,
+          29.77266
+        ],
+        [
+          -23.84691,
+          29.77106
+        ],
+        [
+          -23.84968,
+          29.77018
+        ],
+        [
+          -23.85255,
+          29.77024
+        ],
+        [
+          -23.86531,
+          29.77418
+        ]
+      ]
+    ],
+    "note": "Provincial project. Total cost R24.4m; R28.6m spent (IDP 2025/26). No coordinates published. Drawn as a line along road D3997 in OpenStreetMap, from D844 at Sebayeng to D617, as the project names; the pin is the midpoint of that line. The ward list is the wards the road crosses.",
+    "sources": [
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "RAL Mmileng issue 4 of 2022",
+        "url": "https://www.ral.co.za/wp-content/uploads/2025/08/Mmileng-issue-4-of-2022.pdf"
+      },
+      {
+        "label": "OpenStreetMap (road geometry)",
+        "url": "https://www.openstreetmap.org/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "total",
+        "original": 24370591,
+        "adjusted": null,
+        "label": "RAL total project cost (IDP 2025/26 sector table); R28,635,853 spent; VAT not stated"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 24370591,
+        "vat": "not stated",
+        "progress": "100% (final completion)",
+        "note": "T1009B; R28 635 853 spent; p.1191"
+      }
+    ],
+    "mapWard": 29,
+    "routeNote": "OSM road ref D3997, drawn in full from its junction with D844 at Sebayeng to its junction with D617, which matches the project's endpoints 'Sebayeng (D844) to Ga-Moswedi (D617)'. The spur D3997A is not included."
+  },
+  {
+    "id": "prov-ral-d3959-dikgale-regravel",
+    "name": "RAL/T1344 Regravelling of road D3959 in Ga-Dikgale",
+    "short": "D3959 regravelling",
+    "sector": "Roads",
+    "status": "complete",
+    "statusNote": "Final completion 100% (IDP 2025/26)",
+    "progress": "100%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Roads Agency Limpopo",
+    "level": "provincial",
+    "ward": "32",
+    "village": "Ga-Dikgale",
+    "lat": -23.773605,
+    "lon": 29.738969,
+    "pin": "route",
+    "route": [
+      [
+        [
+          -23.76117,
+          29.72181
+        ],
+        [
+          -23.76285,
+          29.72507
+        ],
+        [
+          -23.76508,
+          29.72719
+        ],
+        [
+          -23.76804,
+          29.73314
+        ],
+        [
+          -23.77188,
+          29.73681
+        ],
+        [
+          -23.77305,
+          29.73849
+        ],
+        [
+          -23.78031,
+          29.74376
+        ],
+        [
+          -23.79042,
+          29.74851
+        ]
+      ]
+    ],
+    "note": "Provincial project. Total cost R9.0m; R8.86m spent (IDP 2025/26). No coordinates published. Drawn as a line along road D3959 in OpenStreetMap (D3997 near Sebayeng to D4019, past Mantheding); the IDP lists the Sebayeng-Mantheding-Ga-Dikgale road as D3959-D3997 (p.641). Which section was regravelled is not stated, so the whole mapped road is drawn. The pin is its midpoint; the ward is the ward the road lies in.",
+    "sources": [
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "OpenStreetMap (road geometry)",
+        "url": "https://www.openstreetmap.org/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "total",
+        "original": 9000000,
+        "adjusted": null,
+        "label": "RAL total project cost (IDP 2025/26 sector table); R8,859,445 spent; VAT not stated"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 9000000,
+        "vat": "not stated",
+        "progress": "100% (final completion)",
+        "note": "T1344; R8 859 445 spent; p.1193"
+      }
+    ],
+    "mapWard": 32,
+    "routeNote": "OSM road ref D3959: the whole of the road as mapped in OSM, from D3997 near Sebayeng south-east past Mantheding (Ga-Dikgale) to D4019. The Polokwane Final IDP 2025/26 (p.641) lists the 'arterial road Sebayeng Mantheding to Ga-Dikgale' as D3959-D3997, which matches this road. The regravelled section is not stated, so the whole mapped road is drawn. OSM tags most of it as asphalt and the last 1.5 km as unpaved; the asphalt may come from that later municipal upgrading."
+  },
+  {
+    "id": "prov-ral-d3339-makotopong-mothiba",
+    "name": "RAL/T1145 Preventative maintenance of roads D3339, D3989 and D3959 from Makotopong to Ga-Mothiba",
+    "short": "Makotopong–Mothiba roads",
+    "sector": "Roads",
+    "status": "deferred",
+    "statusNote": "On hold at 0% (IDP 2025/26); design stage, money only in 2026/27",
+    "progress": "0%",
+    "due": "",
+    "dataIssue": "The EPRE gives a total cost of R4.5m but budgets R7.3m for 2026/27 alone (the RAL plan says R6.43m).",
+    "implementer": "Roads Agency Limpopo",
+    "level": "provincial",
+    "ward": "24",
+    "village": "Makotopong, Ga-Mothiba",
+    "lat": -23.849521,
+    "lon": 29.64171,
+    "pin": "route",
+    "route": [
+      [
+        [
+          -23.79419,
+          29.63649
+        ],
+        [
+          -23.8026,
+          29.6371
+        ],
+        [
+          -23.80504,
+          29.63587
+        ],
+        [
+          -23.81421,
+          29.63672
+        ],
+        [
+          -23.81532,
+          29.63717
+        ],
+        [
+          -23.8181,
+          29.63993
+        ],
+        [
+          -23.83591,
+          29.6433
+        ],
+        [
+          -23.83717,
+          29.63918
+        ],
+        [
+          -23.83838,
+          29.63843
+        ],
+        [
+          -23.8486,
+          29.6417
+        ],
+        [
+          -23.84964,
+          29.64168
+        ],
+        [
+          -23.85499,
+          29.63497
+        ],
+        [
+          -23.85606,
+          29.63469
+        ],
+        [
+          -23.86105,
+          29.63899
+        ],
+        [
+          -23.85961,
+          29.64457
+        ],
+        [
+          -23.87913,
+          29.66062
+        ],
+        [
+          -23.8837,
+          29.66566
+        ],
+        [
+          -23.8883,
+          29.66644
+        ],
+        [
+          -23.88794,
+          29.669
+        ],
+        [
+          -23.88906,
+          29.66942
+        ]
+      ]
+    ],
+    "note": "Provincial project. The EPRE gives a total cost of R4.5m but puts R7.3m in 2026/27 (the RAL plan says R6.43m), so the figures conflict. Drawn as a line along roads D3339 and D3989 in OpenStreetMap, from Makotopong to Ga-Mothiba; the D3959 part is not drawn because the only D3959 in OpenStreetMap is near Sebayeng, 8 km away. The pin is the line's midpoint; the EPRE point is -23.8059, 29.6359.",
+    "sources": [
+      {
+        "label": "Limpopo EPRE 2025/26, Table B5",
+        "url": "https://www.limtreasury.gov.za/lim_admin_trea/pages/sites/treasury_lim/documents/budget_statement/Limpopo%20Estimates%20of%20Provincial%20Revenue%20and%20Expenditure%202025-26.PDF"
+      },
+      {
+        "label": "RAL Annual Performance Plan 2025/26",
+        "url": "https://www.ral.co.za/wp-content/uploads/2025/08/RAL-Annual-Performance-Plan-2025-2026.pdf"
+      },
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "OpenStreetMap (road geometry)",
+        "url": "https://www.openstreetmap.org/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 7317000,
+        "adjusted": null,
+        "label": "RAL equitable share (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.606"
+      },
+      {
+        "date": "2025-03",
+        "document": "RAL APP 2025/26",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "Design development",
+        "note": "T1145 EQS road maintenance; p.63"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2026/27",
+        "amount": 7317000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.606"
+      },
+      {
+        "date": "2025-03",
+        "document": "RAL APP 2025/26",
+        "fy": "2026/27",
+        "amount": 6426000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "T1145 EQS road maintenance; p.63"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2027/28",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL equitable share; Table B5; p.606"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "total",
+        "amount": 4500000,
+        "vat": "not stated",
+        "progress": "Design development",
+        "note": "Table B5 total project cost; R0 spent; p.606"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 4500000,
+        "vat": "not stated",
+        "progress": "On hold 0%",
+        "note": "T1145; R0 spent; p.1192"
+      }
+    ],
+    "mapWard": 24,
+    "routeNote": "OSM road refs D3339 and D3989: D3339 from where it enters Makotopong (Census 2011 boundary) south to its junction with D3989, then D3989 south through Ga-Mothiba to the R71. This follows 'from Makotopong to Ga-Mothiba'; the exact section is not stated. The project also names D3959, but the only D3959 in OSM is 8 km away near Sebayeng and is not connected, so that part is not drawn."
+  },
+  {
+    "id": "prov-edu-maboyane-primary",
+    "name": "Maboyane Primary School upgrading and additions",
+    "short": "Maboyane Primary",
+    "sector": "Education",
+    "status": "in_progress",
+    "statusNote": "Practical completion 97%; R5m more budgeted for 2026/27",
+    "progress": "97%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Limpopo Department of Education",
+    "level": "provincial",
+    "ward": "33",
+    "village": "Ga-Dikgale",
+    "lat": -23.7473622,
+    "lon": 29.7823285,
+    "pin": "site",
+    "route": null,
+    "note": "Provincial project, Education Infrastructure Grant. Total cost R3.75m; R327k spent. Pin and ward are from the national school register (EMIS 923240303).",
+    "sources": [
+      {
+        "label": "Limpopo EPRE 2025/26, Table B5",
+        "url": "https://www.limtreasury.gov.za/lim_admin_trea/pages/sites/treasury_lim/documents/budget_statement/Limpopo%20Estimates%20of%20Provincial%20Revenue%20and%20Expenditure%202025-26.PDF"
+      },
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "Capricorn DM IDP 2026/27",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/06/Final-Draft-202627-IDP-and-budget-21-May-2026-Council.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist (Limpopo)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 5000000,
+        "adjusted": null,
+        "label": "Education Infrastructure Grant (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.579"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2026/27",
+        "amount": 5000000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.579"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2027/28",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.579"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "total",
+        "amount": 3749000,
+        "vat": "not stated",
+        "progress": "Stage 6: Handover",
+        "note": "EIG; total cost; R327 000 spent; p.579"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 3748881,
+        "vat": "not stated",
+        "progress": "97% (practical completion)",
+        "note": "EIG; R327 167 spent; p.1183"
+      },
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2026/27",
+        "amount": 5000000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; total 3 748 881, R327 167 spent; p.497"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "2026/27",
+        "amount": 5000000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+      },
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2027/28",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; total 3 748 881, R327 167 spent; p.497"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "2027/28",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+      },
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2028/29",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; total 3 748 881, R327 167 spent; p.497"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "2028/29",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+      }
+    ],
+    "mapWard": 33
+  },
+  {
+    "id": "prov-edu-ngwanalaka-secondary",
+    "name": "Ngwanalaka Secondary School infrastructure project",
+    "short": "Ngwanalaka Secondary",
+    "sector": "Education",
+    "status": "in_progress",
+    "statusNote": "Practical completion 97%",
+    "progress": "97%",
+    "due": "",
+    "dataIssue": "The IDP gives a total cost of R291k but R14.4m spent. One of the figures is wrong at the source.",
+    "implementer": "Limpopo Department of Education",
+    "level": "provincial",
+    "ward": "24",
+    "village": "Ga-Mothiba (Ngwanalaka)",
+    "lat": -23.87598,
+    "lon": 29.6520958,
+    "pin": "site",
+    "route": null,
+    "note": "Provincial project, Education Infrastructure Grant. The type of work is not stated. The IDP gives a total cost of R291k but R14.4m spent, so the figures conflict. Pin is from the school register (EMIS 923241108).",
+    "sources": [
+      {
+        "label": "Limpopo EPRE 2025/26, Table B5",
+        "url": "https://www.limtreasury.gov.za/lim_admin_trea/pages/sites/treasury_lim/documents/budget_statement/Limpopo%20Estimates%20of%20Provincial%20Revenue%20and%20Expenditure%202025-26.PDF"
+      },
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist (Limpopo)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 2283000,
+        "adjusted": null,
+        "label": "Education Infrastructure Grant"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2025/26",
+        "amount": 2283000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.578"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.578"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "2027/28",
+        "amount": 0,
+        "vat": "not stated",
+        "progress": "",
+        "note": "EIG; Table B5; p.578"
+      },
+      {
+        "date": "2025-03",
+        "document": "Limpopo EPRE 2025/26",
+        "fy": "total",
+        "amount": 291000,
+        "vat": "not stated",
+        "progress": "Stage 6: Handover",
+        "note": "EIG; total cost 291k but R13 931 000 spent; p.578"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "total",
+        "amount": 291246,
+        "vat": "not stated",
+        "progress": "97% (practical completion)",
+        "note": "EIG; R14 374 447 spent; p.1186"
+      }
+    ],
+    "mapWard": 24
+  },
+  {
+    "id": "prov-lnw-ebenezer-bulk",
+    "name": "Olifantspoort/Ebenezer bulk water supply scheme refurbishment (phase 1)",
+    "short": "Ebenezer bulk water",
+    "sector": "Water",
+    "status": "in_progress",
+    "statusNote": "54% complete in Nov 2024; phase 1 due in 2026",
+    "progress": "54%",
+    "due": "",
+    "dataIssue": "Cost estimates differ: R889m (parliamentary reply, Nov 2024) against R7.6bn for phase 1A (CDM IDP 2026/27, all phases R23.2bn).",
+    "implementer": "Lepelle Northern Water (for the national Department of Water and Sanitation)",
+    "level": "national",
+    "ward": "",
+    "village": "Sebayeng, Ga-Dikgale (bulk supply)",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "National project. Ebenezer is the source for the municipal Sebayeng/Dikgale water scheme. Phase 1 restores 60 Ml/day. Estimated cost R889m (PMG reply, Nov 2024), funded from the Budget Facility for Infrastructure. The scheme serves a much wider area than this cluster, and its works are outside the cluster, so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane IDP 2025/26, sector department projects",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-Intergrated-Development-Plan-2025_2026.pdf"
+      },
+      {
+        "label": "PMG written reply NO489 (Nov 2024)",
+        "url": "https://pmg.org.za/committee-question/27073/"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "total",
+        "original": 889000000,
+        "adjusted": null,
+        "label": "Budget Facility for Infrastructure (national, via DWS and Lepelle Northern Water), phase 1 total cost; covers the whole Olifantspoort/Ebenezer scheme, not only this cluster"
+      }
+    ],
+    "history": [
+      {
+        "date": "2024-11",
+        "document": "PMG written reply NO489",
+        "fy": "total",
+        "amount": 889000000,
+        "vat": "not stated",
+        "progress": "54%",
+        "note": "Budget Facility for Infrastructure; phase 1 (refurbishment to restore 60 Ml/day) total cost; expected completion July 2025; reply dated 14 Nov 2024"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Phase 1 due 2026",
+        "note": "LNW; first phase set for completion in 2026; p.335"
+      },
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "total",
+        "amount": 7600000000,
+        "vat": "not stated",
+        "progress": "Main refurbishment works at practical commissioning",
+        "note": "Ph 1A est. cost R7.6 bn (all phases R23.2 bn); refurbishment completion Jun 2026; p.466"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "prov-eskom-segopye-ext",
+    "name": "Eskom electrification of Segopye Extension",
+    "short": "Segopye Ext electrification",
+    "sector": "Electricity",
+    "status": "planned",
+    "statusNote": "Planned for 2027/28, 31 connections",
+    "progress": "",
+    "due": "",
+    "dataIssue": "The planned amount looks far too low for the number of connections. The units in the CDM table may be wrong.",
+    "implementer": "Eskom",
+    "level": "national",
+    "ward": "29",
+    "village": "Segopje/Segopye",
+    "lat": -23.79687,
+    "lon": 29.8209,
+    "pin": "village",
+    "route": null,
+    "note": "The amount is as printed in the CDM IDP and looks low for 31 connections. Pin marks Segopje village at Maribe school (EMIS 923240723: ward 29, village 'Segopje'), the same point as the other Segopje projects. Where the extension lies is not stated.",
+    "sources": [
+      {
+        "label": "Capricorn DM IDP 2026/27",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/06/Final-Draft-202627-IDP-and-budget-21-May-2026-Council.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2027/28",
+        "original": 178922,
+        "adjusted": null,
+        "label": "Eskom (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2027/28",
+        "amount": 178922,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Eskom planned CAPEX, 31 connections; p.504"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "prov-eskom-sebayeng",
+    "name": "Eskom electrification of Sebayeng",
+    "short": "Sebayeng electrification",
+    "sector": "Electricity",
+    "status": "planned",
+    "statusNote": "Planned for 2028/29, 702 connections",
+    "progress": "",
+    "due": "",
+    "dataIssue": "The planned amount looks far too low for the number of connections. The units in the CDM table may be wrong.",
+    "implementer": "Eskom",
+    "level": "national",
+    "ward": "32",
+    "village": "Sebayeng",
+    "lat": -23.7678345,
+    "lon": 29.6999874,
+    "pin": "village",
+    "route": null,
+    "note": "The amount is as printed in the CDM IDP and looks low for 702 connections. Pin marks Sebayeng (OpenStreetMap place node 5674142796), not the connection sites. The Census 2011 Sebayeng boundary lies wholly in ward 32, so the ward is given as 32; the CDM table gives no ward.",
+    "sources": [
+      {
+        "label": "Capricorn DM IDP 2026/27",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/06/Final-Draft-202627-IDP-and-budget-21-May-2026-Council.pdf"
+      },
+      {
+        "label": "OpenStreetMap: Sebayeng place node",
+        "url": "https://www.openstreetmap.org/node/5674142796"
+      },
+      {
+        "label": "Census 2011 village boundary (Adrian Frith)",
+        "url": "https://census2011.adrianfrith.com/place/974028"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2028/29",
+        "original": 839603,
+        "adjusted": null,
+        "label": "Eskom (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2028/29",
+        "amount": 839603,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Eskom planned CAPEX, 702 connections; p.505"
+      }
+    ],
+    "mapWard": 32
+  },
+  {
+    "id": "prov-cdm-makgoba-biodigesters",
+    "name": "Pilot renewable energy bio-digesters at Ga-Makgoba",
+    "short": "Ga-Makgoba bio-digesters",
+    "sector": "Energy",
+    "status": "complete",
+    "statusNote": "Pilot built; households get cooking gas",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Capricorn District Municipality",
+    "level": "district",
+    "ward": "",
+    "village": "Ga-Makgoba",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Climate change pilot. The CDM IDP 2026/27 (p.86) says CDM built bio-digesters at Ga-Makgoba village in Polokwane and that households now get cooking gas, but gives no budget or date. A University of Venda article (2020) says CDM gave R600 000 to pilot the project in selected communities around Makgoba village, and that the March 2020 biogas training was held at Makgoba Community Hall in ward 29 (ward numbers before the 2021 boundary changes). Polokwane has two Makgoba villages (near Ga-Dikgale in ward 33, and near Tshware in ward 30), and neither source says which, so it has no pin.",
+    "sources": [
+      {
+        "label": "Capricorn DM IDP 2026/27",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/06/Final-Draft-202627-IDP-and-budget-21-May-2026-Council.pdf"
+      },
+      {
+        "label": "Capricorn DM Draft IDP 2025/26",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2025/03/CDM-Draft-2025-26-IDP-and-Budget.pdf"
+      },
+      {
+        "label": "University of Venda: biogas training and CDM pilot at Makgoba (2020, web archive)",
+        "url": "http://web.archive.org/web/20200611030254/https://www.univen.ac.za/?p=18096"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "total",
+        "original": 600000,
+        "adjusted": null,
+        "label": "CDM support for the pilot (University of Venda article, 2020); year and VAT not stated"
+      }
+    ],
+    "history": [
+      {
+        "date": "2020-06",
+        "document": "University of Venda news article",
+        "fy": "total",
+        "amount": 600000,
+        "vat": "not stated",
+        "progress": "Pilot planned",
+        "note": "CDM support for piloting bio-digesters in communities around Makgoba village; training held at Makgoba Community Hall, 13-17 Mar 2020; date is the web archive capture (11 Jun 2020)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Pilot complete",
+        "note": "pilot successful, households receive cooking gas; no budget; p.86"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "road-thlatlaganya-paving",
+    "name": "Paving of internal street in Thlatlaganya access road in Ga-Makgoba (phase 2)",
+    "short": "Thlatlaganya paving",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "New in the 2026/27 budget: 1 km of street to be paved",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "31",
+    "village": "Thlatlaganya, Ga-Makgoba",
+    "lat": -23.86333333,
+    "lon": 29.71761111,
+    "pin": "site",
+    "route": null,
+    "note": "The final 2026/27 budget lists it as 'Paving of internal street in Thlatlaganya access road in Ga Makgoba'; the A-Schedule (SA36) calls the same project 'Tlhatlaganya Phase 2'. Both say ward 31. The 2026/27 SA36 coordinates for phase 2 (-23.819, 29.522) fall outside the cluster. The pin uses the coordinates the 2025/26 SA36 gives for 'Paving of Thlathlanganya Roads' (23.8633, 29.7176, minus sign dropped), which fall in ward 31 near Syferkuil; that line looks like phase 1, so phase 2 may not be at the same spot. Note that the Ga-Makgoba village near Tshware is in ward 30, 9 km east, so the name and the coordinates do not fully agree. An earlier 'Paving of Thlathlanganya Roads' line (draft 2026/27 budget, R797k and R917k in later years) looks like phase 1 and is not counted separately. This is a different project from the 'Upgrading of access road in Ga Makgoba' (ward 33).",
+    "sources": [
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2025/26 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-ANNUAL-BUDGET-202526_2028_MTREF.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 7500000,
+        "adjusted": null,
+        "label": "Own funds (CRR)"
+      },
+      {
+        "fy": "2026/27",
+        "original": 5500000,
+        "adjusted": null,
+        "label": "IUDG"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-03",
+        "document": "Draft budget 2026/27",
+        "fy": "2027/28",
+        "amount": 797101,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'Paving of Thlathlanganya Roads' (likely phase 1); budget2627 draft"
+      },
+      {
+        "date": "2026-03",
+        "document": "Draft budget 2026/27",
+        "fy": "2028/29",
+        "amount": 916666,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'Paving of Thlathlanganya Roads' (likely phase 1)"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "excl",
+        "progress": "1 km to be paved",
+        "note": "Lists only the own-funds (CRR) part: R7 500 000 excl (R8 625 000 incl); p.1031"
+      },
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 13000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR 7 500 000 + IUDG 5 500 000"
+      }
+    ],
+    "mapWard": 31
+  },
+  {
+    "id": "road-solomondale-rehab",
+    "name": "Rehabilitation of internal street in Solomondale",
+    "short": "Solomondale street rehab",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "New in the 2026/27 budget",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "32",
+    "village": "Solomondale",
+    "lat": -23.7749569,
+    "lon": 29.6891259,
+    "pin": "village",
+    "route": null,
+    "note": "A different project from the 'Paving of internal street from Solomondale to D3997'. The SA36 gives ward 32 but only the city's default coordinates. Which street is not stated. Pin marks Solomondale at Solomondale school (EMIS 923241405, ward 32, Sebayeng town), not the street.",
+    "sources": [
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 10000000,
+        "adjusted": null,
+        "label": "Own funds (CRR)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 10000000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; incl 11 500 000"
+      }
+    ],
+    "mapWard": 32
+  }
+];

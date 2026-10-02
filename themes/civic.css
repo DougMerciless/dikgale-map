@@ -1,0 +1,36 @@
+/* Theme: Civic portal. Like a government service site: navy band, Public Sans, clear blue links, plain cards. */
+:root {
+  --paper: #F1F4F8; --panel: #FFFFFF; --ink: #1B2533; --muted: #5B6675; --line: #CED6E0; --grid: #E6EBF1;
+  --fund: #005EA2; --ok: #00703C; --prog: #B76E00; --cut: #8A94A3; --more: #D4351C;
+  --head: "Public Sans", system-ui, sans-serif; --serif: "Public Sans", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root { --paper: #0E1622; --panel: #152131; --ink: #E7EDF5; --muted: #9DABBD; --line: #263649; --grid: #1B2A3D; } }
+body { font-size: 16px; }
+.strip { background: #0B2545; color: #fff; letter-spacing: .06em; padding: 10px 16px; }
+.mast { background: #13315C; color: #fff; max-width: none; padding: 30px max(16px, calc((100vw - 1280px) / 2 + 16px)) 26px; border-bottom: 5px solid #FFBE2E; }
+.mast .kicker { color: #FFBE2E; }
+.mast h1 { color: #fff; font-weight: 700; letter-spacing: -.01em; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.12; max-width: 24ch; }
+.mast .dek { color: #DCE4EF; opacity: 1; }
+.mast .stat { border-top: 1px solid rgba(255,255,255,.35); }
+.mast .stat b { color: #fff; font-weight: 700; }
+.mast .stat span { color: #C3D0E0; }
+.mast .stat.more b { color: #FF8C78; }
+.mast .stat.cut b { color: #C3D0E0; }
+.sect { font-weight: 700; border-bottom: 3px solid var(--fund); }
+.mapwrap { border: 1px solid var(--line); box-shadow: 0 2px 6px rgba(11,37,69,.08); border-radius: 6px; overflow: hidden; }
+.search { border: 2px solid var(--ink); background: var(--panel); padding: 10px 12px; border-radius: 0; }
+.search:focus { outline: 3px solid #FFBE2E; outline-offset: 0; }
+.chip { border: 1px solid var(--fund); color: var(--fund); font-weight: 600; border-radius: 4px; background: var(--panel); }
+.chip[aria-pressed="true"] { background: var(--fund); color: #fff; }
+select { border: 1px solid var(--ink); border-radius: 0; }
+.list { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+.list li { border-bottom: 1px solid var(--line); }
+.item .t { font-weight: 700; color: var(--fund); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.item.sel { background: #FFF6E0; box-shadow: inset 4px 0 0 #FFBE2E; }
+.detail { border: 1px solid var(--line); border-top: 6px solid var(--c, var(--fund)); border-radius: 6px; }
+.detail h2 { font-weight: 700; }
+.btn { background: #00703C; border-radius: 0; box-shadow: 0 2px 0 #002D18; border-color: transparent; }
+.btn:hover { background: #005A30; }
+.pin .lbl { border: 1px solid var(--ink); font-weight: 600; }
+.pin.sel .lbl { background: var(--fund); border-color: var(--fund); }
+.foot { border-top: 1px solid var(--line); }

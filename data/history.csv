@@ -1,0 +1,211 @@
+project_id,date,document,fy,amount,vat,progress,note
+bridge-ga-mailula,2026-02,Adjustments budget 2025/26 – original,2025/26,0,excl,,CRR; not in original budget; p.22
+bridge-ga-mailula,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,540000,excl,,"CRR; new low-level bridge (Ga Mailula) moved from operating budget; p.16, p.22"
+bridge-segopye-mahlohlo,2026-02,Adjustments budget 2025/26 – original,2025/26,0,excl,,CRR; not in original budget; p.22
+bridge-segopye-mahlohlo,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,680000,excl,,"CRR; new low-level bridge (Segopye and Mahlohl[o]) moved from operating budget; p.16, p.22"
+bridge-titibe-mogabane,2026-02,Adjustments budget 2025/26 – original,2025/26,0,excl,,CRR; not in original budget; p.22
+bridge-titibe-mogabane,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,1080000,excl,,"CRR; new low-level bridge (Titibe and Mogabane) moved from operating budget; p.16, p.22"
+centre-segopje-mobile,2024-04,Final IDP 2024/25,2024/25,1196554,excl,,CRR; Annexure A p.1153 (also p.990)
+centre-segopje-mobile,2024-04,Final IDP 2024/25,2025/26,1280952,excl,,CRR; Annexure A p.1153 (also p.990)
+centre-segopje-mobile,2024-04,Final IDP 2024/25,2026/27,360000,excl,,CRR; Annexure A p.1153 (also p.990)
+centre-segopje-mobile,2025-03,Draft IDP 2025/26 (projects phase),2025/26,1280952,excl,,CRR; p.400
+centre-segopje-mobile,2025-03,Draft IDP 2025/26 (projects phase),2026/27,1360000,excl,,CRR; p.400
+centre-segopje-mobile,2025-03,Draft IDP 2025/26 (projects phase),2027/28,1496000,excl,,CRR; p.400
+centre-segopje-mobile,2025-05,Original budget 2025/26 (Annexure A),2025/26,2000000,excl,,CRR; p.104; same figures in Final IDP 2025/26 Annexure B p.1410ff
+centre-segopje-mobile,2025-05,Original budget 2025/26 (Annexure A),2026/27,2200000,excl,,CRR; p.104; same figures in Final IDP 2025/26 Annexure B p.1410ff
+centre-segopje-mobile,2026-02,Adjustments budget 2025/26 – original,2025/26,2000000,excl,,CRR; p.26
+centre-segopje-mobile,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,2000000,excl,,CRR; p.26
+centre-segopje-mobile,2026-02,Adjustments budget 2025/26 – adjusted,2026/27,2200000,excl,,CRR outer year; p.26
+centre-segopje-mobile,2026-03,Draft IDP 2026/31,,,not stated,Established,centre established; implementation to conclude in 2025/26; no 2026-29 budget line; p.542
+centre-segopje-mobile,2026-05,Final IDP 2026/31,,,not stated,Established,same text; p.542
+library-dikgale,2024-04,Final IDP 2024/25,2024/25,0,excl,,CRR; Annexure A p.1151 (also p.884)
+library-dikgale,2024-04,Final IDP 2024/25,2026/27,800000,excl,Planning,CRR; planning target 2025/26; p.1151
+library-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2025/26,0,excl,"Planning (2025/26), designs (2026/27)",CRR; p.280
+library-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2026/27,1800000,excl,,CRR; p.280
+library-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2027/28,2000000,excl,,CRR; p.280
+paving-dikgale-moshate,2024-04,Final IDP 2024/25,2024/25,1833649,excl,,IUDG; Annexure A p.1139 (also p.755)
+paving-dikgale-moshate,2024-04,Final IDP 2024/25,2025/26,2476370,excl,,IUDG; Annexure A p.1139 (also p.755)
+paving-dikgale-moshate,2024-04,Final IDP 2024/25,2026/27,1626087,excl,,IUDG; Annexure A p.1139 (also p.755)
+paving-dikgale-moshate,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2476370,excl,,IUDG; p.115
+paving-dikgale-moshate,2025-03,Draft IDP 2025/26 (projects phase),2026/27,1626087,excl,,IUDG; p.115
+paving-dikgale-moshate,2025-03,Draft IDP 2025/26 (projects phase),2027/28,4000000,excl,,IUDG; p.115
+paving-dikgale-moshate,2025-03,Draft budget 2025/26,2025/26,1000000,incl,,IUDG; 'with VAT' table; p.25
+paving-dikgale-moshate,2025-05,Original budget 2025/26 (Annexure A),2025/26,869565,excl,,IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff
+paving-dikgale-moshate,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,2108696,not stated,Construction,IUDG; = 2024/25 incl figure; p.546
+paving-dikgale-moshate,2026-02,Adjustments budget 2025/26 – original,2025/26,869565,excl,,IUDG; p.22
+paving-dikgale-moshate,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,0,excl,,IUDG; cut by 869 565; p.22
+paving-solomondale-d3997,2024-04,Final IDP 2024/25 – 2022/23 IUDG status table,2022/23,655226,not stated,On design,IUDG; p.457
+paving-solomondale-d3997,2024-04,Final IDP 2024/25,2024/25,3671407,excl,,IUDG; Annexure A p.1139 (also p.769)
+paving-solomondale-d3997,2024-04,Final IDP 2024/25,2025/26,2227337,excl,,IUDG; Annexure A p.1139 (also p.769)
+paving-solomondale-d3997,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2227337,excl,,IUDG; p.145
+paving-solomondale-d3997,2025-03,Draft IDP 2025/26 (projects phase),2026/27,2500000,excl,,IUDG; p.145
+paving-solomondale-d3997,2025-03,Draft IDP 2025/26 (projects phase),2027/28,5500000,excl,,IUDG; p.145
+paving-solomondale-d3997,2025-05,Original budget 2025/26 (Annexure A),2025/26,869565,excl,,IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff
+paving-solomondale-d3997,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,4222118,not stated,Construction,IUDG; = 2024/25 incl figure; p.546
+paving-solomondale-d3997,2026-02,Adjustments budget 2025/26 – original,2025/26,869565,excl,,IUDG; p.22
+paving-solomondale-d3997,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,0,excl,,IUDG; cut by 869 565; p.22
+paving-solomondale-d3997,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,IUDG; p.1375; same in Draft budget 2026/27
+paving-solomondale-d3997,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,869565,excl,,IUDG; p.1375
+paving-solomondale-d3997,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,IUDG; p.1488; same in Final budget 2026/27 Annexure A (Jun 2026)
+paving-solomondale-d3997,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,869565,excl,,IUDG; p.1488
+prov-cdm-makgoba-biodigesters,2026-05,Capricorn DM IDP 2026/27,,,not stated,Pilot complete,"pilot successful, households receive cooking gas; no budget; p.86"
+prov-edu-maboyane-primary,2025-03,Limpopo EPRE 2025/26,total,3749000,not stated,Stage 6: Handover,EIG; total cost; R327 000 spent; p.579
+prov-edu-maboyane-primary,2025-03,Limpopo EPRE 2025/26,2025/26,0,not stated,,EIG; Table B5; p.579
+prov-edu-maboyane-primary,2025-03,Limpopo EPRE 2025/26,2026/27,5000000,not stated,,EIG; Table B5; p.579
+prov-edu-maboyane-primary,2025-03,Limpopo EPRE 2025/26,2027/28,0,not stated,,EIG; Table B5; p.579
+prov-edu-maboyane-primary,2025-05,Final IDP 2025/26,total,3748881,not stated,97% (practical completion),EIG; R327 167 spent; p.1183
+prov-edu-maboyane-primary,2026-05,Capricorn DM IDP 2026/27,2026/27,5000000,not stated,,"EIG; total 3 748 881, R327 167 spent; p.497"
+prov-edu-maboyane-primary,2026-05,Capricorn DM IDP 2026/27,2027/28,0,not stated,,"EIG; total 3 748 881, R327 167 spent; p.497"
+prov-edu-maboyane-primary,2026-05,Capricorn DM IDP 2026/27,2028/29,0,not stated,,"EIG; total 3 748 881, R327 167 spent; p.497"
+prov-edu-maboyane-primary,2026-05,Final IDP 2026/31,2026/27,5000000,not stated,,"EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+prov-edu-maboyane-primary,2026-05,Final IDP 2026/31,2027/28,0,not stated,,"EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+prov-edu-maboyane-primary,2026-05,Final IDP 2026/31,2028/29,0,not stated,,"EIG sector table; total 3 748 881, R327 167 spent; p.1180"
+prov-edu-ngwanalaka-secondary,2025-03,Limpopo EPRE 2025/26,total,291000,not stated,Stage 6: Handover,EIG; total cost 291k but R13 931 000 spent; p.578
+prov-edu-ngwanalaka-secondary,2025-03,Limpopo EPRE 2025/26,2025/26,2283000,not stated,,EIG; Table B5; p.578
+prov-edu-ngwanalaka-secondary,2025-03,Limpopo EPRE 2025/26,2026/27,0,not stated,,EIG; Table B5; p.578
+prov-edu-ngwanalaka-secondary,2025-03,Limpopo EPRE 2025/26,2027/28,0,not stated,,EIG; Table B5; p.578
+prov-edu-ngwanalaka-secondary,2025-05,Final IDP 2025/26,total,291246,not stated,97% (practical completion),EIG; R14 374 447 spent; p.1186
+prov-eskom-sebayeng,2026-05,Capricorn DM IDP 2026/27,2028/29,839603,not stated,,"Eskom planned CAPEX, 702 connections; p.505"
+prov-eskom-segopye-ext,2026-05,Capricorn DM IDP 2026/27,2027/28,178922,not stated,,"Eskom planned CAPEX, 31 connections; p.504"
+prov-lnw-ebenezer-bulk,2025-05,Final IDP 2025/26,,,not stated,Phase 1 due 2026,LNW; first phase set for completion in 2026; p.335
+prov-lnw-ebenezer-bulk,2026-05,Capricorn DM IDP 2026/27,total,7600000000,not stated,Main refurbishment works at practical commissioning,Ph 1A est. cost R7.6 bn (all phases R23.2 bn); refurbishment completion Jun 2026; p.466
+prov-ral-d3339-makotopong-mothiba,2025-03,Limpopo EPRE 2025/26,total,4500000,not stated,Design development,Table B5 total project cost; R0 spent; p.606
+prov-ral-d3339-makotopong-mothiba,2025-03,Limpopo EPRE 2025/26,2025/26,0,not stated,,RAL equitable share; Table B5; p.606
+prov-ral-d3339-makotopong-mothiba,2025-03,Limpopo EPRE 2025/26,2026/27,7317000,not stated,,RAL equitable share; Table B5; p.606
+prov-ral-d3339-makotopong-mothiba,2025-03,Limpopo EPRE 2025/26,2027/28,0,not stated,,RAL equitable share; Table B5; p.606
+prov-ral-d3339-makotopong-mothiba,2025-03,RAL APP 2025/26,2025/26,0,not stated,Design development,T1145 EQS road maintenance; p.63
+prov-ral-d3339-makotopong-mothiba,2025-03,RAL APP 2025/26,2026/27,6426000,not stated,,T1145 EQS road maintenance; p.63
+prov-ral-d3339-makotopong-mothiba,2025-05,Final IDP 2025/26,total,4500000,not stated,On hold 0%,T1145; R0 spent; p.1192
+prov-ral-d3959-dikgale-regravel,2025-05,Final IDP 2025/26,total,9000000,not stated,100% (final completion),T1344; R8 859 445 spent; p.1193
+prov-ral-d3997-sebayeng-gamoswedi,2025-05,Final IDP 2025/26,total,24370591,not stated,100% (final completion),T1009B; R28 635 853 spent; p.1191
+prov-ral-d844-mankweng-sebayeng,2025-03,Limpopo EPRE 2025/26,total,24595000,not stated,Design documentation,Table B5 total project cost; R7 334 000 spent to date; R thousand converted; p.607
+prov-ral-d844-mankweng-sebayeng,2025-03,Limpopo EPRE 2025/26,2025/26,0,not stated,,RAL equitable share; Table B5; p.607
+prov-ral-d844-mankweng-sebayeng,2025-03,Limpopo EPRE 2025/26,2026/27,7317000,not stated,,RAL equitable share; Table B5; p.607
+prov-ral-d844-mankweng-sebayeng,2025-03,Limpopo EPRE 2025/26,2027/28,19093000,not stated,,RAL equitable share; Table B5; p.607
+prov-ral-d844-mankweng-sebayeng,2025-03,RAL APP 2025/26,2025/26,0,not stated,Design documentation,T1134 EQS road maintenance; p.63
+prov-ral-d844-mankweng-sebayeng,2025-03,RAL APP 2025/26,2026/27,6426000,not stated,,T1134 EQS road maintenance; p.63
+prov-ral-d844-mankweng-sebayeng,2025-03,RAL APP 2025/26,2027/28,22533000,not stated,,T1134 EQS road maintenance; p.63
+prov-ral-d844-mankweng-sebayeng,2025-05,Final IDP 2025/26,total,24595044,not stated,3% (design),sector projects table; R7 334 059 spent; p.1191
+prov-ral-d844-mankweng-sebayeng,2026-03,Draft IDP 2026/31,,,not stated,Site establishment,now listed as RAL T1412 D844 Mankweng to Sebayeng; p.1233
+road-ga-makgoba-access,2024-04,Final IDP 2024/25 – 2022/23 IUDG status table,2022/23,978192,not stated,On design,IUDG; '(planning)'; p.458
+road-ga-makgoba-access,2024-04,Final IDP 2024/25,2024/25,2662119,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.758 says excl)
+road-ga-makgoba-access,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2400000,excl,,IUDG; p.122
+road-ga-makgoba-access,2025-03,Draft IDP 2025/26 (projects phase),2026/27,2600000,excl,,IUDG; p.122
+road-ga-makgoba-access,2025-03,Draft budget 2025/26,2025/26,2628138,incl,,IUDG; 'with VAT' table; p.25
+road-ga-makgoba-access,2025-05,Original budget 2025/26 (Annexure A),2025/26,2285337,excl,,IUDG; RAL roads table p.106 (incl 2 628 138); same figures in Final IDP 2025/26 Annexure B p.1410ff
+road-ga-makgoba-access,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,3061437,not stated,Construction,IUDG; = 2024/25 incl figure; p.548
+road-ga-makgoba-access,2026-02,Adjustments budget 2025/26 – original,2025/26,285337,excl,,IUDG; RAL roads table p.28; May 2025 original was 2 285 337
+road-ga-makgoba-access,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,143677,excl,,IUDG; cut by 141 660; p.28
+road-ga-makgoba-access,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,IUDG; p.1400; same in Draft budget 2026/27
+road-ga-makgoba-access,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,869565,excl,,IUDG; p.1400
+road-ga-makgoba-access,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)
+road-ga-makgoba-access,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,869565,excl,,IUDG; p.1504
+road-sekoala-mehlakong,2024-04,Final IDP 2024/25 – 2022/23 IUDG status table,2022/23,766579,not stated,On design,IUDG; p.458
+road-sekoala-mehlakong,2024-04,Final IDP 2024/25,2024/25,2216651,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)
+road-sekoala-mehlakong,2024-04,Final IDP 2024/25,2025/26,2681023,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)
+road-sekoala-mehlakong,2024-04,Final IDP 2024/25,2026/27,2608696,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.768 says excl)
+road-sekoala-mehlakong,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2681023,excl,,IUDG; p.141
+road-sekoala-mehlakong,2025-03,Draft IDP 2025/26 (projects phase),2026/27,2608696,excl,,IUDG; p.141
+road-sekoala-mehlakong,2025-03,Draft IDP 2025/26 (projects phase),2027/28,4500000,excl,,IUDG; p.141
+road-sekoala-mehlakong,2025-05,Original budget 2025/26 (Annexure A),2025/26,7130435,excl,,IUDG; RAL roads table p.106; same figures in Final IDP 2025/26 Annexure B p.1410ff
+road-sekoala-mehlakong,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,2549149,not stated,Construction,IUDG; = 2024/25 incl figure; p.548
+road-sekoala-mehlakong,2026-02,Adjustments budget 2025/26 – original,2025/26,7130435,excl,,IUDG; RAL roads table p.28
+road-sekoala-mehlakong,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,8030435,excl,,IUDG; +900 000; p.28
+road-sekoala-mehlakong,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,IUDG; p.1376; same in Draft budget 2026/27
+road-sekoala-mehlakong,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,869565,excl,,IUDG; p.1376
+road-sekoala-mehlakong,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,IUDG; p.1489; same in Final budget 2026/27 Annexure A (Jun 2026)
+road-sekoala-mehlakong,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,869565,excl,,IUDG; p.1489
+road-titibe-makgoba,2024-04,Final IDP 2024/25,2024/25,2608696,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)
+road-titibe-makgoba,2024-04,Final IDP 2024/25,2025/26,2681023,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)
+road-titibe-makgoba,2024-04,Final IDP 2024/25,2026/27,3478261,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.760 says excl)
+road-titibe-makgoba,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2681023,excl,,IUDG; p.125
+road-titibe-makgoba,2025-03,Draft IDP 2025/26 (projects phase),2026/27,1478261,excl,,IUDG; p.125
+road-titibe-makgoba,2025-03,Draft IDP 2025/26 (projects phase),2027/28,6500000,excl,,IUDG; p.125
+road-titibe-makgoba,2025-03,Draft budget 2025/26,2025/26,10870452,incl,,IUDG; 'with VAT' table; p.25
+road-titibe-makgoba,2025-05,Original budget 2025/26 (Annexure A),2025/26,9452567,excl,,IUDG; RAL roads table p.106 (incl 10 870 452); same figures in Final IDP 2025/26 Annexure B p.1410ff
+road-titibe-makgoba,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,3000000,not stated,Construction,IUDG; = 2024/25 incl figure; p.548
+road-titibe-makgoba,2026-02,Adjustments budget 2025/26 – original,2025/26,10564322,excl,,IUDG; RAL roads table p.28; differs from May 2025 original (9 452 567)
+road-titibe-makgoba,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,10564322,excl,,IUDG; unchanged; p.28
+road-titibe-makgoba,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,IUDG; p.1400; same in Draft budget 2026/27
+road-titibe-makgoba,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,869565,excl,,IUDG; p.1400
+road-titibe-makgoba,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)
+road-titibe-makgoba,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,869565,excl,,IUDG; p.1504
+road-tshware-mamotshwa,2024-04,Final IDP 2024/25,2024/25,2863483,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)
+road-tshware-mamotshwa,2024-04,Final IDP 2024/25,2025/26,3448509,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)
+road-tshware-mamotshwa,2024-04,Final IDP 2024/25,2026/27,2173913,excl,,IUDG; RAL roads table p.1156 (no VAT label; IDP table p.769 says excl)
+road-tshware-mamotshwa,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2448509,excl,,IUDG; p.142
+road-tshware-mamotshwa,2025-03,Draft IDP 2025/26 (projects phase),2026/27,2173913,excl,,IUDG; p.142
+road-tshware-mamotshwa,2025-03,Draft IDP 2025/26 (projects phase),2027/28,5500000,excl,,IUDG; p.142
+road-tshware-mamotshwa,2025-03,Draft budget 2025/26,2025/26,6240000,incl,,IUDG; 'with VAT' table; p.25
+road-tshware-mamotshwa,2025-05,Original budget 2025/26 (Annexure A),2025/26,4495843,excl,,IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff
+road-tshware-mamotshwa,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,3293006,not stated,Construction,IUDG; = 2024/25 incl figure; p.549
+road-tshware-mamotshwa,2026-02,Adjustments budget 2025/26 – original,2025/26,4495843,excl,,IUDG; p.22
+road-tshware-mamotshwa,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,1115360,excl,,IUDG; cut by 3 380 483; p.22
+road-tshware-mamotshwa,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,IUDG; RAL roads list; p.1400; same in Draft budget 2026/27
+road-tshware-mamotshwa,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,869565,excl,,IUDG; p.1400
+road-tshware-mamotshwa,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,IUDG; p.1504; same in Final budget 2026/27 Annexure A (Jun 2026)
+road-tshware-mamotshwa,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,869565,excl,,IUDG; p.1504
+rws-sebayeng-dikgale,2024-04,Final IDP 2024/25 – 2022/23 IUDG status table,2022/23,5000000,not stated,Technical report stage,IUDG; 'Sebayeng/Dikgale RWS Phase 10'; consultant reviewed designs; p.460
+rws-sebayeng-dikgale,2024-04,Final IDP 2024/25,2024/25,4142658,excl,,IUDG; Annexure A MTREF p.1142 (also IDP table p.705)
+rws-sebayeng-dikgale,2024-04,Final IDP 2024/25,2025/26,2869417,excl,,IUDG; Annexure A MTREF p.1142 (also IDP table p.705)
+rws-sebayeng-dikgale,2024-04,Final IDP 2024/25,2026/27,4347826,excl,,IUDG; Annexure A MTREF p.1142 (also IDP table p.705)
+rws-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2869417,excl,,IUDG; p.7
+rws-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2026/27,4347826,excl,,IUDG; p.7
+rws-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2027/28,2200000,excl,,IUDG; p.7
+rws-sebayeng-dikgale,2025-05,Original budget 2025/26 (Annexure A),2025/26,5973406,excl,,IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff
+rws-sebayeng-dikgale,2025-05,Original budget 2025/26 (Annexure A),2026/27,6389414,excl,,IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff
+rws-sebayeng-dikgale,2025-05,Original budget 2025/26 (Annexure A),2027/28,7130435,excl,,IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff
+rws-sebayeng-dikgale,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,4764057,not stated,Construction,"IUDG; printed R4.764.056,56 (= 2024/25 incl figure); p.549"
+rws-sebayeng-dikgale,2025-05,Final IDP 2025/26,,,not stated,64%,Phase 10 reached 64%; p.329
+rws-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – original,2025/26,5973406,excl,,IUDG; with transfer of funds already cut to 1 027 332; Annexure A p.23
+rws-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,1027332,excl,,IUDG; Annexure A p.23
+rws-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,5000000,excl,,"CRR 'WIP Sebayeng Dikgale RWS 233600' new line; p.16, p.23"
+rws-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2026/27,6389414,excl,,IUDG outer year; p.23
+rws-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2027/28,7130435,excl,,IUDG outer year (column mislabelled 2026/27); p.23
+rws-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,5556012,excl,,IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27
+rws-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2027/28,6200378,excl,,IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27
+rws-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,7710453,excl,,IUDG 'WIP Sebayeng Dikgale RWS'; p.1381; same in Draft budget 2026/27
+rws-sebayeng-dikgale,2026-03,Draft IDP 2026/31,,,not stated,64%,repeats 2024 Phase 10 64% text; p.346
+rws-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,5556012,excl,,IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)
+rws-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2027/28,6200378,excl,,IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)
+rws-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,7710453,excl,,IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)
+sport-complex-sebayeng-dikgale,2024-04,Final IDP 2024/25 – 2022/23 IUDG status table,2022/23,1361000,not stated,Design review,IUDG; consultant busy with design review; p.461
+sport-complex-sebayeng-dikgale,2024-04,Final IDP 2024/25,2024/25,5672945,excl,,IUDG; Annexure A p.1151 (also p.852)
+sport-complex-sebayeng-dikgale,2024-04,Final IDP 2024/25,2025/26,4347826,excl,,IUDG; Annexure A p.1151 (also p.852)
+sport-complex-sebayeng-dikgale,2024-04,Final IDP 2024/25,2026/27,3391304,excl,,IUDG; Annexure A p.1151 (also p.852)
+sport-complex-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2025/26,2347826,excl,,IUDG; p.249
+sport-complex-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2026/27,2391304,excl,,IUDG; p.249
+sport-complex-sebayeng-dikgale,2025-03,Draft IDP 2025/26 (projects phase),2027/28,1750000,excl,,IUDG; p.249
+sport-complex-sebayeng-dikgale,2025-03,Draft budget 2025/26,,,not stated,Delayed,delayed due to non-appointment of contractor; p.90
+sport-complex-sebayeng-dikgale,2025-05,Original budget 2025/26 (Annexure A),2025/26,3024130,excl,,IUDG; p.103; same figures in Final IDP 2025/26 Annexure B p.1410ff
+sport-complex-sebayeng-dikgale,2025-05,Original budget 2025/26 (Annexure A),2026/27,3478261,excl,,IUDG; p.103; same figures in Final IDP 2025/26 Annexure B p.1410ff
+sport-complex-sebayeng-dikgale,2025-05,Final IDP 2025/26 – 2024/25 project status table,2024/25,6523887,not stated,Not started,IUDG; negotiating priced BOQ with contractor; p.551
+sport-complex-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – original,2025/26,3024130,excl,,IUDG; p.26
+sport-complex-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,3024130,excl,,IUDG; p.26
+sport-complex-sebayeng-dikgale,2026-02,Adjustments budget 2025/26 – adjusted,2026/27,3478261,excl,,IUDG outer year; p.26
+sport-complex-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,4729236,excl,,IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27
+sport-complex-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2027/28,5304348,excl,,IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27
+sport-complex-sebayeng-dikgale,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,4347826,excl,,IUDG 'CWIP Construction of Sebayeng Dikgale Sport Complex'; p.1391; same in Draft budget 2026/27
+sport-complex-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,4729236,excl,,IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)
+sport-complex-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2027/28,5304348,excl,,IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)
+sport-complex-sebayeng-dikgale,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,4347826,excl,,IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)
+water-sebayeng-diepriver,2025-03,Draft IDP 2025/26 (projects phase),2025/26,5000000,excl,,RBIG; p.49
+water-sebayeng-diepriver,2025-03,Draft IDP 2025/26 (projects phase),2026/27,100000000,excl,,RBIG; p.49
+water-sebayeng-diepriver,2025-03,Draft IDP 2025/26 (projects phase),2027/28,279000000,excl,,RBIG; p.49
+water-sebayeng-diepriver,2025-05,Original budget 2025/26 (Annexure A),2025/26,2000000,excl,,CRR planning and design; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff
+water-sebayeng-diepriver,2025-05,Original budget 2025/26 (Annexure A),2026/27,69565217,excl,,RBIG line (construction); p.100
+water-sebayeng-diepriver,2025-05,Original budget 2025/26 (Annexure A),2027/28,869565,excl,,RBIG line; p.100
+water-sebayeng-diepriver,2026-02,Adjustments budget 2025/26 – original,2025/26,2000000,excl,,CRR; p.23
+water-sebayeng-diepriver,2026-02,Adjustments budget 2025/26 – adjusted,2025/26,1917084,excl,,CRR; cut by 82 916; p.23
+water-sebayeng-diepriver,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2026/27,0,excl,,CRR co-funding; no RBIG line any more; p.1380; same in Draft budget 2026/27
+water-sebayeng-diepriver,2026-03,Draft IDP 2026/31 (Annexure B draft MTREF),2028/29,1739130,excl,,CRR co-funding; p.1380
+water-sebayeng-diepriver,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2026/27,0,excl,,CRR; p.1491; same in Final budget 2026/27 Annexure A (Jun 2026)
+water-sebayeng-diepriver,2026-05,Final IDP 2026/31 (Annexure B final MTREF),2028/29,1739130,excl,,CRR; p.1491
+road-thlatlaganya-paving,2026-03,Draft budget 2026/27,2027/28,797101,excl,,IUDG 'Paving of Thlathlanganya Roads' (likely phase 1); budget2627 draft
+road-thlatlaganya-paving,2026-03,Draft budget 2026/27,2028/29,916666,excl,,IUDG 'Paving of Thlathlanganya Roads' (likely phase 1)
+road-thlatlaganya-paving,2026-05,Final IDP 2026/31,,,excl,1 km to be paved,Lists only the own-funds (CRR) part: R7 500 000 excl (R8 625 000 incl); p.1031
+road-thlatlaganya-paving,2026-06,Final budget 2026/27 (Annexure A),2026/27,13000000,excl,,CRR 7 500 000 + IUDG 5 500 000
+road-solomondale-rehab,2026-06,Final budget 2026/27 (Annexure A),2026/27,10000000,excl,,CRR; incl 11 500 000
+prov-lnw-ebenezer-bulk,2024-11,PMG written reply NO489,total,889000000,not stated,54%,Budget Facility for Infrastructure; phase 1 (refurbishment to restore 60 Ml/day) total cost; expected completion July 2025; reply dated 14 Nov 2024
+prov-cdm-makgoba-biodigesters,2020-06,University of Venda news article,total,600000,not stated,Pilot planned,"CDM support for piloting bio-digesters in communities around Makgoba village; training held at Makgoba Community Hall, 13-17 Mar 2020; date is the web archive capture (11 Jun 2020)"
+housing-ntsima,2024-12,CDM news: Ntsima house handover,,,not stated,Handed over,House handed over on 20 Dec 2024 by the CoGHSTA MEC and the CDM executive mayor to Mme Makgato; the MEC had promised the provincial Petitions Committee on 24 Oct 2024 to deliver it before Christmas; no cost given; cdm.org.za/?p=18033 (23 Dec 2024)

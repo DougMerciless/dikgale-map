@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sebayeng/Dikgale Projects Ledger</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500..800&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+  // Optional look: index.html?theme=clean | editorial | civic (default: newsroom).
+  (function () {
+    var fonts = {
+      clean: "DM+Sans:opsz,wght@9..40,400..700",
+      editorial: "Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Source+Sans+3:wght@400..700",
+      civic: "Public+Sans:wght@400..800"
+    };
+    var t = new URLSearchParams(location.search).get("theme");
+    if (!fonts[t]) return;
+    document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=' + fonts[t] + '&display=swap">');
+    document.write('<link rel="stylesheet" href="themes/' + t + '.css">');
+  })();
+</script>
+</head>
+<body>
+<div class="strip"><span>Sebayeng/Dikgale Projects Ledger</span><span>Polokwane Municipality · Limpopo</span></div>
+<header class="mast">
+  <p class="kicker">Wards 24 and 29 to 33 · Budgets 2024/25 to 2026/31</p>
+  <h1>Where the money went in Sebayeng&#8209;Dikgale</h1>
+  <p class="dek">Every government project we could trace in the cluster: municipal roads and water, provincial schools and roads, national power and bulk water. Where it is, how far it got, and whether its money grew or was cut along the way.</p>
+  <div class="tally" id="tally"></div>
+</header>
+
+<main>
+  <section class="mapwrap" aria-label="Project map">
+    <div id="map"></div>
+    <p id="mapnote" class="mapnote hidden"></p>
+    <div class="legend">
+      <span><i class="sw" style="background:var(--ok)"></i>Complete</span>
+      <span><i class="sw" style="background:var(--prog)"></i>In progress</span>
+      <span><i class="sw" style="background:var(--fund)"></i>Funded</span>
+      <span><i class="sw" style="background:var(--cut)"></i>Deferred or cut</span>
+      <span><i class="swr"></i>More money added</span>
+      <span><i class="swc"></i>Budget reduced</span>
+      <span><i class="swroad"></i>Road project (line follows the road)</span>
+      <span><i class="swapprox"></i>Approximate: pin marks the village</span>
+      <span><i class="swward"></i>Ward boundary (click to filter)</span>
+    </div>
+  </section>
+
+  <section class="side">
+    <h3 class="sect">The projects</h3>
+    <input type="search" id="q" class="search" placeholder="Search projects, villages, roads (e.g. Titibe, D844)" aria-label="Search projects" autocomplete="off">
+    <div class="filters" id="statusChips" aria-label="Filter by status"></div>
+    <div class="row">
+      <select id="sector" aria-label="Filter by sector"></select>
+      <select id="ward" aria-label="Filter by ward"></select>
+      <select id="level" aria-label="Filter by level of government"></select>
+      <select id="money" aria-label="Filter by budget change">
+        <option value="all">Any budget change</option>
+        <option value="more">More money added</option>
+        <option value="new">Added mid-year</option>
+        <option value="cut">Budget reduced</option>
+        <option value="same">Unchanged</option>
+      </select>
+    </div>
+    <div class="toolbar">
+      <span id="count" class="count" aria-live="polite"></span>
+      <button type="button" id="clear" class="linkbtn hidden">Clear filters</button>
+      <button type="button" id="csv" class="chip">Download as CSV</button>
+    </div>
+    <div id="notice" class="notice hidden"></div>
+    <article class="detail hidden" id="detail" aria-live="polite"></article>
+    <ul class="list" id="list"></ul>
+  </section>
+</main>
+<footer class="foot">Sources: Polokwane Municipality budgets and IDPs, Limpopo Treasury (EPRE), Roads Agency Limpopo, Capricorn District Municipality, DBE school register, Municipal Demarcation Board, Census 2011. Each project lists its own sources. Approximate pins show the village, not the site. Road lines © OpenStreetMap contributors (ODbL).</footer>
+
+<script src="data/projects.js"></script>
+<script src="data/wards.js"></script>
+<script src="config.js" onerror="window.MAP_CONFIG = window.MAP_CONFIG || {}"></script>
+<script src="app.js"></script>
+</body>
+</html>
