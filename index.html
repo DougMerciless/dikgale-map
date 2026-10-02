@@ -50,7 +50,7 @@
 
   <section class="side">
     <h3 class="sect">The projects</h3>
-    <input type="search" id="q" class="search" placeholder="Search projects, villages, roads (e.g. Titibe, D844)" aria-label="Search projects" autocomplete="off">
+    <input type="search" id="q" class="search" placeholder="Search projects, villages, roads, contractors (e.g. Titibe, D844)" aria-label="Search projects" autocomplete="off">
     <div class="filters" id="statusChips" aria-label="Filter by status"></div>
     <div class="row">
       <select id="sector" aria-label="Filter by sector"></select>
@@ -63,6 +63,7 @@
         <option value="cut">Budget reduced</option>
         <option value="same">Unchanged</option>
       </select>
+      <select id="contractor" class="hidden" aria-label="Filter by contractor"></select>
     </div>
     <div class="toolbar">
       <span id="count" class="count" aria-live="polite"></span>

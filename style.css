@@ -114,6 +114,7 @@ select { border: 1px solid var(--line); background: var(--panel); border-radius:
 .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; font: 500 13px var(--serif); color: var(--muted); }
 .toolbar .count { margin-right: auto; }
 .toolbar .chip:disabled { opacity: .4; cursor: default; }
+.linkbtn.firm { text-align: left; font-size: 14px; }
 .linkbtn { border: 0; background: none; padding: 0; color: var(--fund); font: 600 13px var(--serif); cursor: pointer; text-decoration: underline; }
 .notice { font: 13px var(--serif); color: var(--muted); padding: 8px 12px; border: 1px dashed var(--line); }
 

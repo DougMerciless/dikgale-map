@@ -80,6 +80,9 @@ The script stops with a line number if a row has a problem, such as an unknown s
 | `due` | Planned completion, e.g. `2024-07` (optional) |
 | `data_issue` | Problem with the source figures. Shows a "Figures disputed" badge (optional) |
 | `implementer` | Municipality, CoGHSTA, RAL, Department of Health, and so on |
+| `contractor` | Company appointed to build it, as named in the source. Several: separate with `;` (optional) |
+| `consultant` | Design or supervision consultant, same format (optional) |
+| `contract_note` | Contract reference, award date, value with VAT basis, and source page (optional) |
 | `level` | Level of government: `municipal`, `district`, `provincial` or `national` |
 | `ward`, `village` | Location description |
 | `lat`, `lon` | Decimal degrees. Leave both empty if unknown; the project still shows in the list |

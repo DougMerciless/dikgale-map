@@ -19,7 +19,7 @@ const PIN_TEXT = {
   route: "Line shows the road",
 };
 
-const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", q: "" };
+const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", q: "" };
 const $ = (id) => document.getElementById(id);
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
@@ -70,9 +70,12 @@ function parseWards(text) {
 }
 const projectWards = (p) => { const w = parseWards(p.ward); if (p.mapWard) w.add(p.mapWard); return w; };
 
+// Every company named on a project: contractors and consultants.
+const firms = (p) => [...(p.contractor || []), ...(p.consultant || [])];
+
 function matchesQuery(p) {
   if (!state.q) return true;
-  const hay = [p.name, p.short, p.village, p.implementer, p.sector, p.id, p.ward && "ward " + p.ward].join(" ").toLowerCase();
+  const hay = [p.name, p.short, p.village, p.implementer, p.sector, p.id, p.ward && "ward " + p.ward, ...firms(p)].join(" ").toLowerCase();
   return state.q.toLowerCase().split(/\s+/).every((t) => hay.includes(t));
 }
 
@@ -83,6 +86,7 @@ function isVisible(p) {
   if (state.sector !== "all" && p.sector !== state.sector) return false;
   if (state.level !== "all" && p.level !== state.level) return false;
   if (state.money !== "all" && moneyChange(p).kind !== state.money) return false;
+  if (state.contractor !== "all" && !firms(p).includes(state.contractor)) return false;
   return true;
 }
 
@@ -238,6 +242,11 @@ function renderFilters() {
     Object.entries(LEVELS).filter(([k]) => count(k))
       .map(([k, l]) => `<option value="${k}" ${k === state.level ? "selected" : ""}>${l} (${count(k)})</option>`).join("");
   const wcount = (w) => state.projects.filter((p) => projectWards(p).has(w)).length;
+  const names = [...new Set(state.projects.flatMap(firms))].sort((a, b) => a.localeCompare(b));
+  const fcount = (n) => state.projects.filter((p) => firms(p).includes(n)).length;
+  $("contractor").classList.toggle("hidden", !names.length);
+  $("contractor").innerHTML = '<option value="all">All contractors</option>' +
+    names.map((n) => `<option value="${esc(n)}" ${n === state.contractor ? "selected" : ""}>${esc(n)} (${fcount(n)})</option>`).join("");
   $("ward").innerHTML = '<option value="all">All wards</option>' +
     CLUSTER_WARDS.map((w) => `<option value="${w}" ${String(w) === state.ward ? "selected" : ""}>Ward ${w} (${wcount(w)})</option>`).join("");
 }
@@ -386,6 +395,9 @@ function historyChart(byFy, fys) {
   return { svg, axis };
 }
 
+// A company name in the detail panel filters the list to that company's projects.
+const firmLink = (n) => `<button type="button" class="linkbtn firm" data-firm="${esc(n)}">${esc(n)}</button>`;
+
 function renderDetail() {
   const box = $("detail");
   const p = state.projects.find((x) => x.id === state.selected);
@@ -423,6 +435,9 @@ function renderDetail() {
     ${pct(p.progress) != null ? `<div class="prog"><div class="bar"><i style="width:${pct(p.progress)}%;background:var(${pct(p.progress) >= 100 ? "--ok" : "--prog"})"></i></div><span>${esc(p.progress)} complete${p.due ? ", due " + esc(p.due) : ""}</span></div>` : ""}
     <dl class="kv">
       ${p.implementer ? `<dt>Implementer</dt><dd>${esc(p.implementer)}</dd>` : ""}
+      <dt>Contractor</dt><dd>${(p.contractor || []).length ? p.contractor.map(firmLink).join(", ") : '<span class="hint">Not named in the documents we found</span>'}</dd>
+      ${(p.consultant || []).length ? `<dt>Consultant</dt><dd>${p.consultant.map(firmLink).join(", ")}</dd>` : ""}
+      ${p.contractNote ? `<dt>Contract</dt><dd class="hint">${esc(p.contractNote)}</dd>` : ""}
       ${p.level ? `<dt>Government</dt><dd>${LEVELS[p.level]}</dd>` : ""}
       ${p.sector ? `<dt>Sector</dt><dd>${esc(p.sector)}</dd>` : ""}
       ${p.village ? `<dt>Area</dt><dd>${esc(p.village)}${p.ward ? ", ward " + esc(p.ward) : ""}</dd>` : ""}
@@ -442,6 +457,7 @@ function renderDetail() {
     </div>`;
   box.querySelector(".close").onclick = () => { state.selected = null; render(); };
   box.querySelector(".copy").onclick = (e) => copyLink(e.currentTarget, projectUrl(p.id));
+  for (const b of box.querySelectorAll(".firm")) b.onclick = () => { state.contractor = b.dataset.firm; render(); };
 }
 
 // ---------- shareable links ----------
@@ -453,7 +469,7 @@ function readUrl() {
   state.selected = u.get("p") || null;
   state.q = u.get("q") || "";
   state.status = new Set((u.get("status") || "").split(",").filter((k) => STATUS[k]));
-  for (const k of ["sector", "ward", "level", "money"]) state[k] = u.get(k) || "all";
+  for (const k of ["sector", "ward", "level", "money", "contractor"]) state[k] = u.get(k) || "all";
   $("q").value = state.q;
   $("money").value = state.money;
 }
@@ -464,7 +480,7 @@ function writeUrl() {
   set("p", state.selected);
   set("q", state.q);
   set("status", [...state.status].join(","));
-  for (const k of ["sector", "ward", "level", "money"]) set(k, state[k] === "all" ? "" : state[k]);
+  for (const k of ["sector", "ward", "level", "money", "contractor"]) set(k, state[k] === "all" ? "" : state[k]);
   const qs = u.toString().replace(/%2C/g, ",");
   history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
 }
@@ -490,12 +506,12 @@ function csvCell(v) {
 }
 
 function downloadCsv() {
-  const head = ["id", "name", "sector", "status", "status_note", "level", "implementer", "ward", "village", "lat", "lon", "pin",
+  const head = ["id", "name", "sector", "status", "status_note", "level", "implementer", "contractor", "consultant", "contract_note", "ward", "village", "lat", "lon", "pin",
     "headline_fy", "headline_amount", "headline_kind", "budget_change", "budget_change_rands", "budget_lines", "link", "sources"];
   const rows = state.projects.filter(isVisible).sort((a, b) => a.name.localeCompare(b.name)).map((p) => {
     const h = headline(p), m = moneyChange(p);
     const lines = (p.budget || []).map((r) => `${r.fy} ${r.label || ""}: original ${r.original}${r.adjusted != null ? ", adjusted " + r.adjusted : ""}`.replace(/\s+:/, ":")).join("; ");
-    return [p.id, p.name, p.sector, STATUS[p.status]?.label, p.statusNote, LEVELS[p.level], p.implementer, p.ward, p.village,
+    return [p.id, p.name, p.sector, STATUS[p.status]?.label, p.statusNote, LEVELS[p.level], p.implementer, (p.contractor || []).join("; "), (p.consultant || []).join("; "), p.contractNote, p.ward, p.village,
       p.lat, p.lon, p.pin, h?.fy, h?.amount, h?.kind, m.kind === "none" ? "" : m.kind, m.delta || "", lines, projectUrl(p.id),
       (p.sources || []).map((x) => x.url).join(" ")];
   });
@@ -516,7 +532,7 @@ function renderCount() {
 }
 
 function clearFilters() {
-  Object.assign(state, { status: new Set(), sector: "all", level: "all", ward: "all", money: "all", q: "" });
+  Object.assign(state, { status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", q: "" });
   $("q").value = ""; $("money").value = "all";
   render();
 }
@@ -577,6 +593,7 @@ $("q").onkeydown = (e) => {
 };
 $("level").onchange = (e) => { state.level = e.target.value; render(); };
 $("money").onchange = (e) => { state.money = e.target.value; render(); };
+$("contractor").onchange = (e) => { state.contractor = e.target.value; render(); };
 $("csv").onclick = downloadCsv;
 $("clear").onclick = clearFilters;
 

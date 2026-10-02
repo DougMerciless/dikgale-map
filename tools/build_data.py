@@ -35,6 +35,11 @@ def num(value, field, where):
         sys.exit(f"{where}: '{field}' is not a number: {value!r}")
 
 
+def split_names(text):
+    """'A (Pty) Ltd; B cc' -> ['A (Pty) Ltd', 'B cc']"""
+    return [n.strip() for n in (text or "").split(";") if n.strip()]
+
+
 def parse_sources(text):
     sources = []
     for part in (text or "").split(";"):
@@ -111,6 +116,9 @@ def main():
                 "due": (row.get("due") or "").strip(),
                 "dataIssue": (row.get("data_issue") or "").strip(),
                 "implementer": (row.get("implementer") or "").strip(),
+                "contractor": split_names(row.get("contractor")),
+                "consultant": split_names(row.get("consultant")),
+                "contractNote": (row.get("contract_note") or "").strip(),
                 "level": level,
                 "ward": (row.get("ward") or "").strip(),
                 "village": (row.get("village") or "").strip(),

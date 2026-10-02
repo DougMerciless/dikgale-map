@@ -10,6 +10,13 @@ window.PROJECTS = [
     "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Makeyise Trading and Projects"
+    ],
+    "consultant": [
+      "Nemarango Consulting Engineers"
+    ],
+    "contractNote": "Phase 10 (rollover): PM38/2022, contract 19 Jan 2024 to 18 Sept 2024, value not stated; contractor 'Makeyise Trading and Projects', consultant 'Nemorango consulting engineers' (Annual report 2023/24 p.597); AR 2024/25 writes the ref as '38/2022', contractor 'Makeyise Trading', consultant 'Nemarango Consulting Engineers' (p.838). Next phase: planning by Nemarango Consulting Engineers, contractor TBA (Annual report 2024/25 p.837). MSW states on its own website that it did design and construction monitoring of the scheme from 2011",
     "level": "municipal",
     "ward": "32",
     "village": "Sebayeng and Dikgale villages",
@@ -131,6 +138,24 @@ window.PROJECTS = [
         "vat": "not stated",
         "progress": "64% (phase 10)",
         "note": "IUDG 'WIP Sebayeng/Dikgale RWS 233600' spent 100% (also CRR WIP R4 657 620 of R5 123 486); target 90% missed due to stoppages and community unrest; pp.43-44, p.423"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Makeyise Trading and Projects",
+        "note": "Phase 10, PM38/2022; contract 19 Jan 2024 to 19 Jul 2024; value not stated; p.597"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Nemorango Consulting Engineers",
+        "note": "Phase 10, PM38/2022; written 'Nemorango consulting engineers'; p.597"
       },
       {
         "date": "2025-03",
@@ -371,6 +396,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Malerate Construction"
+    ],
+    "consultant": [
+      "Nemorango Consulting Engineers"
+    ],
+    "contractNote": "Fence and borehole phase: ref TBC, value and dates not stated; contractor 'Malerate construction', consultant 'Nemorango consulting' (Annual report 2023/24 p.611); 'Malerate' and 'Nemorango consulting engineers' (Annual report 2024/25 p.844). No contractor named for the later ablution block, pitch or courts work",
     "level": "municipal",
     "ward": "24, 29 to 33",
     "village": "Sebayeng/Dikgale",
@@ -491,8 +523,17 @@ window.PROJECTS = [
         "fy": "2023/24",
         "amount": null,
         "vat": "not stated",
-        "progress": "Contractor appointed",
-        "note": "Appointment of the contractor achieved; p.450"
+        "progress": "Contractor appointed: Malerate Construction",
+        "note": "Appointment of the contractor achieved; p.450; named on p.611 as 'Malerate construction' for the fence and borehole (ref TBC, value not stated)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Nemorango Consulting",
+        "note": "Fence and borehole; ref TBC; p.611"
       },
       {
         "date": "2025-03",
@@ -697,6 +738,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Mamayila Trading Enterprise / RM Mashaba Projects JV"
+    ],
+    "consultant": [
+      "T2-Tech Engineers"
+    ],
+    "contractNote": "PM53/2022 (panel ref), 0.6 km paving, contract 24 Jul 2024 to 10 Jan 2025, value not stated (Annual report 2024/25 p.833); design by T2-Tech Engineers (Annual report 2023/24 p.559)",
     "level": "municipal",
     "ward": "29",
     "village": "Ga-Dikgale",
@@ -770,6 +818,15 @@ window.PROJECTS = [
         "vat": "excl",
         "progress": "",
         "note": "IUDG; Annexure A p.1139 (also p.755)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: T2-Tech Engineers",
+        "note": "Design stage, detailed design completed; p.559"
       },
       {
         "date": "2025-03",
@@ -862,6 +919,15 @@ window.PROJECTS = [
         "note": "IUDG; spent R5 922 736 incl against adjusted R5 348 506 excl; plus CRR line spent R1 183 756 excl (R1 361 320 incl, 94%); pp.483-484"
       },
       {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Mamayila Trading Enterprise / RM Mashaba Projects JV",
+        "note": "PM53/2022; contract 24 Jul 2024 to 10 Jan 2025; value not stated; p.833"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -893,6 +959,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Rural Blue Belt"
+    ],
+    "consultant": [
+      "Nemorango Consulting Engineers"
+    ],
+    "contractNote": "Ref TBA, contract 29 Nov 2023 to 14 Jun 2024, value not stated; consultant written 'Nemorango consulting engineers' (Annual report 2023/24 p.570)",
     "level": "municipal",
     "ward": "32",
     "village": "Solomondale",
@@ -971,6 +1044,24 @@ window.PROJECTS = [
         "vat": "not stated",
         "progress": "",
         "note": "IUDG; spent 2023/24 (budget 2 194 000); p.466"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Rural Blue Belt",
+        "note": "Ref TBA; contract 29 Nov 2023 to 14 Jun 2024; value not stated; p.570"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Nemorango Consulting Engineers",
+        "note": "Ref TBA; p.570"
       },
       {
         "date": "2025-03",
@@ -1112,6 +1203,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "PJMJ Engineering & Plant Hire"
+    ],
+    "consultant": [
+      "Zakumi Consulting Engineers"
+    ],
+    "contractNote": "PM53/2022 (panel ref), 1.36 km gravel to tar, contract 3 Jun 2024 to 25 Feb 2025, value not stated (Annual report 2024/25 p.832); contractor written 'PJMJ' in Annual report 2023/24 p.569",
     "level": "municipal",
     "ward": "30",
     "village": "Tshware / Ga-Makgaba",
@@ -1273,6 +1371,24 @@ window.PROJECTS = [
         "note": "Outstanding invoices to service providers paid (100%); p.48"
       },
       {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: PJMJ Engineering & Plant Hire",
+        "note": "PM53/2022; contract 3 Jun 2024 to 25 Feb 2025; value not stated; p.832 (also 'PJMJ', Annual report 2023/24 p.569)"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Zakumi Consulting Engineers",
+        "note": "PM53/2022; p.832 (also Annual report 2023/24 p.569)"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -1340,6 +1456,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality (RAL roads list)",
+    "contractor": [
+      "Phoppe Maphori"
+    ],
+    "consultant": [
+      "Sizeya Consulting Engineers"
+    ],
+    "contractNote": "PM53/2022 (panel ref), 1.2 km gravel to tar, contract 19 Aug 2024 to 31 Mar 2025, value not stated (Annual report 2024/25 p.834)",
     "level": "municipal",
     "ward": "29",
     "village": "Mehlakong",
@@ -1496,6 +1619,24 @@ window.PROJECTS = [
         "note": "1.2 km to be paved; base, kerbs and paving bricks; p.46"
       },
       {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Phoppe Maphori",
+        "note": "PM53/2022; contract 19 Aug 2024 to 31 Mar 2025; value not stated; p.834"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Sizeya Consulting Engineers",
+        "note": "PM53/2022; p.834"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -1564,7 +1705,7 @@ window.PROJECTS = [
   {
     "id": "road-titibe-makgoba",
     "name": "Upgrading of road from Titibe to Marobala and Makgoba",
-    "short": "Titibe road",
+    "short": "Titibe–Marobala–Makgoba road",
     "sector": "Roads",
     "status": "in_progress",
     "statusNote": "98%, June 2026: practically complete but the contractor must redo the V-drain (poor workmanship) and is on penalties (Q4 report 2025/26)",
@@ -1572,9 +1713,16 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The May 2025 budget gave R9,452,567 for 2025/26, but the adjustments budget lists the original as R10,564,322.",
     "implementer": "Polokwane Municipality (RAL roads list)",
+    "contractor": [
+      "Maloka Machaba Surfacing"
+    ],
+    "consultant": [
+      "T2-Tech Engineers"
+    ],
+    "contractNote": "PM53/2022 (panel ref), 1.5 km road, contract 24 Jul 2024 to 14 Feb 2025, value not stated (Annual report 2024/25 p.833); T2-Tech Engineers also did the design (Annual report 2023/24 p.565)",
     "level": "municipal",
     "ward": "33",
-    "village": "Titibe",
+    "village": "Titibe, Marobala and Ga-Makgoba",
     "lat": -23.7204268,
     "lon": 29.7917217,
     "pin": "village",
@@ -1737,6 +1885,24 @@ window.PROJECTS = [
         "note": "Outstanding invoices only 70% paid because of outstanding works on site; p.47"
       },
       {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Maloka Machaba Surfacing",
+        "note": "PM53/2022; contract 24 Jul 2024 to 14 Feb 2025; value not stated; p.833"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: T2-Tech Engineers",
+        "note": "PM53/2022; p.833 (design: Annual report 2023/24 p.565)"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -1813,6 +1979,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "33",
     "village": "Titibe",
@@ -1885,6 +2054,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Limpopo CoGHSTA with Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "30",
     "village": "Ntsima, Ga-Dikgale",
@@ -1928,6 +2100,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "30",
     "village": "Ga-Mailula",
@@ -2000,6 +2175,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "32",
     "village": "Sebayeng (Diepriver)",
@@ -2166,6 +2344,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The May 2025 budget gave R2,285,337 for 2025/26, but the adjustments budget lists the original as R285,337, apparently missing a leading 2. The R142k cut is measured against the smaller figure.",
     "implementer": "Polokwane Municipality (RAL roads list)",
+    "contractor": [
+      "Makeyise Trading and Projects"
+    ],
+    "consultant": [
+      "Sebego Maloka and Viljoen Civil Engineers"
+    ],
+    "contractNote": "PM53/2022 (panel ref), 2.3 km road, contract 7 Dec 2023 to 30 Aug 2024, value not stated (Annual report 2024/25 p.830); Annual report 2023/24 p.562 gives the ref as TBA and the consultant as 'SMV Civil Engineers'",
     "level": "municipal",
     "ward": "33",
     "village": "Ga-Makgoba",
@@ -2313,6 +2498,24 @@ window.PROJECTS = [
         "note": "Outstanding invoices to service providers paid (100%); p.47"
       },
       {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Makeyise Trading and Projects",
+        "note": "PM53/2022; contract 7 Dec 2023 to 30 Aug 2024; value not stated; p.830 (also Annual report 2023/24 p.562)"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Sebego Maloka and Viljoen Civil Engineers",
+        "note": "PM53/2022; p.830; Annual report 2023/24 p.562 names 'SMV Civil Engineers'"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -2380,6 +2583,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "29",
     "village": "Segopye",
@@ -2443,6 +2649,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "29",
     "village": "Segopje",
@@ -2663,6 +2872,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "32",
     "village": "Dikgale",
@@ -2755,6 +2967,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Roads Agency Limpopo",
+    "contractor": [
+      "Basia Ke Balobedu (Pty) Ltd"
+    ],
+    "consultant": [
+      "Mgiba Consulting"
+    ],
+    "contractNote": "RAL/T1412/2025 maintenance of road D844 Mankweng to Sebayeng, awarded 24 Sep 2025, R12 500 000.00, VAT not stated (p.4 #24); RAL/C1412/2025 supervision, awarded 20 Oct 2025, R1 641 591,35, VAT not stated (p.6 #58) (RAL publication of bids Jul 2025 to Mar 2026)",
     "level": "provincial",
     "ward": "25 to 32",
     "village": "Mankweng to Sebayeng",
@@ -2922,7 +3141,7 @@ window.PROJECTS = [
         "fy": "",
         "amount": 12500000,
         "vat": "not stated",
-        "progress": "Contractor appointed",
+        "progress": "Contractor appointed: Basia Ke Balobedu (Pty) Ltd",
         "note": "RAL/T1412/2025 maintenance of road D844 Mankweng to Sebayeng; Basia Ke Balobedu (Pty) Ltd; awarded 24.09.2025; p.4 #24"
       },
       {
@@ -2931,7 +3150,7 @@ window.PROJECTS = [
         "fy": "",
         "amount": 1641591.35,
         "vat": "not stated",
-        "progress": "",
+        "progress": "Consultant appointed: Mgiba Consulting",
         "note": "RAL/C1412/2025 supervision; Mgiba Consulting; awarded 20.10.2025; p.6 #58"
       }
     ],
@@ -2949,6 +3168,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Roads Agency Limpopo",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "29, 30, 32, 33",
     "village": "Sebayeng, Solomondale, Ga-Dikgale",
@@ -3195,6 +3417,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Roads Agency Limpopo",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "32",
     "village": "Ga-Dikgale",
@@ -3281,6 +3506,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The EPRE gives a total cost of R4.5m but budgets R7.3m for 2026/27 alone (the RAL plan says R6.43m).",
     "implementer": "Roads Agency Limpopo",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "24",
     "village": "Makotopong, Ga-Mothiba",
@@ -3477,6 +3705,9 @@ window.PROJECTS = [
     "due": "2027-03",
     "dataIssue": "The 2026/27 allocation (R5m) is larger than the stated total project cost (R3.75m, with R327k spent).",
     "implementer": "Limpopo Department of Education",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "33",
     "village": "Ga-Dikgale",
@@ -3634,6 +3865,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The IDP gives a total cost of R291k but R14.4m spent. One of the figures is wrong at the source.",
     "implementer": "Limpopo Department of Education",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "24",
     "village": "Ga-Mothiba (Ngwanalaka)",
@@ -3733,6 +3967,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "Cost estimates differ: R889m (parliamentary reply, Nov 2024) against R7.6bn for phase 1A (CDM IDP 2026/27, all phases R23.2bn).",
     "implementer": "Lepelle Northern Water (for the national Department of Water and Sanitation)",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "national",
     "ward": "",
     "village": "Sebayeng, Ga-Dikgale (bulk supply)",
@@ -3827,6 +4064,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The planned amount looks far too low for the number of connections. The units in the CDM table may be wrong.",
     "implementer": "Eskom",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "national",
     "ward": "29",
     "village": "Segopje/Segopye",
@@ -3877,6 +4117,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The planned amount looks far too low for the number of connections. The units in the CDM table may be wrong.",
     "implementer": "Eskom",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "national",
     "ward": "32",
     "village": "Sebayeng",
@@ -3931,6 +4174,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Capricorn District Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "district",
     "ward": "",
     "village": "Ga-Makgoba",
@@ -4007,6 +4253,9 @@ window.PROJECTS = [
     "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "31",
     "village": "Thlatlaganya, Ga-Makgoba",
@@ -4111,6 +4360,9 @@ window.PROJECTS = [
     "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "32",
     "village": "Solomondale",
@@ -4178,6 +4430,15 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Saatchi",
+      "October Integrated",
+      "Todani"
+    ],
+    "consultant": [
+      "Mapco Projects and Development"
+    ],
+    "contractNote": "PM38/2022-12 (Saatchi) 725 VIPs wards 24 and 32; PM38/2022-16 (October Integrated) 727 VIPs wards 29 and 33; PM38/2022-15 (Todani) 744 VIPs; all start 12 May 2023, consultant Mapco (Annual report 2023/24 pp.606-607, where the refs are printed PM38/2002-; Annual report 2024/25 pp.843-844). Values per contract not stated; the three contracts total R37 950 000 appointed, VAT not stated (Final IDP 2024/25 p.462)",
     "level": "municipal",
     "ward": "24, 29 to 33",
     "village": "Sebayeng/Dikgale cluster villages",
@@ -4225,6 +4486,42 @@ window.PROJECTS = [
         "note": "3 contractors appointed in 2023/24 for 2160 VIPs in the Sebayeng Dikgale cluster; 744 completed in 2023/24; p.50. Contracts: -12 720 VIPs 77%, -16 727 VIPs 96%, -15 744 VIPs complete; pp.374-375"
       },
       {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2022/23",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Saatchi",
+        "note": "PM38/2022-12 (printed 'PM38/2002-12'), 720 VIPs; start 12 May 2023; value not stated; p.606"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2022/23",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: October Integrated",
+        "note": "PM38/2022-16 (printed 'PM38/2002-16'), 727 VIPs; start 12 May 2023; value not stated; p.606"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2022/23",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Todani",
+        "note": "PM38/2022-15 (printed 'PM38/2002-15'), 744 VIPs; start 12 May 2023; value not stated; p.607"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2022/23",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Mapco Projects and Development",
+        "note": "All three PM38/2022 VIP contracts; pp.606-607"
+      },
+      {
         "date": "2026-01",
         "document": "Annual report 2024/25",
         "fy": "",
@@ -4256,6 +4553,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "24",
     "village": "Matsiokwane / Ngwanalaka (Mafiane)",
@@ -4396,6 +4696,13 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [
+      "Shabback Business Enterprise"
+    ],
+    "consultant": [
+      "Muteo Consulting Engineers"
+    ],
+    "contractNote": "Phase 1 only ('Paving of streets in Sebayeng/Dikgale Cluster (Paving of internal street at Madiga) Ward 29'): PM53/2022 (panel ref), contract 23 Nov 2023 to 30 May 2024, value not stated, project completed (Annual report 2023/24 p.557). No contractor named for phase 2",
     "level": "municipal",
     "ward": "29",
     "village": "Madiga",
@@ -4466,6 +4773,24 @@ window.PROJECTS = [
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed: Shabback Business Enterprise",
+        "note": "Phase 1; PM53/2022; contract 23 Nov 2023 to 30 May 2024; value not stated; p.557"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Consultant appointed: Muteo Consulting Engineers",
+        "note": "Phase 1; PM53/2022; p.557"
+      },
+      {
+        "date": "2025-03",
         "document": "SDBIP 2024/25 (revised)",
         "fy": "2024/25",
         "amount": 869565,
@@ -4523,6 +4848,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "31",
     "village": "Sencherere",
@@ -4595,6 +4923,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "The CDM table prints 750 291 as planned capex for 102 connections, which looks far too low in rands; the units may be wrong, so no budget line is shown.",
     "implementer": "Eskom",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "national",
     "ward": "29",
     "village": "Madiga",
@@ -4638,6 +4969,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "31",
     "village": "Mamotintane",
@@ -4733,6 +5067,9 @@ window.PROJECTS = [
     "due": "2027-06",
     "dataIssue": "The budget funds it from IUDG; the SDBIP and IDP list it as own funds (CRR).",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "31",
     "village": "Thabang (near Ngaleng)",
@@ -4800,6 +5137,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "Only R269 618 incl (33%) of the R826 572 budget was spent in 2024/25 (Annual report), although the ramp is reported as built. Ward differs: the SDBIP says ward 32, the IDP lists the station in ward 33.",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "33",
     "village": "Ga-Dikgale",
@@ -4889,6 +5229,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "24",
     "village": "Makotopong",
@@ -4965,6 +5308,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality (RAL roads list)",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "municipal",
     "ward": "33",
     "village": "Ga-Mokgopo / Ga-Makalanyane",
@@ -5039,6 +5385,9 @@ window.PROJECTS = [
     "due": "",
     "dataIssue": "",
     "implementer": "Limpopo Department of Public Works, Roads and Infrastructure for CoGHSTA",
+    "contractor": [],
+    "consultant": [],
+    "contractNote": "",
     "level": "provincial",
     "ward": "",
     "village": "Ga-Dikgale (Moshate)",
