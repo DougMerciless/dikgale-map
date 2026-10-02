@@ -5,9 +5,9 @@
     "short": "Sebayeng/Dikgale RWS",
     "sector": "Water",
     "status": "in_progress",
-    "statusNote": "Phase 10 was 64% complete in mid-2024; later plans repeat that figure unchanged",
-    "progress": "64%",
-    "due": "2024-07",
+    "statusNote": "Phase 10 reached practical completion (contract Jan to Sept 2024, Annual report 2024/25). The next phase was at 0% against a 35% target in June 2026; detailed design under way, construction expected to start in July to Sept 2026 (Q4 report 2025/26)",
+    "progress": "",
+    "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
     "level": "municipal",
@@ -17,7 +17,7 @@
     "lon": 29.698348,
     "pin": "village",
     "route": null,
-    "note": "Multi-phase bulk scheme running since 2011, supplying 30+ villages from the Ebenezer bulk line. Phase 10 targeted Sebayeng, Dikgale, Potse, Ntsima and Syferkuil (118 households, 34 jobs). Map pin marks Sebayeng; the scheme covers a wide area.",
+    "note": "Multi-phase bulk scheme running since 2011, supplying 30+ villages from the Ebenezer bulk line. Phase 10 targeted Sebayeng, Dikgale, Potse, Ntsima and Syferkuil (118 households, 34 jobs). Map pin marks Sebayeng; the scheme covers a wide area. The 64% figure (July 2024) was for phase 10 only and is no longer shown as the project's progress. The 2026/27 SDBIP plans 2 200 m of reticulation, 1 000 m of pumping main, 2 storage tanks, 2 equipped boreholes and 20 communal standpipes by June 2027.",
     "sources": [
       {
         "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
@@ -34,6 +34,30 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
       }
     ],
     "budget": [
@@ -101,6 +125,15 @@
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 5957323,
+        "vat": "not stated",
+        "progress": "64% (phase 10)",
+        "note": "IUDG 'WIP Sebayeng/Dikgale RWS 233600' spent 100% (also CRR WIP R4 657 620 of R5 123 486); target 90% missed due to stoppages and community unrest; pp.43-44, p.423"
+      },
+      {
+        "date": "2025-03",
         "document": "Draft IDP 2025/26 (projects phase)",
         "fy": "2025/26",
         "amount": 2869417,
@@ -132,8 +165,17 @@
         "fy": "",
         "amount": null,
         "vat": "not stated",
-        "progress": "64%",
+        "progress": "64% (phase 10)",
         "note": "Phase 10 reached 64%; p.329"
+      },
+      {
+        "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Phase 11 investigations: 3%",
+        "note": "Phase 11: geohydrological investigations; p.33"
       },
       {
         "date": "2025-05",
@@ -170,6 +212,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.100; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Phase 11 design: 5%",
+        "note": "Preliminary design report; PDR and DDR; p.32. 411 households in Sebayeng/Dikgale got water access in 2024/25 (p.9)"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 9249895,
+        "vat": "excl",
+        "progress": "Phase 10 practical completion",
+        "note": "IUDG; spent R10 637 379 incl (100%); phase 10 contract PM38/2022 (Makeyise Trading) 19 Jan 2024 to 18 Sept 2024, practical completion, snag list pending; p.488, p.290"
       },
       {
         "date": "2026-02",
@@ -222,7 +282,7 @@
         "fy": "",
         "amount": null,
         "vat": "not stated",
-        "progress": "64%",
+        "progress": "64% (phase 10, repeated)",
         "note": "repeats 2024 Phase 10 64% text; p.346"
       },
       {
@@ -278,6 +338,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.1492; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 6389414,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG CWP_5; wards 29-33; same as budget R5 556 012 excl; p.19"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "0% (target 35%)",
+        "note": "Target 35% (reticulation) not met: late approval of project areas, survey and geotechnical delays; preliminary design approved; construction expected Q1 2026/27; p.37 (scanned page)"
       }
     ],
     "mapWard": 32
@@ -287,8 +365,8 @@
     "name": "Construction of Sebayeng/Dikgale Sport Complex",
     "short": "Sport complex",
     "sector": "Sport",
-    "status": "funded",
-    "statusNote": "Delayed: no contractor appointed yet (2025 and 2026 budgets). R4.7m, R5.3m and R4.3m planned for 2026/27 to 2028/29",
+    "status": "in_progress",
+    "statusNote": "Under construction in phases: fence and borehole done (2024/25), ablution block and pitch grass done (June 2026); combi courts and athletics track planned for 2026/27 (SDBIP 2026/27)",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -300,7 +378,7 @@
     "lon": null,
     "pin": "",
     "route": null,
-    "note": "Site not published. The IDP lists the project for the whole cluster (wards 24, 29, 30, 31, 32 and 33) with no GPS point. The budget's coordinates (-23.891, 29.382) are west of Polokwane city, outside the cluster, so they are an error. The 2026/31 draft IDP still lists it, with R5.4m and R5m in later years.",
+    "note": "Site not published. The IDP lists the project for the whole cluster (wards 24, 29, 30, 31, 32 and 33) with no GPS point. The budget's coordinates (-23.891, 29.382) are west of Polokwane city, outside the cluster, so they are an error. The 2026/31 draft IDP still lists it, with R5.4m and R5m in later years. A contractor was appointed in 2023/24 (Annual report 2023/24 p.450); the 2025 budget remark that no contractor was appointed is out of date. The 2024/25 performance reports tag the project to ward 24 and the A-schedule to ward 33.",
     "sources": [
       {
         "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
@@ -317,6 +395,34 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
       }
     ],
     "budget": [
@@ -381,6 +487,15 @@
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor appointed",
+        "note": "Appointment of the contractor achieved; p.450"
+      },
+      {
+        "date": "2025-03",
         "document": "Draft IDP 2025/26 (projects phase)",
         "fy": "2025/26",
         "amount": 2347826,
@@ -408,6 +523,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Fencing: 100%",
+        "note": "Fencing; practical completion certificate; p.41"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 6523887,
@@ -432,6 +556,33 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.103; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Borehole: 100%",
+        "note": "Drilling of borehole; completion certificate; p.38"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "18% (target 25%)",
+        "note": "Target 25% not met: dispute over appointment of EPWP personnel; guardhouse and ablution block; p.55"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 5446546,
+        "vat": "excl",
+        "progress": "Year's budget spent: 99%",
+        "note": "IUDG; spent 2024/25 (R6 263 528 incl) against adjusted R5 496 688 excl (R6 321 191 incl); p.497"
       },
       {
         "date": "2026-02",
@@ -513,6 +664,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.1498; same in Final budget 2026/27 Annexure A (Jun 2026)"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 5438621,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG CWP_81; combi courts then athletics track by 30 June 2027; same as budget R4 729 236 excl; p.23"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Ablution block and pitch: 100%",
+        "note": "Construction of ablution block and planting grass for soccer pitch; p.55 (scanned page)"
       }
     ],
     "mapWard": null
@@ -523,7 +692,7 @@
     "short": "Moshate paving",
     "sector": "Roads",
     "status": "deferred",
-    "statusNote": "Budget removed in Feb 2026 adjustments",
+    "statusNote": "Budget removed in Feb 2026 adjustments. Work stood at 60% in June 2025 after a cash-flow stoppage; outstanding invoices were paid in 2025/26 (mid-year report). No completion reported",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -544,6 +713,26 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane SDBIP 2024/25 (revised Mar 2025)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/SDBIP-2024-2025-REVISED-1-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -620,6 +809,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Surfacing 0.65 km: 60%",
+        "note": "Target 0.65 km surfacing; project on hold for cash-flow; contractor paid 28/03/2025 and to resume; p.26"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 2108696,
@@ -635,6 +833,33 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "60% (target not met)",
+        "note": "Target not achieved; to be aligned to the design report; p.29"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Outstanding invoices to service providers paid (100%); p.47"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 5150205,
+        "vat": "excl",
+        "progress": "Year's budget spent: 96%",
+        "note": "IUDG; spent R5 922 736 incl against adjusted R5 348 506 excl; plus CRR line spent R1 183 756 excl (R1 361 320 incl, 94%); pp.483-484"
       },
       {
         "date": "2026-02",
@@ -663,7 +888,7 @@
     "short": "Solomondale paving",
     "sector": "Roads",
     "status": "deferred",
-    "statusNote": "Budget removed in Feb 2026 adjustments",
+    "statusNote": "Budget removed in Feb 2026 adjustments. R8.5m was spent in 2024/25 (98% of budget) and outstanding invoices were paid in 2025/26; no completion certificate found, so not marked complete",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -684,6 +909,22 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2024/25 (revised Mar 2025)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/SDBIP-2024-2025-REVISED-1-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -721,6 +962,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; Annexure A p.1139 (also p.769)"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 2190066,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; spent 2023/24 (budget 2 194 000); p.466"
+      },
+      {
+        "date": "2025-03",
+        "document": "SDBIP 2024/25 (revised)",
+        "fy": "2024/25",
+        "amount": 6171407,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG adjusted (R7 097 118 incl); target 1.43 km stormwater; pp.9, 30"
       },
       {
         "date": "2025-03",
@@ -766,6 +1025,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Outstanding invoices to service providers paid (100%); p.48"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 7429623,
+        "vat": "excl",
+        "progress": "Year's budget spent: 98%",
+        "note": "IUDG; spent R8 544 066 incl against adjusted R7 571 407 excl (R8 707 118 incl); p.485"
       },
       {
         "date": "2026-02",
@@ -829,9 +1106,9 @@
     "name": "Upgrading of arterial road in Tshware from taxi rank via Tshware village to Mamotshwa clinic",
     "short": "Tshware road",
     "sector": "Roads",
-    "status": "funded",
-    "statusNote": "Budget reduced in Feb 2026 adjustments",
-    "progress": "",
+    "status": "complete",
+    "statusNote": "Contract works complete: stormwater (Q3 2024/25) and layer works (Q4 2024/25) at 100%, each with a completion certificate. The year's target was surfacing 1.36 km; the reports do not say the surfacing was done. R0.87m planned for 2028/29",
+    "progress": "100%",
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
@@ -851,6 +1128,22 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -891,6 +1184,15 @@
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 920609,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; spent 2023/24 (R920 608.81); p.466"
+      },
+      {
+        "date": "2025-03",
         "document": "Draft IDP 2025/26 (projects phase)",
         "fy": "2025/26",
         "amount": 2448509,
@@ -927,6 +1229,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Stormwater works: 100%",
+        "note": "Target: surfacing of 1.36 km; stormwater construction achieved, completion certificate; p.31"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 3293006,
@@ -942,6 +1253,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.99; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Layer works: 100%",
+        "note": "Completion of layer works; completion certificate; p.31"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Outstanding invoices to service providers paid (100%); p.48"
       },
       {
         "date": "2026-02",
@@ -1005,9 +1334,9 @@
     "name": "Paving of Sekoala Primary School road to Mehlakong",
     "short": "Sekoala road",
     "sector": "Roads",
-    "status": "funded",
-    "statusNote": "Topped up in Feb 2026 adjustments",
-    "progress": "",
+    "status": "complete",
+    "statusNote": "Complete: 1.2 km paved, practical and completion certificates, June 2026 (Q4 report 2025/26)",
+    "progress": "100%",
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality (RAL roads list)",
@@ -1031,6 +1360,22 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q1 performance report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FIRST-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-2025-2026-OCTOBER-2025.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
       }
     ],
     "budget": [
@@ -1107,6 +1452,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Layer works: 55.7%",
+        "note": "Construction of layer works; p.31"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 2549149,
@@ -1122,6 +1476,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; RAL roads table p.106; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-10",
+        "document": "Q1 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Layer works: 73%",
+        "note": "Processing layer works; p.33"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Paving 1.2 km: 91%",
+        "note": "1.2 km to be paved; base, kerbs and paving bricks; p.46"
       },
       {
         "date": "2026-02",
@@ -1176,6 +1548,15 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.1489"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "1.2 km paved: 100%",
+        "note": "1.2 km paved; practical and completion certificates; p.46 (scanned page)"
       }
     ],
     "mapWard": 29
@@ -1185,9 +1566,9 @@
     "name": "Upgrading of road from Titibe to Marobala and Makgoba",
     "short": "Titibe road",
     "sector": "Roads",
-    "status": "funded",
-    "statusNote": "In the 2025/26 budget",
-    "progress": "",
+    "status": "in_progress",
+    "statusNote": "98%, June 2026: practically complete but the contractor must redo the V-drain (poor workmanship) and is on penalties (Q4 report 2025/26)",
+    "progress": "98%",
     "due": "",
     "dataIssue": "The May 2025 budget gave R9,452,567 for 2025/26, but the adjustments budget lists the original as R10,564,322.",
     "implementer": "Polokwane Municipality (RAL roads list)",
@@ -1207,6 +1588,26 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
+      },
+      {
+        "label": "Polokwane notice: Titibe road progress update (Dec 2025)",
+        "url": "https://www.polokwane.gov.za/public-notice-upgrading-of-road-from-titibe-to-marobala-and-makgoba-progress-update/"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
       }
     ],
     "budget": [
@@ -1247,6 +1648,15 @@
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 999086,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; spent 2023/24 (budget 1 000 000); p.465"
+      },
+      {
+        "date": "2025-03",
         "document": "Draft IDP 2025/26 (projects phase)",
         "fy": "2025/26",
         "amount": 2681023,
@@ -1283,6 +1693,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "25% (target 40%)",
+        "note": "Target 40% not achieved: slow progress, cash-flow problems; p.30"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 3000000,
@@ -1298,6 +1717,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; RAL roads table p.106 (incl 10 870 452); same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-12",
+        "document": "Polokwane notice: Titibe road progress",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Surfacing of 1.5 km completed; road to open over December holidays; V-drain and kerbs from January 2026"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Invoices paid: 70%",
+        "note": "Outstanding invoices only 70% paid because of outstanding works on site; p.47"
       },
       {
         "date": "2026-02",
@@ -1352,6 +1789,15 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; p.1504"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "1.5 km road: 98%",
+        "note": "Completion of 1.5 km road; practically complete, V-drain to be redone, contractor on penalties and busy with snag list; p.46 (scanned page)"
       }
     ],
     "mapWard": 33
@@ -1361,9 +1807,9 @@
     "name": "Construction of low-level bridge linking Titibe and Mogabane",
     "short": "Titibe bridge",
     "sector": "Bridges",
-    "status": "funded",
-    "statusNote": "Added in Feb 2026 adjustments",
-    "progress": "",
+    "status": "complete",
+    "statusNote": "Complete: bridge built, payment and completion certificate, June 2026 (Q4 report 2025/26)",
+    "progress": "100%",
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
@@ -1383,6 +1829,10 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
       }
     ],
     "budget": [
@@ -1411,6 +1861,15 @@
         "vat": "excl",
         "progress": "",
         "note": "CRR; new low-level bridge (Titibe and Mogabane) moved from operating budget; p.16, p.22"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Bridge built: 100%",
+        "note": "'Construction of low-level bridge linking Titibe and Mogabane': target achieved, 1 low-level bridge constructed; p.48 (scanned page)"
       }
     ],
     "mapWard": 33
@@ -1463,9 +1922,9 @@
     "name": "Construction of low-level bridge in Ga-Mailula",
     "short": "Ga-Mailula bridge",
     "sector": "Bridges",
-    "status": "funded",
-    "statusNote": "Added in Feb 2026 adjustments",
-    "progress": "",
+    "status": "complete",
+    "statusNote": "Complete: bridge built, payment and completion certificate, June 2026 (Q4 report 2025/26)",
+    "progress": "100%",
     "due": "",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
@@ -1485,6 +1944,10 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
       }
     ],
     "budget": [
@@ -1513,6 +1976,15 @@
         "vat": "excl",
         "progress": "",
         "note": "CRR; new low-level bridge (Ga Mailula) moved from operating budget; p.16, p.22"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Bridge built: 100%",
+        "note": "'Construction of low level bridge in Ga Mailula': target achieved, 1 low-level bridge constructed; p.48 (scanned page)"
       }
     ],
     "mapWard": 30
@@ -1523,7 +1995,7 @@
     "short": "Diepriver wellfields",
     "sector": "Water",
     "status": "funded",
-    "statusNote": "Slightly reduced in Feb 2026 adjustments",
+    "statusNote": "Planning: scoping report done by Dec 2025 (mid-year report 2025/26); construction money (RBIG) dropped from the 2026/27 budget",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -1548,6 +2020,10 @@
       {
         "label": "Polokwane Final IDP 2026/31",
         "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -1614,6 +2090,15 @@
         "note": "RBIG line; p.100"
       },
       {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Scoping: 50%",
+        "note": "Planning and design, CWP_39: scoping achieved; p.41"
+      },
+      {
         "date": "2026-02",
         "document": "Adjustments budget 2025/26 – original",
         "fy": "2025/26",
@@ -1675,9 +2160,9 @@
     "name": "Upgrading of access road in Ga-Makgoba",
     "short": "Ga-Makgoba road",
     "sector": "Roads",
-    "status": "funded",
-    "statusNote": "Budget roughly halved in Feb 2026 adjustments",
-    "progress": "",
+    "status": "complete",
+    "statusNote": "Complete: 2.2 km surfaced, completion certificate, June 2025 (Q4 report 2024/25)",
+    "progress": "100%",
     "due": "",
     "dataIssue": "The May 2025 budget gave R2,285,337 for 2025/26, but the adjustments budget lists the original as R285,337, apparently missing a leading 2. The R142k cut is measured against the smaller figure.",
     "implementer": "Polokwane Municipality (RAL roads list)",
@@ -1701,6 +2186,22 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -1732,6 +2233,15 @@
       },
       {
         "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 3534983,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; spent 2023/24 (budget 3 542 963); p.465"
+      },
+      {
+        "date": "2025-03",
         "document": "Draft IDP 2025/26 (projects phase)",
         "fy": "2025/26",
         "amount": 2400000,
@@ -1759,6 +2269,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Surfacing 2.2 km: 100%",
+        "note": "Surfacing of 2.2 km road achieved, completion certificate; p.29"
+      },
+      {
+        "date": "2025-05",
         "document": "Final IDP 2025/26 – 2024/25 project status table",
         "fy": "2024/25",
         "amount": 3061437,
@@ -1774,6 +2293,24 @@
         "vat": "excl",
         "progress": "",
         "note": "IUDG; RAL roads table p.106 (incl 2 628 138); same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Road reserve finishing: 100%",
+        "note": "Cleaning and finishing the road reserve; completion certificate; p.31"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Outstanding invoices to service providers paid (100%); p.47"
       },
       {
         "date": "2026-02",
@@ -1901,7 +2438,7 @@
     "short": "Segopje service centre",
     "sector": "Community services",
     "status": "funded",
-    "statusNote": "The 2026/31 IDP describes the centre as established, with no further money",
+    "statusNote": "Public ablutions reached practical completion in June 2025 (Q4 report 2024/25); the 2026/31 IDP describes the centre as established",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -1926,6 +2463,22 @@
       {
         "label": "Polokwane budget documents (original, adjusted, draft and final MTREF)",
         "url": "https://www.polokwane.gov.za/budget/"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Mid-year report 2025/26",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/POLOKWANE-MUNICIPALITY-MID-YEAR-BUDGET-AND-PERFORMANCE-ASSESSMENT-REPORT-2025-26-29-JAN-2026.pdf"
       }
     ],
     "budget": [
@@ -1999,6 +2552,15 @@
       },
       {
         "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Ablutions and electrical: 19%",
+        "note": "Public ablution and electrical installations; contractor behind schedule; p.43"
+      },
+      {
+        "date": "2025-05",
         "document": "Original budget 2025/26 (Annexure A)",
         "fy": "2025/26",
         "amount": 2000000,
@@ -2014,6 +2576,33 @@
         "vat": "excl",
         "progress": "",
         "note": "CRR; p.104; same figures in Final IDP 2025/26 Annexure B p.1410ff"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Ablutions commissioned: 100%",
+        "note": "Commissioning of public ablution facilities and testing of electrical installations; practical completion certificate; p.40"
+      },
+      {
+        "date": "2026-01",
+        "document": "Mid-year report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Benches and fence: 0% (done the year before)",
+        "note": "Benches and perimeter fence target: activities achieved in the previous year; p.60"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 2080998,
+        "vat": "excl",
+        "progress": "Year's budget spent: 94%",
+        "note": "CRR; spent R2 393 148 incl against adjusted R2 541 512 incl; p.500"
       },
       {
         "date": "2026-02",
@@ -2160,9 +2749,9 @@
     "name": "RAL/T1134 Preventative maintenance of road D844 from Mankweng to Sebayeng",
     "short": "D844 maintenance",
     "sector": "Roads",
-    "status": "funded",
-    "statusNote": "Design stage (3%); money in 2026/27 and 2027/28",
-    "progress": "3%",
+    "status": "in_progress",
+    "statusNote": "Contractor appointed Sept 2025 (RAL/T1412/2025, R12.5m); no progress figure reported since",
+    "progress": "",
     "due": "",
     "dataIssue": "",
     "implementer": "Roads Agency Limpopo",
@@ -2208,7 +2797,7 @@
         ]
       ]
     ],
-    "note": "Provincial project. Total cost R24.6m, R7.3m spent in earlier years (EPRE). The RAL plan gives different yearly figures: R6.43m in 2026/27 and R22.53m in 2027/28. Drawn as a line along road D844 in OpenStreetMap, from D617 in Mankweng to the D3997 junction in Sebayeng; the pin is the line's midpoint. The EPRE point (-23.8809, 29.7259) is at the Mankweng end, about 1.8 km off the road. The ward list is the wards the road runs through or along.",
+    "note": "Provincial project. Total cost R24.6m, R7.3m spent in earlier years (EPRE). The RAL plan gives different yearly figures: R6.43m in 2026/27 and R22.53m in 2027/28. Drawn as a line along road D844 in OpenStreetMap, from D617 in Mankweng to the D3997 junction in Sebayeng; the pin is the line's midpoint. The EPRE point (-23.8809, 29.7259) is at the Mankweng end, about 1.8 km off the road. The ward list is the wards the road runs through or along. Contracts: RAL/T1412/2025 maintenance of road D844 Mankweng to Sebayeng, Basia Ke Balobedu (Pty) Ltd, awarded 24 Sept 2025, R12 500 000.00; RAL/C1412/2025 supervision, Mgiba Consulting, awarded 20 Oct 2025, R1 641 591.35 (RAL tender bulletin pp.4, 6). The earlier 3% was the design-stage figure.",
     "sources": [
       {
         "label": "Limpopo EPRE 2025/26, Table B5",
@@ -2225,6 +2814,10 @@
       {
         "label": "OpenStreetMap (road geometry)",
         "url": "https://www.openstreetmap.org/"
+      },
+      {
+        "label": "RAL Publication of Bids, Jul 2025 to Mar 2026",
+        "url": "https://www.ral.co.za/wp-content/uploads/2026/04/Publication-of-Bids-on-Tender-Bulletin-March-2026.pdf"
       }
     ],
     "budget": [
@@ -2322,6 +2915,24 @@
         "vat": "not stated",
         "progress": "Site establishment",
         "note": "now listed as RAL T1412 D844 Mankweng to Sebayeng; p.1233"
+      },
+      {
+        "date": "2026-04",
+        "document": "RAL tender bulletin Jul 2025–Mar 2026",
+        "fy": "",
+        "amount": 12500000,
+        "vat": "not stated",
+        "progress": "Contractor appointed",
+        "note": "RAL/T1412/2025 maintenance of road D844 Mankweng to Sebayeng; Basia Ke Balobedu (Pty) Ltd; awarded 24.09.2025; p.4 #24"
+      },
+      {
+        "date": "2026-04",
+        "document": "RAL tender bulletin Jul 2025–Mar 2026",
+        "fy": "",
+        "amount": 1641591.35,
+        "vat": "not stated",
+        "progress": "",
+        "note": "RAL/C1412/2025 supervision; Mgiba Consulting; awarded 20.10.2025; p.6 #58"
       }
     ],
     "mapWard": 30,
@@ -2863,8 +3474,8 @@
     "status": "in_progress",
     "statusNote": "Practical completion 97%; R5m more budgeted for 2026/27",
     "progress": "97%",
-    "due": "",
-    "dataIssue": "",
+    "due": "2027-03",
+    "dataIssue": "The 2026/27 allocation (R5m) is larger than the stated total project cost (R3.75m, with R327k spent).",
     "implementer": "Limpopo Department of Education",
     "level": "provincial",
     "ward": "33",
@@ -2948,6 +3559,15 @@
       },
       {
         "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Sector list row 29: start 2022-11-30, end 2027-03-31; printed p.1179 (PDF p.1180)"
+      },
+      {
+        "date": "2026-05",
         "document": "Capricorn DM IDP 2026/27",
         "fy": "2026/27",
         "amount": 5000000,
@@ -3021,7 +3641,7 @@
     "lon": 29.6520958,
     "pin": "site",
     "route": null,
-    "note": "Provincial project, Education Infrastructure Grant. The type of work is not stated. The IDP gives a total cost of R291k but R14.4m spent, so the figures conflict. Pin is from the school register (EMIS 923241108).",
+    "note": "Provincial project, Education Infrastructure Grant. The type of work is not stated. The IDP gives a total cost of R291k but R14.4m spent, so the figures conflict. Pin is from the school register (EMIS 923241108). The EPRE 2025/26 gives an end date of 31 March 2026 (Stage 6: handover). The school is not in the 2026/27 education list in the Final IDP 2026/31, and no completion statement was found.",
     "sources": [
       {
         "label": "Limpopo EPRE 2025/26, Table B5",
@@ -3089,6 +3709,15 @@
         "vat": "not stated",
         "progress": "97% (practical completion)",
         "note": "EIG; R14 374 447 spent; p.1186"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Not listed in the 2026/27 education sector list (around printed p.1179)"
       }
     ],
     "mapWard": 24
@@ -3099,8 +3728,8 @@
     "short": "Ebenezer bulk water",
     "sector": "Water",
     "status": "in_progress",
-    "statusNote": "54% complete in Nov 2024; phase 1 due in 2026",
-    "progress": "54%",
+    "statusNote": "March 2026: an MP put Olifantspoort at 85% and Ebenezer at 65% complete when questioning LNW in Parliament; LNW reported 82% overall progress against plan for its capital projects (2024/25 annual report presentation)",
+    "progress": "",
     "due": "",
     "dataIssue": "Cost estimates differ: R889m (parliamentary reply, Nov 2024) against R7.6bn for phase 1A (CDM IDP 2026/27, all phases R23.2bn).",
     "implementer": "Lepelle Northern Water (for the national Department of Water and Sanitation)",
@@ -3120,6 +3749,14 @@
       {
         "label": "PMG written reply NO489 (Nov 2024)",
         "url": "https://pmg.org.za/committee-question/27073/"
+      },
+      {
+        "label": "PMG: Water and Sanitation Committee, 10 Mar 2026 (LNW annual report)",
+        "url": "https://pmg.org.za/committee-meeting/42550/"
+      },
+      {
+        "label": "Lepelle Northern Water annual report 2024/25 presentation (Mar 2026)",
+        "url": "https://pmg.org.za/files/260310updated_Lepelle_NW_Integrated_Annual_Report_202425Rev1.pdf"
       }
     ],
     "budget": [
@@ -3137,7 +3774,7 @@
         "fy": "total",
         "amount": 889000000,
         "vat": "not stated",
-        "progress": "54%",
+        "progress": "54% (phase 1)",
         "note": "Budget Facility for Infrastructure; phase 1 (refurbishment to restore 60 Ml/day) total cost; expected completion July 2025; reply dated 14 Nov 2024"
       },
       {
@@ -3148,6 +3785,24 @@
         "vat": "not stated",
         "progress": "Phase 1 due 2026",
         "note": "LNW; first phase set for completion in 2026; p.335"
+      },
+      {
+        "date": "2026-03",
+        "document": "PMG committee meeting 10 Mar 2026",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Ebenezer 65%, Olifantspoort 85% (figures quoted by an MP)",
+        "note": "Ms M Kobe (ActionSA) asked for updates on the 'Olifantspoort (85% completion) and Ebeneezer (65% completion)' ministerial projects; figures stated by the MP, not by LNW"
+      },
+      {
+        "date": "2026-03",
+        "document": "LNW annual report 2024/25 presentation",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "82% against plan (all LNW phase 1 work)",
+        "note": "Chart 'Overall progress achieved against PEP' 82%, covering Olifantspoort and Ebenezer phase 1A electromechanical and pipeline works and other LNW projects; p.21"
       },
       {
         "date": "2026-05",
@@ -3271,7 +3926,7 @@
     "short": "Ga-Makgoba bio-digesters",
     "sector": "Energy",
     "status": "complete",
-    "statusNote": "Pilot built; households get cooking gas",
+    "statusNote": "Pilot built; households get cooking gas. CDM still monitored the Makgoba biogas project in 2024/25",
     "progress": "",
     "due": "",
     "dataIssue": "",
@@ -3296,6 +3951,10 @@
       {
         "label": "University of Venda: biogas training and CDM pilot at Makgoba (2020, web archive)",
         "url": "http://web.archive.org/web/20200611030254/https://www.univen.ac.za/?p=18096"
+      },
+      {
+        "label": "Capricorn DM Annual report 2024/25",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/03/Final-2025-Annual-Report-AMENDED-with-MPAC-Resolution.pdf"
       }
     ],
     "budget": [
@@ -3317,6 +3976,15 @@
         "note": "CDM support for piloting bio-digesters in communities around Makgoba village; training held at Makgoba Community Hall, 13-17 Mar 2020; date is the web archive capture (11 Jun 2020)"
       },
       {
+        "date": "2026-03",
+        "document": "Capricorn DM Annual report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "CDM monitored biogas renewable energy projects in Makgoba, Avon and Indermark in 2024/25; p.58"
+      },
+      {
         "date": "2026-05",
         "document": "Capricorn DM IDP 2026/27",
         "fy": "",
@@ -3334,9 +4002,9 @@
     "short": "Thlatlaganya paving",
     "sector": "Roads",
     "status": "funded",
-    "statusNote": "New in the 2026/27 budget: 1 km of street to be paved",
+    "statusNote": "New in the 2026/27 budget: 1 km of street to be paved by June 2027 (SDBIP 2026/27)",
     "progress": "",
-    "due": "",
+    "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
     "level": "municipal",
@@ -3363,6 +4031,10 @@
       {
         "label": "Polokwane Final Budget 2025/26 A-Schedule (SA36)",
         "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-ANNUAL-BUDGET-202526_2028_MTREF.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
       }
     ],
     "budget": [
@@ -3415,6 +4087,15 @@
         "vat": "excl",
         "progress": "",
         "note": "CRR 7 500 000 + IUDG 5 500 000"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 13500000,
+        "vat": "incl",
+        "progress": "",
+        "note": "IUDG CWP_213 'commitments project'; ward 31; 1 km paved; p.30 (budget lists IUDG R5 500 000 excl + CRR R7 500 000 excl)"
       }
     ],
     "mapWard": 31
@@ -3425,9 +4106,9 @@
     "short": "Solomondale street rehab",
     "sector": "Roads",
     "status": "funded",
-    "statusNote": "New in the 2026/27 budget",
+    "statusNote": "New in the 2026/27 budget: 2.8 km of street to be rehabilitated by June 2027 (SDBIP 2026/27)",
     "progress": "",
-    "due": "",
+    "due": "2027-06",
     "dataIssue": "",
     "implementer": "Polokwane Municipality",
     "level": "municipal",
@@ -3450,6 +4131,10 @@
       {
         "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
         "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
       }
     ],
     "budget": [
@@ -3469,8 +4154,934 @@
         "vat": "excl",
         "progress": "",
         "note": "CRR; incl 11 500 000"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 11500000,
+        "vat": "incl",
+        "progress": "",
+        "note": "CRR CWP_200; ward 32; 2.8 km rehabilitated by target date; same as budget R10 000 000 excl; p.29"
       }
     ],
     "mapWard": 32
+  },
+  {
+    "id": "sanitation-sebayeng-dikgale-vip",
+    "name": "Sebayeng/Dikgale Rural Sanitation (VIP toilets)",
+    "short": "Rural sanitation VIPs",
+    "sector": "Sanitation",
+    "status": "complete",
+    "statusNote": "Built in 2023 and 2024 under three contracts: 744 VIPs complete Nov 2023; 725 VIPs and 727 VIPs reached practical completion (one in Oct 2024); contractors compiling beneficiary lists (Annual report 2024/25)",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "24, 29 to 33",
+    "village": "Sebayeng/Dikgale cluster villages",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "About 2 196 VIP toilets in three IUDG contracts (consultant Mapco): PM38/2022-15 (Todani Projects) 744 VIPs in wards 30 and 31, villages Kgokong, Ga-Kama, Mamotintane and Ga-Matholo, complete 16 Nov 2023; PM38/2022-12 (Saatchi) 725 VIPs in wards 24 and 32 (720 in the 2023/24 report), practical completion October 2024; PM38/2022-16 (October Integrated Projects) 727 VIPs in wards 29 and 33, practical completion. The toilets are spread over many villages, so there is no pin.",
+    "sources": [
+      {
+        "label": "Polokwane Final IDP 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2024/04/2024-25-Final-IDP.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      }
+    ],
+    "budget": [],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2022/23",
+        "amount": 12650000,
+        "vat": "not stated",
+        "progress": "33%",
+        "note": "IUDG overview: 'Sebayeng Dikgale Rural Sanitation' IDP budget R12 650 000, appointed amount R37 950 000 (3 contractors), expenditure R6 419 613, 11-05-2023 to 11-09-2023; p.462"
+      },
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "3 contractors appointed in 2023/24 for 2160 VIPs in the Sebayeng Dikgale cluster; 744 completed in 2023/24; p.50. Contracts: -12 720 VIPs 77%, -16 727 VIPs 96%, -15 744 VIPs complete; pp.374-375"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Practical completion",
+        "note": "PM38/2022-12 725 VIPs wards 24 and 32: practical completion Oct 2024; PM38/2022-16 727 VIPs wards 29 and 33: practical completion; contractors compiling beneficiary lists; pp.843-844"
+      },
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "",
+        "amount": 12650000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Water provision progress table: 'Sebayeng Dikgale Rural Sanitation (IUDG)', wards 30, 31, construction of 744 VIPs, 23 Apr 24, 37 jobs, 744 households; p.304"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "road-matsiokwane-ngwanalaka",
+    "name": "Paving of road from Matsiokwane Village to Ngwanalaka crossing at Mafiane",
+    "short": "Matsiokwane–Ngwanalaka road",
+    "sector": "Roads",
+    "status": "in_progress",
+    "statusNote": "98%, June 2026: 1.26 km road practically complete, contractor busy with snag list after slow progress (Q4 report 2025/26)",
+    "progress": "98%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "24",
+    "village": "Matsiokwane / Ngwanalaka (Mafiane)",
+    "lat": -23.87598,
+    "lon": 29.6520958,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Ngwanalaka (Ngwanalaka Secondary School, EMIS 923241108, ward 24), the road's named end point, not the road. Matsiokwane village and the Mafiane crossing are not located in any source. The 2025/26 budget also planned R11 130 435 (IUDG) for 2027/28, but the line is not in the 2026/27 budget.",
+    "sources": [
+      {
+        "label": "Polokwane SDBIP 2024/25 (revised Mar 2025)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/SDBIP-2024-2025-REVISED-1-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2025/26 (Annexure A and SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-ANNUAL-BUDGET-202526_2028_MTREF.pdf"
+      },
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
+      },
+      {
+        "label": "DBE EMIS school masterlist 2025 (school GPS and ward)",
+        "url": "https://www.education.gov.za/Programmes/EMIS/EMISDownloads.aspx"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2024/25",
+        "original": 869565,
+        "adjusted": 934782,
+        "label": "IUDG"
+      },
+      {
+        "fy": "2024/25",
+        "original": 0,
+        "adjusted": 3000000,
+        "label": "Own funds (CRR), special adjustments"
+      },
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 6062764,
+        "label": "Own funds (CRR), 'SW Upgrading' line added in Feb 2026 adjustments"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "SDBIP 2024/25 (revised)",
+        "fy": "2024/25",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG original (R1 000 000 incl); adjusted R934 782 excl (R1 074 999 incl); CWP_39 detailed design; pp.9, 31"
+      },
+      {
+        "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Detailed design: 100%",
+        "note": "Detailed design achieved; p.26"
+      },
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2027/28",
+        "amount": 11130435,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; R12 800 000 incl; p.106"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Contractor and site establishment: 20%",
+        "note": "Allocation of a contractor and site establishment; p.29"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 3000000,
+        "vat": "excl",
+        "progress": "Year's budget spent: 62%",
+        "note": "CRR special adjustments R3 450 000 incl; spent R1 863 687 excl (R2 143 240 incl); IUDG spent R1 014 041 incl (100%); pp.483, 485"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 6062764,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR 'SW Upgrading of Road from Matsiokwane Village to Ngwanalaka', new line (R6 972 179 incl); RAL projects table p.28"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "1.26 km road: 98%",
+        "note": "Completion of 1.26 km road not achieved due to slow progress; project practically completed, contractor busy with snag list; p.49 (scanned page)"
+      }
+    ],
+    "mapWard": 24
+  },
+  {
+    "id": "paving-madiga",
+    "name": "Paving of internal street at Madiga",
+    "short": "Madiga paving",
+    "sector": "Roads",
+    "status": "planned",
+    "statusNote": "Phase 1 paved and complete in 2023/24. Phase 2 is designed, with R870k excl planned only for 2028/29 (budget 2026/27)",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "29",
+    "village": "Madiga",
+    "lat": -23.80706389,
+    "lon": 29.71615556,
+    "pin": "site",
+    "route": null,
+    "note": "One entry for both phases. Phase 1 ('Paving of streets in Sebayeng/Dikgale Cluster (paving of internal street at Madiga)', ward 29) was paved in 2023/24; the Dikgale Traditional Council confirmed 'Madiga completed' (Final IDP 2025/26 p.1275). Phase 2 had a design budget in 2024/25 and construction money only in 2028/29, so the status is planned. Pin uses the coordinates the 2026/27 A-schedule (SA36) gives for this project (minus sign dropped on the latitude); they fall in ward 29.",
+    "sources": [
+      {
+        "label": "Polokwane Annual report 2023/24",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/2023-2024-Annual-Report-with-Attachments-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2024/25 (revised Mar 2025)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/SDBIP-2024-2025-REVISED-1-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2025/26",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/2025-20-26-Final-IDP.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2024/25",
+        "original": 869565,
+        "adjusted": 38930,
+        "label": "IUDG (design)"
+      },
+      {
+        "fy": "2024/25",
+        "original": 1000000,
+        "adjusted": 0,
+        "label": "Own funds (CRR), removed in 2024/25 revision"
+      },
+      {
+        "fy": "2028/29",
+        "original": 869565,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "Annual report 2023/24",
+        "fy": "2023/24",
+        "amount": 4827022,
+        "vat": "not stated",
+        "progress": "Phase 1 complete: 100%",
+        "note": "Phase 1, CWP_66 'Paving of streets in Sebayeng/Dikgale Cluster (paving of internal street at Madiga) ward 29': construction of base and paving, completion certificate; p.434"
+      },
+      {
+        "date": "2025-03",
+        "document": "SDBIP 2024/25 (revised)",
+        "fy": "2024/25",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG original; adjusted R38 930 excl; CRR line R1 000 000 removed; p.8"
+      },
+      {
+        "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Phase 2 design: 100%",
+        "note": "Phase 2 detailed design achieved; p.25"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Dikgale Traditional Council: 'Paving of Mokgopo completed, Madiga completed'; p.1275"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 38930,
+        "vat": "excl",
+        "progress": "Phase 2 design budget spent: 100%",
+        "note": "IUDG; spent R44 770 incl; p.484"
+      },
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2028/29",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; R1 000 000 incl; p.156"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "bridge-sencherere",
+    "name": "Construction of low-level bridge in Mankweng Sencherere",
+    "short": "Sencherere bridge",
+    "sector": "Bridges",
+    "status": "complete",
+    "statusNote": "Complete: bridge built, payment and completion certificate, June 2026 (Q4 report 2025/26)",
+    "progress": "100%",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "31",
+    "village": "Sencherere",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "The budget names it 'Mankweng Sencherere'. Sencherere is listed as a ward 31 village in the ward needs tables (Final IDP 2026/31 p.1348). No coordinates are published and no school-register or other point for Sencherere was found, so it has no pin and its position inside ward 31 could not be checked.",
+    "sources": [
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2025/26 (scanned)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-30-JULY-2026.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2025/26",
+        "original": 0,
+        "adjusted": 680000,
+        "label": "Own funds (CRR), moved from operating budget"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – original",
+        "fy": "2025/26",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; not in original budget; p.22"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2025/26",
+        "amount": 680000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; new low-level bridge (Mankweng Sencherere), R782 000 incl; p.16, p.22"
+      },
+      {
+        "date": "2026-07",
+        "document": "Q4 performance report 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Bridge built: 100%",
+        "note": "'Construction of low-level bridge in Mankweng Sencherere': target achieved; p.48 (scanned page)"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "prov-eskom-madiga-ext",
+    "name": "Eskom electrification of Madiga Extension",
+    "short": "Madiga Ext electrification",
+    "sector": "Electricity",
+    "status": "planned",
+    "statusNote": "Planned for 2027/28, 102 connections",
+    "progress": "",
+    "due": "",
+    "dataIssue": "The CDM table prints 750 291 as planned capex for 102 connections, which looks far too low in rands; the units may be wrong, so no budget line is shown.",
+    "implementer": "Eskom",
+    "level": "national",
+    "ward": "29",
+    "village": "Madiga",
+    "lat": -23.80706389,
+    "lon": 29.71615556,
+    "pin": "village",
+    "route": null,
+    "note": "Pin marks Madiga, using the coordinates the municipal budget gives for the Madiga street-paving project (ward 29); where the extension lies is not stated. Madiga is listed in ward 29 in the municipality's waste table (Final IDP 2026/31 p.465).",
+    "sources": [
+      {
+        "label": "Capricorn DM IDP 2026/27",
+        "url": "https://www.cdm.org.za/wp-content/uploads/2026/06/Final-Draft-202627-IDP-and-budget-21-May-2026-Council.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      }
+    ],
+    "budget": [],
+    "history": [
+      {
+        "date": "2026-05",
+        "document": "Capricorn DM IDP 2026/27",
+        "fy": "2027/28",
+        "amount": 750291,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Eskom 2027/28 planned projects: LIM354_Polokwane 'Madiga Ext', planned capex 750 291, 102 connections; units not stated; p.504"
+      }
+    ],
+    "mapWard": 29
+  },
+  {
+    "id": "road-mamotintane-hospital",
+    "name": "Completion of Hospital Road in Mamotintane Village",
+    "short": "Mamotintane hospital road",
+    "sector": "Roads",
+    "status": "funded",
+    "statusNote": "In the 2026/27 budget for design (scoping, preliminary and detailed design in 2026/27); construction money in 2027/28",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "31",
+    "village": "Mamotintane",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Ward 31 in the budget and SDBIP; Mamotintane is listed as a ward 31 village (Final IDP 2026/31 p.1348). The IDP gives R1m (2026/27) and R9m (2027/28) for 0.8 km. The 2026/27 budget also has a separate CRR line 'Completion of Mamotintane road' of R14 000 000 excl in 2027/28 (p.155), probably the same road, which is not counted here. The earlier 'Completion of Hospital Road in Mankweng' (ward 31) had R31.06m appointed and was 91% done in 2023 (Final IDP 2024/25 p.456). No coordinates are published (the A-schedule gives the city default), so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2024/04/2024-25-Final-IDP.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 869565,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      },
+      {
+        "fy": "2027/28",
+        "original": 797101,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05",
+        "document": "Final IDP 2026/31",
+        "fy": "2027/28",
+        "amount": 9000000,
+        "vat": "not stated",
+        "progress": "",
+        "note": "Completion of 0.8 km road; 2026/27 R1 000 000; p.1028"
+      },
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 869565,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; R1 000 000 incl; p.165"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 1000000,
+        "vat": "incl",
+        "progress": "Planning",
+        "note": "IUDG CWP_210; ward 31; scoping, preliminary and detailed design; p.30"
+      },
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2027/28",
+        "amount": 797101,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG; R916 666 incl; p.165. Separate CRR line Completion of Mamotintane road R14 000 000 excl in 2027/28, p.155"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "bridge-thabang-ngaleng",
+    "name": "Construction of low-level bridge at Thabang Village near Ngaleng",
+    "short": "Thabang bridge",
+    "sector": "Bridges",
+    "status": "funded",
+    "statusNote": "New in the 2026/27 budget; bridge to be completed by June 2027 (SDBIP 2026/27)",
+    "progress": "",
+    "due": "2027-06",
+    "dataIssue": "The budget funds it from IUDG; the SDBIP and IDP list it as own funds (CRR).",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "31",
+    "village": "Thabang (near Ngaleng)",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Ward 31 in the budget A-schedule and SDBIP; Thabang is listed as a ward 31 village and Ngaleng as a ward 30 village (Final IDP 2026/31 pp.1346-1348). No coordinates are published, so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 A-Schedule (SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Annual-Budget_A-Schedule-202627_202829.pdf"
+      },
+      {
+        "label": "Polokwane SDBIP 2026/27",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/FINAL-2026-2027-SDBIP-25-JUNE-2026.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 521739,
+        "adjusted": null,
+        "label": "IUDG (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 521739,
+        "vat": "excl",
+        "progress": "",
+        "note": "IUDG 'Constructin of Low level Bridge Thabang Village near Ngaleng'; R600 000 incl; p.155"
+      },
+      {
+        "date": "2026-06",
+        "document": "SDBIP 2026/27",
+        "fy": "2026/27",
+        "amount": 600000,
+        "vat": "incl",
+        "progress": "",
+        "note": "CRR CWP_191; ward 31; 100% by target date; p.29"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "waste-dikgale-transfer-ramp",
+    "name": "Construction of ramp at Dikgale transfer station",
+    "short": "Dikgale transfer station ramp",
+    "sector": "Waste",
+    "status": "complete",
+    "statusNote": "Ramp built, June 2025 (Q4 report 2024/25; evidence: pictures)",
+    "progress": "100%",
+    "due": "",
+    "dataIssue": "Only R269 618 incl (33%) of the R826 572 budget was spent in 2024/25 (Annual report), although the ramp is reported as built. Ward differs: the SDBIP says ward 32, the IDP lists the station in ward 33.",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "33",
+    "village": "Ga-Dikgale",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "The Dikgale rural transfer station is listed as 'Ga-Dikgale ward 33, operational' (Final IDP 2026/31 p.462); the 2024/25 SDBIP tags the ramp project to ward 32. The SDBIP scope also mentions repairing a damaged electrical connection. No coordinates are published, so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane SDBIP 2024/25 (revised Mar 2025)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/04/SDBIP-2024-2025-REVISED-1-March-2025.pdf"
+      },
+      {
+        "label": "Polokwane Q3 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/05/FINAL-THIRD-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT.pdf"
+      },
+      {
+        "label": "Polokwane Q4 performance report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/08/FOURTH-QUARTER-INSTITUTIONAL-PERFORMANCE-REPORT-01-APRIL-2025-TO-30-JUNE-2025.pdf"
+      },
+      {
+        "label": "Polokwane Annual report 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/202425-ANNUAL-REPORT-WITH-ANNEXURES-PLK-MUNICIPALITY-INCLUDING-ENTITY.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2024/25",
+        "original": 718758,
+        "adjusted": 718758,
+        "label": "Own funds (CRR)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-03",
+        "document": "SDBIP 2024/25 (revised)",
+        "fy": "2024/25",
+        "amount": 718758,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR CWP_175; R826 572 incl; ward 32; pp.16, 35"
+      },
+      {
+        "date": "2025-05",
+        "document": "Q3 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Service provider appointed (stage 50%)",
+        "note": "Appointment of service provider achieved; p.40"
+      },
+      {
+        "date": "2025-07",
+        "document": "Q4 performance report 2024/25",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Ramp built: 100%",
+        "note": "Construction of the ramp; POE pictures; p.37"
+      },
+      {
+        "date": "2026-01",
+        "document": "Annual report 2024/25",
+        "fy": "2024/25",
+        "amount": 234450,
+        "vat": "excl",
+        "progress": "Year's budget spent: 33%",
+        "note": "CRR; spent R269 618 incl against R826 572 incl; p.496"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "waste-makotopong-transfer-electrification",
+    "name": "Makotopong transfer station electrification",
+    "short": "Makotopong transfer station power",
+    "sector": "Waste",
+    "status": "deferred",
+    "statusNote": "Planned in the 2025/26 budget for 2026/27 (R600k), but not in the 2026/27 budget",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality",
+    "level": "municipal",
+    "ward": "24",
+    "village": "Makotopong",
+    "lat": -23.828385,
+    "lon": 29.667414,
+    "pin": "site",
+    "route": null,
+    "note": "The Makotopong rural transfer station is listed as 'Makotopong ward 24, operational', and the IDP says budget is needed to install electricity (Final IDP 2026/31 pp.461-462). Pin uses the coordinates the 2025/26 A-schedule (SA36) gives for this project; they fall in ward 24.",
+    "sources": [
+      {
+        "label": "Polokwane Final Budget 2025/26 (Annexure A and SA36)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2025/06/LIM354-ANNUAL-BUDGET-202526_2028_MTREF.pdf"
+      },
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2026/31",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2026-31-Final-IDP-28-May-2026-V.pdf"
+      },
+      {
+        "label": "Polokwane Final Budget 2026/27 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Budget-Document-Final-2027.pdf"
+      }
+    ],
+    "budget": [
+      {
+        "fy": "2026/27",
+        "original": 600000,
+        "adjusted": null,
+        "label": "Own funds (CRR) (planned)"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-05",
+        "document": "Original budget 2025/26 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 600000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR; R690 000 incl; p.103; SA36 coordinates -23.828385, 29.667414 (p.101)"
+      },
+      {
+        "date": "2026-02",
+        "document": "Adjustments budget 2025/26 – adjusted",
+        "fy": "2026/27",
+        "amount": 600000,
+        "vat": "excl",
+        "progress": "",
+        "note": "CRR outer year; p.25"
+      },
+      {
+        "date": "2026-06",
+        "document": "Final budget 2026/27 (Annexure A)",
+        "fy": "2026/27",
+        "amount": 0,
+        "vat": "excl",
+        "progress": "",
+        "note": "Not in the final 2026/27 capital budget (transfer station lines are Mankweng, Ga-Maja, Ga-Chuene, Molepo and Mashashane only); p.161"
+      }
+    ],
+    "mapWard": 24
+  },
+  {
+    "id": "road-d3997-mokgopo-makalanyane",
+    "name": "Upgrading of arterial road D3997 from GaMokgopo to Ga Makalanyane",
+    "short": "D3997 Mokgopo road",
+    "sector": "Roads",
+    "status": "deferred",
+    "statusNote": "Still at planning stage in 2025 (IDP 2025/26); dropped from the 2025/26 and 2026/27 budgets",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Polokwane Municipality (RAL roads list)",
+    "level": "municipal",
+    "ward": "33",
+    "village": "Ga-Mokgopo / Ga-Makalanyane",
+    "lat": null,
+    "lon": null,
+    "pin": "",
+    "route": null,
+    "note": "Ward 33 in the IDP and the National Treasury project register. R1 179 152 was spent in 2020/21 (Municipal Money, project PC001001002006002_00069). The Final IDP 2024/25 planned R825 652 (2024/25), R1 376 675 (2025/26) and R2 608 696 (2026/27) on its RAL roads list, VAT not stated. No later budget lists it. Mokgopo and Makalanyane are not located, so it has no pin.",
+    "sources": [
+      {
+        "label": "Polokwane Final IDP 2024/25",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/2024/04/2024-25-Final-IDP.pdf"
+      },
+      {
+        "label": "Polokwane Final IDP 2025/26",
+        "url": "http://www.polokwane.gov.za/wp-content/uploads/2025/06/2025-20-26-Final-IDP.pdf"
+      },
+      {
+        "label": "Municipal Money infrastructure projects (National Treasury)",
+        "url": "https://municipalmoney.gov.za/infrastructure/projects/"
+      }
+    ],
+    "budget": [],
+    "history": [
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2024/25",
+        "amount": 825652,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG 'RAL Upgrading of arterial road D3997 from GaMokgopo to Ga Ma[kalanyane]'; RAL roads table p.1156"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2025/26",
+        "amount": 1376675,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156"
+      },
+      {
+        "date": "2024-04",
+        "document": "Final IDP 2024/25",
+        "fy": "2026/27",
+        "amount": 2608696,
+        "vat": "not stated",
+        "progress": "",
+        "note": "IUDG; RAL roads table p.1156"
+      },
+      {
+        "date": "2025-05",
+        "document": "Final IDP 2025/26",
+        "fy": "",
+        "amount": 949500,
+        "vat": "not stated",
+        "progress": "Planning",
+        "note": "2024/25 project status table: R949 500, project still at planning stage (ward 33); p.549"
+      }
+    ],
+    "mapWard": null
+  },
+  {
+    "id": "prov-dikgale-traditional-council-office",
+    "name": "Dikgale Traditional Council office",
+    "short": "Dikgale TC office",
+    "sector": "Community services",
+    "status": "complete",
+    "statusNote": "Built and handed over on 7 October 2022 (CoGHSTA TODAY)",
+    "progress": "",
+    "due": "",
+    "dataIssue": "",
+    "implementer": "Limpopo Department of Public Works, Roads and Infrastructure for CoGHSTA",
+    "level": "provincial",
+    "ward": "",
+    "village": "Ga-Dikgale (Moshate)",
+    "lat": -23.7620556,
+    "lon": 29.7897222,
+    "pin": "village",
+    "route": null,
+    "note": "Provincial project; cost not published. The MEC for CoGHSTA handed the office over at the Dikgale Royal Grounds. DPWRI lists Dikgale among ten traditional council offices it built (APP 2025/26 PDF p.41). The exact site is not published: the pin marks Ga-Dikgale Moshate using the coordinates the municipal budget gives for the Ga-Dikgale Moshate street-paving project, and the ward is left blank.",
+    "sources": [
+      {
+        "label": "CoGHSTA TODAY No.19 (2022/23)",
+        "url": "https://www.coghsta.limpopo.gov.za/documents/CoGHSTA%20TODAY%2019%20of%202023.pdf"
+      },
+      {
+        "label": "Limpopo DPWRI Annual Performance Plan 2025/26",
+        "url": "https://www.dpw.limpopo.gov.za/Database/uploads/documents/perfomance_plans/20252026%20Departmental%20Annual%20Performance%20Plan.pdf"
+      },
+      {
+        "label": "Polokwane Adjustments Budget 2025/26 (Annexure A)",
+        "url": "https://www.polokwane.gov.za/wp-content/uploads/LIM354-Adjustments-Budget_202526.pdf"
+      }
+    ],
+    "budget": [],
+    "history": [
+      {
+        "date": "2022-10",
+        "document": "CoGHSTA TODAY No.19 2022/23",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Handed over",
+        "note": "'Brand new Dikgale Traditional Council Office opens its doors'; handing over on Friday 07 October 2022 at Dikgale Royal Grounds; p.1"
+      },
+      {
+        "date": "2025-03",
+        "document": "DPWRI APP 2025/26",
+        "fy": "",
+        "amount": null,
+        "vat": "not stated",
+        "progress": "Complete",
+        "note": "Department constructed ten traditional council offices; completed offices include Dikgale Traditional Council; PDF p.41"
+      }
+    ],
+    "mapWard": 29
   }
 ]
