@@ -221,6 +221,23 @@ select { border: 1px solid var(--line); background: var(--panel); border-radius:
 #map.far .wardlbl { font-size: 9px; letter-spacing: .04em; opacity: .45; }
 .list li.more { border-bottom: 0; padding: 12px 0; text-align: center; }
 
+/* Money by area */
+.areas { max-width: 1280px; margin: 0 auto; padding: 22px 16px 4px; display: grid; gap: 8px; }
+.tablewrap { overflow-x: auto; }
+.areatable { min-width: 560px; max-width: 980px; }
+.areatable th[scope="row"] { text-align: left; font: 600 14px var(--serif); padding: 8px 6px 8px 0; border-bottom: 1px solid var(--grid); }
+.areatable tr[data-cluster] { cursor: pointer; }
+.areatable tr[data-cluster]:hover, .areatable tr.sel { background: var(--panel); }
+.areatable tr.sel th { color: var(--more); }
+.areatable td.up { color: var(--more); }
+.areatable tr.tot th, .areatable tr.tot td { border-top: 2px solid var(--ink); font-weight: 800; }
+.areatable tr.nw th { font-weight: 500; color: var(--muted); }
+.areatable .bar { margin-top: 4px; }
+.shadebar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 8px 12px; border-top: 1px solid var(--line); }
+.shadeleg { border: 0; padding: 0; }
+.sw.sq { border-radius: 2px; width: 14px; height: 11px; }
+.sw.none { background: var(--paper); border: 1px solid var(--line); }
+
 /* ---------- phones ---------- */
 @media (max-width: 599px) {
   .mapwrap { box-shadow: 3px 3px 0 var(--ink); margin-right: 3px; }

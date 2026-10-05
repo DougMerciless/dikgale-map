@@ -4,9 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Polokwane Projects Ledger</title>
+<meta name="description" content="Government projects in all 45 wards of Polokwane: what was budgeted, what was added or cut, how far it got and who built it.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Polokwane Projects Ledger">
+<meta property="og:title" content="Where the money went in Polokwane">
+<meta property="og:description" content="Government projects in all 45 wards of Polokwane: what was budgeted, what was added or cut, how far it got and who built it.">
+<meta property="og:url" content="https://dougmerciless.github.io/dikgale-map/">
+<meta property="og:image" content="https://dougmerciless.github.io/dikgale-map/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Map of Polokwane's 45 wards with project pins, next to the title Where the money went in Polokwane">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500..800&display=swap">
-<link rel="stylesheet" href="style.css?v=84ab4408">
+<link rel="stylesheet" href="style.css?v=9d74a4cf">
 <script>
   // Optional look: index.html?theme=clean | editorial | civic (default: newsroom).
   (function () {
@@ -18,7 +29,7 @@
     var t = new URLSearchParams(location.search).get("theme");
     if (!fonts[t]) return;
     document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=' + fonts[t] + '&display=swap">');
-    document.write('<link rel="stylesheet" href="themes/' + t + '.css?v=84ab4408">');
+    document.write('<link rel="stylesheet" href="themes/' + t + '.css?v=9d74a4cf">');
   })();
 </script>
 </head>
@@ -30,6 +41,8 @@
   <p class="dek">Government projects across Polokwane Municipality: municipal roads, water and community facilities, provincial schools, clinics and roads, national power and bulk water. Where each one is, how far it got, and whether its money grew or was cut along the way.</p>
   <div class="tally" id="tally"></div>
 </header>
+
+<section class="areas" id="areas" aria-label="Money by cluster"></section>
 
 <main>
   <section class="mapwrap" aria-label="Project map">
@@ -46,6 +59,8 @@
       <span><i class="swapprox"></i>Approximate: pin marks the village</span>
       <span><i class="swward"></i>Ward boundary (click a ward to filter)</span>
     </div>
+    <div class="shadebar"><button type="button" id="shade" class="chip" aria-pressed="false">Shade wards by budget</button>
+      <div id="shadeLegend" class="legend shadeleg hidden"></div></div>
   </section>
 
   <section class="side">
@@ -68,6 +83,7 @@
     </div>
     <div class="toolbar">
       <span id="count" class="count" aria-live="polite"></span>
+      <select id="sort" aria-label="Sort the list"></select>
       <button type="button" id="clear" class="linkbtn hidden">Clear filters</button>
       <button type="button" id="csv" class="chip">Download as CSV</button>
     </div>
@@ -78,9 +94,9 @@
 </main>
 <footer class="foot">Sources: Polokwane Municipality budgets, IDPs, SDBIPs and performance reports, Limpopo Treasury (EPRE), Roads Agency Limpopo, Capricorn District Municipality, DBE school register, Municipal Demarcation Board, Census 2011. Each project lists its own sources. Approximate pins show the village, not the site. Road lines © OpenStreetMap contributors (ODbL).</footer>
 
-<script src="data/projects.js?v=84ab4408"></script>
-<script src="data/wards.js?v=84ab4408"></script>
+<script src="data/projects.js?v=9d74a4cf"></script>
+<script src="data/wards.js?v=9d74a4cf"></script>
 <script src="config.js" onerror="window.MAP_CONFIG = window.MAP_CONFIG || {}"></script>
-<script src="app.js?v=84ab4408"></script>
+<script src="app.js?v=9d74a4cf"></script>
 </body>
 </html>

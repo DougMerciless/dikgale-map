@@ -146,9 +146,19 @@ The address keeps the open project and the filters, so you can share a view:
 | `sector`, `ward`, `level`, `money` | `?ward=32&money=cut` |
 | `cluster` | `?cluster=Sebayeng/Dikgale` shows one cluster |
 | `contractor` | `?contractor=Makeyise Trading and Projects` |
+| `sort` | `?sort=budget`, `added`, `cut` or `recent` (default: name) |
+| `shade` | `?shade=1` shades the wards by 2025/26 budget |
 | `theme` | `?theme=clean`, `editorial` or `civic` |
 
 The detail panel has a **Copy link to this project** button. **Download as CSV** saves the projects that match the current filters, with their headline figure, budget change, budget lines, link and sources.
+
+## Where the money goes
+
+The table above the map gives each cluster's 2025/26 budget, the money added and cut at the mid-year adjustment, and the 2026/27 plan, for the projects that match the current filters. The 2025/26 budget is the adjusted amount where the adjustments budget gives one, otherwise the original. A project in several wards is split equally between them, so cluster totals add up to the municipal total. **Shade wards by budget** colours the map the same way.
+
+## Link preview
+
+`og.jpg` (1200 × 630) is the image WhatsApp, Facebook and others show when the link is shared, set by the `og:` tags in `index.html`. It has no figures in it, so it does not go out of date.
 
 ## Deploy
 

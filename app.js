@@ -27,13 +27,14 @@ const PIN_TEXT = {
   route: "Line shows the road",
 };
 
-const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", q: "", listMax: LIST_STEP };
+const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", sort: "name", shade: false, q: "", listMax: LIST_STEP };
 const $ = (id) => document.getElementById(id);
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
 // ---------- helpers ----------
 function fmt(n) {
   if (n == null || isNaN(n)) return "–";
+  if (n < 0) return "−" + fmt(-n);
   const a = Math.abs(n);
   if (a >= 1e9) return "R" + (n / 1e9).toFixed(2).replace(/\.?0+$/, "") + "bn";
   if (a >= 1e6) return "R" + (n / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.?0+$/, "") + "m";
@@ -202,35 +203,128 @@ function fitTo(list) {
 }
 const fitAll = () => fitTo(state.cluster !== "all" ? state.projects.filter(isVisible) : state.projects);
 
+// ---------- money by area ----------
+// A project's 2025/26 budget: the adjusted figure where there is one, else the
+// original. A project listed in several wards is split equally between them,
+// so ward and cluster totals add up to the municipal total.
+function budget2526(p) {
+  return (p.budget || []).filter((r) => r.fy === "2025/26").reduce((t, r) => t + (r.adjusted != null ? +r.adjusted || 0 : +r.original || 0), 0);
+}
+const planned2627 = (p) => (p.budget || []).filter((r) => r.fy === "2026/27").reduce((t, r) => t + (+r.original || 0), 0);
+function shareWards(p) {
+  const w = [...parseWards(p.ward)].filter((n) => ALL_WARDS.includes(n));
+  return w.length ? w : p.mapWard ? [p.mapWard] : [];
+}
+// Every filter except ward and cluster, so the table compares areas.
+function visibleAnyArea(p) {
+  const keep = [state.ward, state.cluster];
+  state.ward = state.cluster = "all";
+  const v = isVisible(p);
+  [state.ward, state.cluster] = keep;
+  return v;
+}
+function moneyByWard() {
+  const by = new Map(ALL_WARDS.map((w) => [w, { amount: 0, added: 0, cut: 0, planned: 0, n: 0 }]));
+  const none = { amount: 0, added: 0, cut: 0, planned: 0, n: 0 };
+  for (const p of state.projects.filter(visibleAnyArea)) {
+    const ws = shareWards(p), k = ws.length || 1, g = gain(p);
+    for (const t of ws.length ? ws.map((w) => by.get(w)) : [none]) {
+      t.amount += budget2526(p) / k; t.planned += planned2627(p) / k; t.n += 1;
+      if (g > 0) t.added += g / k; else t.cut += g / k;
+    }
+  }
+  return { by, none };
+}
+
+function renderAreas() {
+  const { by, none } = (wardCache = moneyByWard());
+  const shown = state.projects.filter(visibleAnyArea);
+  const nIn = (ws) => shown.filter((p) => shareWards(p).some((w) => ws.includes(w))).length;
+  const sum = (ws) => ws.reduce((t, w) => { const x = by.get(w); for (const k in t) t[k] += x[k]; return t; }, { amount: 0, added: 0, cut: 0, planned: 0, n: 0 });
+  const rows = CLUSTERS.map((c) => ({ name: c.name, ...sum(c.wards), n: nIn(c.wards) })).sort((a, b) => b.amount - a.amount);
+  const total = rows.reduce((t, r) => ({ ...t, amount: t.amount + r.amount, added: t.added + r.added, cut: t.cut + r.cut, planned: t.planned + r.planned }), { ...none, n: shown.length });
+  const max = Math.max(1, ...rows.map((r) => r.amount));
+  const row = (r, cls = "") => `<tr class="${cls}"${r.name && cls !== "tot" && cls !== "nw" ? ` data-cluster="${esc(r.name)}" tabindex="0"` : ""}>
+      <th scope="row">${esc(r.name)}</th>
+      <td class="n">${r.n ?? ""}</td>
+      <td class="n">${fmt(r.amount)}${cls === "tot" || cls === "nw" ? "" : `<div class="bar"><i style="width:${(r.amount / max * 100).toFixed(1)}%;background:var(--fund)"></i></div>`}</td>
+      <td class="n up">${r.added ? "+" + fmt(r.added) : "–"}</td>
+      <td class="n">${r.cut ? "−" + fmt(-r.cut) : "–"}</td>
+      <td class="n">${fmt(r.planned)}</td></tr>`;
+  $("areas").innerHTML = `
+    <h3 class="sect">Where the money goes</h3>
+    <p class="hint">2025/26 budget per cluster for the projects matching your filters (sector, level, status). Click a cluster to show it on the map.</p>
+    <div class="tablewrap"><table class="budget areatable">
+      <thead><tr><th>Cluster</th><th class="n">Projects</th><th class="n">2025/26 budget</th><th class="n">Added mid-year</th><th class="n">Cut mid-year</th><th class="n">2026/27 planned</th></tr></thead>
+      <tbody>${rows.map((r) => row(r, r.name === state.cluster ? "sel" : "")).join("")}
+        ${row({ name: "No ward given (municipality-wide)", ...none }, "nw")}
+        ${row({ name: "Total", ...total }, "tot")}</tbody></table></div>
+    <p class="hint">2025/26 budget is the adjusted amount where the adjustments budget gives one, otherwise the original. A project in several wards is split equally between them, so a project counts in every cluster it touches but its money is not counted twice. Projects with no ward are shown separately.</p>`;
+  for (const tr of $("areas").querySelectorAll("tr[data-cluster]")) {
+    const go = () => { state.cluster = state.cluster === tr.dataset.cluster ? "all" : tr.dataset.cluster; state.ward = "all"; render(); fitAll(); $("map").scrollIntoView({ behavior: "smooth", block: "center" }); };
+    tr.onclick = go;
+    tr.onkeydown = (e) => { if (e.key === "Enter") go(); };
+  }
+  if (mapApi?.shadeWards) mapApi.shadeWards(state.shade ? by : null);
+  renderShadeLegend(by);
+}
+
+// Sequential ramp: one hue (--fund) from light to dark, mixed with the page colour.
+function hex(c) { const m = c.replace("#", ""); return [0, 2, 4].map((i) => parseInt(m.slice(i, i + 2), 16)); }
+function mix(a, b, t) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(v + (B[i] - v) * t).toString(16).padStart(2, "0")).join(""); }
+let shadeBins = [];
+function shadeColour(v) {
+  if (!v) return null;
+  const i = shadeBins.findIndex((b) => v <= b);
+  return mix(css("--paper"), css("--fund"), [0.18, 0.36, 0.54, 0.72, 0.92][i < 0 ? 4 : i]);
+}
+function renderShadeLegend(by) {
+  const vals = [...by.values()].map((x) => x.amount).filter((v) => v > 0).sort((a, b) => a - b);
+  shadeBins = [0.2, 0.4, 0.6, 0.8, 1].map((q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length) - (q === 1 ? 1 : 0))] || 0);
+  const box = $("shadeLegend");
+  box.classList.toggle("hidden", !state.shade);
+  let lo = 0;
+  box.innerHTML = "Ward 2025/26 budget: " + shadeBins.map((b, i) => {
+    const t = `<span><i class="sw sq" style="background:${mix(css("--paper"), css("--fund"), [0.18, 0.36, 0.54, 0.72, 0.92][i])}"></i>${fmt(lo)}–${fmt(b)}</span>`;
+    lo = b; return t;
+  }).join("") + '<span><i class="sw sq none"></i>none</span>';
+  $("shade").setAttribute("aria-pressed", state.shade);
+  $("shade").textContent = state.shade ? "Hide ward shading" : "Shade wards by budget";
+}
+
+// ---------- sorting ----------
+// Latest document date that mentions the project (history is sorted by date).
+const lastSeen = (p) => (p.history || []).reduce((d, h) => (h.date > d ? h.date : d), "");
+const SORTS = {
+  name:    { label: "Name (A to Z)",           cmp: (a, b) => a.name.localeCompare(b.name) },
+  budget:  { label: "Biggest budget",          cmp: (a, b) => (headline(b)?.amount || 0) - (headline(a)?.amount || 0) },
+  added:   { label: "Most money added",        cmp: (a, b) => gain(b) - gain(a) },
+  cut:     { label: "Biggest cut",             cmp: (a, b) => gain(a) - gain(b) },
+  recent:  { label: "Most recently reported",  cmp: (a, b) => lastSeen(b).localeCompare(lastSeen(a)) },
+};
+// Change at the mid-year adjustment in rands (negative for a cut, 0 when none).
+const gain = (p) => { const m = moneyChange(p); return m.kind === "none" || m.kind === "same" ? 0 : m.delta; };
+const sorted = (list) => list.slice().sort((a, b) => (SORTS[state.sort] || SORTS.name).cmp(a, b) || a.name.localeCompare(b.name));
+
 // ---------- side panel ----------
-// The money figure only adds up like with like: adjusted amounts for one
-// financial year. Its caption says which year and which levels of government
-// it covers, and what it leaves out.
+// The money figure uses the same rule as the "Where the money goes" table:
+// each project's 2025/26 budget, adjusted where it was revised mid-year,
+// otherwise the original.
 function renderTally() {
-  let more = 0, cut = 0, adjusted = 0;
-  const adjFy = new Set(), adjLevels = new Set();
+  let more = 0, cut = 0, total = 0;
   for (const p of state.projects) {
     const m = moneyChange(p);
     if (m.kind === "more" || m.kind === "new") more++;
     if (m.kind === "cut") cut++;
-    for (const r of p.budget || []) if (r.adjusted != null) { adjFy.add(r.fy); adjLevels.add(p.level); }
+    total += budget2526(p);
   }
-  const fy = [...adjFy].sort().pop();
-  let planned = 0;
-  for (const p of state.projects) for (const r of p.budget || []) {
-    if (r.fy !== fy) continue;
-    if (r.adjusted != null) adjusted += +r.adjusted || 0;
-    else if (!adjLevels.has(p.level)) planned += +r.original || 0;
-  }
-  const who = [...adjLevels].map((l) => LEVELS[l].toLowerCase());
   const noFigs = state.projects.filter((p) => !(p.budget || []).length).length;
-  const caption = [`${fy || ""} adjusted ${who.join(" and ")} budgets`,
-    planned ? `plus ${fmt(planned)} planned by other levels of government` : "",
+  const caption = ["2025/26 budgets across all levels of government (adjusted where revised mid-year)",
     noFigs ? `${noFigs} project${noFigs > 1 ? "s" : ""} with no figures yet` : ""].filter(Boolean).join("; ");
   const levels = new Set(state.projects.map((p) => p.level)).size;
   $("tally").innerHTML = state.projects.length
     ? `<div class="stat"><b>${state.projects.length}</b><span>projects tracked across ${levels} levels of government</span></div>
-       <div class="stat"><b>${fmt(adjusted)}</b><span>${esc(caption)}</span></div>
+       <div class="stat"><b>${fmt(total)}</b><span>${esc(caption)}</span></div>
        <div class="stat more"><b>▲ ${more}</b><span>got more money mid-year</span></div>
        <div class="stat cut"><b>▼ ${cut}</b><span>were cut, some to nothing</span></div>`
     : "";
@@ -275,7 +369,8 @@ function renderFilters() {
 function renderList() {
   const ul = $("list");
   ul.innerHTML = "";
-  const visible = state.projects.filter(isVisible).sort((a, b) => a.name.localeCompare(b.name));
+  const visible = sorted(state.projects.filter(isVisible));
+  $("sort").innerHTML = Object.entries(SORTS).map(([k, v]) => `<option value="${k}" ${k === state.sort ? "selected" : ""}>Sort: ${v.label}</option>`).join("");
   if (!visible.length) {
     ul.innerHTML = '<li class="empty">No projects match these filters. Clear a filter to see more.</li>';
     return;
@@ -498,6 +593,8 @@ function readUrl() {
   state.q = u.get("q") || "";
   state.status = new Set((u.get("status") || "").split(",").filter((k) => STATUS[k]));
   for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) state[k] = u.get(k) || "all";
+  state.sort = SORTS[u.get("sort")] ? u.get("sort") : "name";
+  state.shade = u.get("shade") === "1";
   $("q").value = state.q;
   $("money").value = state.money;
 }
@@ -509,6 +606,8 @@ function writeUrl() {
   set("q", state.q);
   set("status", [...state.status].join(","));
   for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) set(k, state[k] === "all" ? "" : state[k]);
+  set("sort", state.sort === "name" ? "" : state.sort);
+  set("shade", state.shade ? "1" : "");
   const qs = u.toString().replace(/%2C/g, ",");
   history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
 }
@@ -536,7 +635,7 @@ function csvCell(v) {
 function downloadCsv() {
   const head = ["id", "name", "sector", "status", "status_note", "level", "implementer", "contractor", "consultant", "contract_note", "ward", "village", "lat", "lon", "pin",
     "headline_fy", "headline_amount", "headline_kind", "budget_change", "budget_change_rands", "budget_lines", "link", "sources"];
-  const rows = state.projects.filter(isVisible).sort((a, b) => a.name.localeCompare(b.name)).map((p) => {
+  const rows = sorted(state.projects.filter(isVisible)).map((p) => {
     const h = headline(p), m = moneyChange(p);
     const lines = (p.budget || []).map((r) => `${r.fy} ${r.label || ""}: original ${r.original}${r.adjusted != null ? ", adjusted " + r.adjusted : ""}`.replace(/\s+:/, ":")).join("; ");
     return [p.id, p.name, p.sector, STATUS[p.status]?.label, p.statusNote, LEVELS[p.level], p.implementer, (p.contractor || []).join("; "), (p.consultant || []).join("; "), p.contractNote, p.ward, p.village,
@@ -579,6 +678,18 @@ function showTip(e) {
   tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
   tip.style.top = (r.top + scrollY - tip.offsetHeight - 6) + "px";
 }
+// Ward hover: number, cluster and its share of the 2025/26 budget.
+let wardCache = null;
+function wardTip(w, ev) {
+  if (!ev) return;
+  const x = (wardCache || (wardCache = moneyByWard())).by.get(w);
+  const c = CLUSTERS.find((k) => k.wards.includes(w));
+  tip.textContent = `Ward ${w}${c ? " · " + c.name : ""} · ${x.n} project${x.n === 1 ? "" : "s"} · 2025/26 budget ${fmt(x.amount)}`;
+  tip.classList.remove("hidden");
+  tip.style.left = Math.min(innerWidth - tip.offsetWidth - 8, ev.clientX + 12) + "px";
+  tip.style.top = (ev.clientY + scrollY + 14) + "px";
+}
+
 const hideTip = (e) => { if (e.target.closest?.("[data-tip]")) tip.classList.add("hidden"); };
 $("detail").addEventListener("mouseover", showTip);
 $("detail").addEventListener("focusin", showTip);
@@ -591,6 +702,7 @@ function render() {
   renderCount();
   renderList();
   renderDetail();
+  renderAreas();
   drawMarkers();
   writeUrl();
   if (mapApi && mapApi.highlightWard) {
@@ -616,7 +728,7 @@ $("ward").onchange = (e) => { state.ward = e.target.value; render(); };
 $("q").oninput = (e) => { state.q = e.target.value.trim(); render(); };
 $("q").onkeydown = (e) => {
   if (e.key === "Enter") {
-    const hit = state.projects.filter(isVisible).sort((a, b) => a.name.localeCompare(b.name))[0];
+    const hit = sorted(state.projects.filter(isVisible))[0];
     if (hit) select(hit.id, false);
   }
   if (e.key === "Escape") { e.target.value = ""; state.q = ""; render(); }
@@ -624,6 +736,8 @@ $("q").onkeydown = (e) => {
 $("level").onchange = (e) => { state.level = e.target.value; render(); };
 $("money").onchange = (e) => { state.money = e.target.value; render(); };
 $("contractor").onchange = (e) => { state.contractor = e.target.value; render(); };
+$("shade").onclick = () => { state.shade = !state.shade; renderAreas(); writeUrl(); };
+$("sort").onchange = (e) => { state.sort = e.target.value; state.listMax = LIST_STEP; renderList(); writeUrl(); };
 $("cluster").onchange = (e) => {
   state.cluster = e.target.value;
   // A ward outside the new cluster would hide everything.
@@ -721,13 +835,18 @@ async function initGoogle(cfg) {
     onView(cb) { map.addListener("idle", cb); },
     addWards(gj, onClick) {
       map.data.addGeoJson(gj);
-      let hi = null;
+      let hi = null, shade = null;
       const style = (f) => {
         const on = !!hi && hi.has(f.getProperty("ward"));
+        const sc = shade && shadeColour(shade.get(f.getProperty("ward"))?.amount);
+        if (shade) return { fillColor: sc || css("--paper"), fillOpacity: sc ? 0.6 : 0.05, strokeColor: css("--ink"), strokeOpacity: on ? 0.9 : 0.5, strokeWeight: on ? 2.5 : 1, zIndex: 0 };
         return { fillColor: css("--fund"), fillOpacity: on ? 0.12 : 0.03, strokeColor: css("--ink"), strokeOpacity: on ? 0.9 : 0.45, strokeWeight: on ? 2.5 : 1.2, zIndex: 0 };
       };
       map.data.setStyle(style);
       map.data.addListener("click", (e) => onClick(e.feature.getProperty("ward")));
+      map.data.addListener("mouseover", (e) => wardTip(e.feature.getProperty("ward"), e.domEvent));
+      map.data.addListener("mouseout", () => tip.classList.add("hidden"));
+      this.shadeWards = (by) => { shade = by; map.data.setStyle(style); };
       for (const f of gj.features) new AdvancedMarkerElement({ map, position: wardCentre(f.geometry), content: wardLabel(f.properties.ward), zIndex: 0 });
       this.highlightWard = (w) => { hi = w; map.data.setStyle(style); };
     },
@@ -774,12 +893,19 @@ async function initLeaflet(cfg) {
     getZoom() { return map.getZoom(); },
     onView(cb) { map.on("zoomend moveend", cb); },
     addWards(gj, onClick) {
-      let hi = null;
+      let hi = null, shade = null;
       const style = (f) => {
         const on = !!hi && hi.has(f.properties.ward);
+        const sc = shade && shadeColour(shade.get(f.properties.ward)?.amount);
+        if (shade) return { color: css("--ink"), weight: on ? 2.5 : 1, opacity: on ? 0.9 : 0.5, fillColor: sc || css("--paper"), fillOpacity: sc ? 0.6 : 0.05 };
         return { color: css("--ink"), weight: on ? 2.5 : 1.2, opacity: on ? 0.9 : 0.45, fillColor: css("--fund"), fillOpacity: on ? 0.12 : 0.03 };
       };
-      const layer = L.geoJSON(gj, { style, onEachFeature: (f, l) => l.on("click", () => onClick(f.properties.ward)) }).addTo(map);
+      const layer = L.geoJSON(gj, { style, onEachFeature: (f, l) => {
+        l.on("click", () => onClick(f.properties.ward));
+        l.on("mouseover", (e) => wardTip(f.properties.ward, e.originalEvent));
+        l.on("mouseout", () => tip.classList.add("hidden"));
+      } }).addTo(map);
+      this.shadeWards = (by) => { shade = by; layer.setStyle(style); };
       for (const f of gj.features) {
         const c = wardCentre(f.geometry);
         L.marker([c.lat, c.lng], { interactive: false, keyboard: false, zIndexOffset: -1000,
