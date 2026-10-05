@@ -11,7 +11,15 @@ const STATUS = {
 
 const LEVELS = { municipal: "Municipal", district: "District", provincial: "Provincial", national: "National" };
 
-const CLUSTER_WARDS = [24, 29, 30, 31, 32, 33];
+// Every ward in the boundary file (all 45 of Polokwane), and the clusters
+// (groups of wards) from data/clusters.csv.
+const ALL_WARDS = (window.WARDS?.features || []).map((f) => f.properties.ward).sort((a, b) => a - b);
+const CLUSTERS = window.CLUSTERS || [];
+const clusterWards = (name) => new Set(CLUSTERS.find((c) => c.name === name)?.wards || []);
+
+// With many pins, labels only show from this zoom level (or on the selected pin).
+const LABEL_ZOOM = 13;
+const LIST_STEP = 60;
 
 const PIN_TEXT = {
   site: "Pin marks the project site",
@@ -19,7 +27,7 @@ const PIN_TEXT = {
   route: "Line shows the road",
 };
 
-const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", q: "" };
+const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", q: "", listMax: LIST_STEP };
 const $ = (id) => document.getElementById(id);
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
@@ -27,6 +35,7 @@ const css = (name) => getComputedStyle(document.documentElement).getPropertyValu
 function fmt(n) {
   if (n == null || isNaN(n)) return "–";
   const a = Math.abs(n);
+  if (a >= 1e9) return "R" + (n / 1e9).toFixed(2).replace(/\.?0+$/, "") + "bn";
   if (a >= 1e6) return "R" + (n / 1e6).toFixed(a >= 1e7 ? 1 : 2).replace(/\.?0+$/, "") + "m";
   if (a >= 1e3) return "R" + Math.round(n / 1e3) + "k";
   return "R" + Math.round(n);
@@ -75,13 +84,14 @@ const firms = (p) => [...(p.contractor || []), ...(p.consultant || [])];
 
 function matchesQuery(p) {
   if (!state.q) return true;
-  const hay = [p.name, p.short, p.village, p.implementer, p.sector, p.id, p.ward && "ward " + p.ward, ...firms(p)].join(" ").toLowerCase();
+  const hay = [p.name, p.short, p.village, p.implementer, p.sector, p.id, p.ward && "ward " + p.ward, ...(p.clusters || []), ...firms(p)].join(" ").toLowerCase();
   return state.q.toLowerCase().split(/\s+/).every((t) => hay.includes(t));
 }
 
 function isVisible(p) {
   if (!matchesQuery(p)) return false;
   if (state.ward !== "all" && !projectWards(p).has(+state.ward)) return false;
+  if (state.cluster !== "all" && !(p.clusters || []).includes(state.cluster)) return false;
   if (state.status.size && !state.status.has(p.status)) return false;
   if (state.sector !== "all" && p.sector !== state.sector) return false;
   if (state.level !== "all" && p.level !== state.level) return false;
@@ -139,6 +149,10 @@ function drawMarkers() {
 function declutter() {
   const box = $("map").getBoundingClientRect();
   const narrow = box.width < 560;
+  // Many pins: no labels until zoomed in, so the overview stays readable.
+  const zoomedOut = Object.keys(markers).length > 60 && mapApi?.getZoom && mapApi.getZoom() < LABEL_ZOOM;
+  $("map").dataset.zoomedOut = zoomedOut ? "1" : "";
+  $("map").classList.toggle("far", !!(mapApi?.getZoom && mapApi.getZoom() < 12));
   const order = state.projects.filter((p) => markers[p.id])
     .sort((a, b) => (b.id === state.selected) - (a.id === state.selected) || isVisible(b) - isVisible(a));
   const taken = order.map((p) => markers[p.id].el.querySelector(".dot").getBoundingClientRect());
@@ -149,7 +163,7 @@ function declutter() {
   for (const p of order) {
     const el = markers[p.id].el;
     el.classList.remove("left", "up", "down", "nolbl");
-    if (narrow && p.id !== state.selected) { el.classList.add("nolbl"); continue; }
+    if ((narrow || zoomedOut) && p.id !== state.selected) { el.classList.add("nolbl"); continue; }
     const spot = spots.find((c) => {
       el.classList.remove("left", "up", "down");
       if (c) el.classList.add(c);
@@ -182,10 +196,11 @@ function wardLabel(n) {
   return el;
 }
 
-function fitAll() {
-  const pts = state.projects.filter(hasLoc).map((p) => ({ lat: p.lat, lng: p.lon }));
+function fitTo(list) {
+  const pts = list.filter(hasLoc).map((p) => ({ lat: p.lat, lng: p.lon }));
   if (mapApi && pts.length) mapApi.fit(pts);
 }
+const fitAll = () => fitTo(state.cluster !== "all" ? state.projects.filter(isVisible) : state.projects);
 
 // ---------- side panel ----------
 // The money figure only adds up like with like: adjusted amounts for one
@@ -247,8 +262,14 @@ function renderFilters() {
   $("contractor").classList.toggle("hidden", !names.length);
   $("contractor").innerHTML = '<option value="all">All contractors</option>' +
     names.map((n) => `<option value="${esc(n)}" ${n === state.contractor ? "selected" : ""}>${esc(n)} (${fcount(n)})</option>`).join("");
+  const inCluster = state.cluster === "all" ? null : clusterWards(state.cluster);
   $("ward").innerHTML = '<option value="all">All wards</option>' +
-    CLUSTER_WARDS.map((w) => `<option value="${w}" ${String(w) === state.ward ? "selected" : ""}>Ward ${w} (${wcount(w)})</option>`).join("");
+    ALL_WARDS.filter((w) => !inCluster || inCluster.has(w))
+      .map((w) => `<option value="${w}" ${String(w) === state.ward ? "selected" : ""}>Ward ${w} (${wcount(w)})</option>`).join("");
+  const ccount = (n) => state.projects.filter((p) => (p.clusters || []).includes(n)).length;
+  $("cluster").classList.toggle("hidden", !CLUSTERS.length);
+  $("cluster").innerHTML = '<option value="all">All clusters</option>' +
+    CLUSTERS.map((c) => `<option value="${esc(c.name)}" ${c.name === state.cluster ? "selected" : ""}>${esc(c.name)} (${ccount(c.name)})</option>`).join("");
 }
 
 function renderList() {
@@ -259,7 +280,7 @@ function renderList() {
     ul.innerHTML = '<li class="empty">No projects match these filters. Clear a filter to see more.</li>';
     return;
   }
-  for (const p of visible) {
+  for (const p of visible.slice(0, state.listMax)) {
     const m = moneyChange(p);
     const st = STATUS[p.status] || STATUS.planned;
     const meta = [LEVELS[p.level], p.village, p.ward ? "Ward " + p.ward : "", !hasLoc(p) ? "not on map yet" : p.pin === "village" ? "approximate pin" : ""].filter(Boolean).join(", ");
@@ -276,6 +297,13 @@ function renderList() {
         ${deltaText(m) ? `<span class="delta ${m.kind}">${deltaText(m)}</span>` : ""}
       </span></button>`;
     li.firstElementChild.onclick = () => select(p.id, false);
+    ul.appendChild(li);
+  }
+  if (visible.length > state.listMax) {
+    const li = document.createElement("li");
+    li.className = "more";
+    li.innerHTML = `<button type="button" class="chip">Show ${Math.min(LIST_STEP, visible.length - state.listMax)} more of ${visible.length - state.listMax}</button>`;
+    li.firstElementChild.onclick = () => { state.listMax += LIST_STEP; renderList(); };
     ul.appendChild(li);
   }
 }
@@ -469,7 +497,7 @@ function readUrl() {
   state.selected = u.get("p") || null;
   state.q = u.get("q") || "";
   state.status = new Set((u.get("status") || "").split(",").filter((k) => STATUS[k]));
-  for (const k of ["sector", "ward", "level", "money", "contractor"]) state[k] = u.get(k) || "all";
+  for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) state[k] = u.get(k) || "all";
   $("q").value = state.q;
   $("money").value = state.money;
 }
@@ -480,7 +508,7 @@ function writeUrl() {
   set("p", state.selected);
   set("q", state.q);
   set("status", [...state.status].join(","));
-  for (const k of ["sector", "ward", "level", "money", "contractor"]) set(k, state[k] === "all" ? "" : state[k]);
+  for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) set(k, state[k] === "all" ? "" : state[k]);
   const qs = u.toString().replace(/%2C/g, ",");
   history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
 }
@@ -532,7 +560,7 @@ function renderCount() {
 }
 
 function clearFilters() {
-  Object.assign(state, { status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", q: "" });
+  Object.assign(state, { status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", q: "", listMax: LIST_STEP });
   $("q").value = ""; $("money").value = "all";
   render();
 }
@@ -565,7 +593,9 @@ function render() {
   renderDetail();
   drawMarkers();
   writeUrl();
-  if (mapApi && mapApi.highlightWard) mapApi.highlightWard(state.ward === "all" ? null : +state.ward);
+  if (mapApi && mapApi.highlightWard) {
+    mapApi.highlightWard(state.ward !== "all" ? new Set([+state.ward]) : state.cluster !== "all" ? clusterWards(state.cluster) : null);
+  }
 }
 
 function select(id, fromMap) {
@@ -594,6 +624,13 @@ $("q").onkeydown = (e) => {
 $("level").onchange = (e) => { state.level = e.target.value; render(); };
 $("money").onchange = (e) => { state.money = e.target.value; render(); };
 $("contractor").onchange = (e) => { state.contractor = e.target.value; render(); };
+$("cluster").onchange = (e) => {
+  state.cluster = e.target.value;
+  // A ward outside the new cluster would hide everything.
+  if (state.ward !== "all" && state.cluster !== "all" && !clusterWards(state.cluster).has(+state.ward)) state.ward = "all";
+  render();
+  if (mapApi && state.cluster !== "all") fitTo(state.projects.filter(isVisible));
+};
 $("csv").onclick = downloadCsv;
 $("clear").onclick = clearFilters;
 
@@ -680,12 +717,13 @@ async function initGoogle(cfg) {
       google.maps.event.addListenerOnce(map, "idle", () => { if (map.getZoom() > 14) map.setZoom(14); });
     },
     panTo(pos) { map.panTo(pos); },
+    getZoom() { return map.getZoom(); },
     onView(cb) { map.addListener("idle", cb); },
     addWards(gj, onClick) {
       map.data.addGeoJson(gj);
       let hi = null;
       const style = (f) => {
-        const on = hi === f.getProperty("ward");
+        const on = !!hi && hi.has(f.getProperty("ward"));
         return { fillColor: css("--fund"), fillOpacity: on ? 0.12 : 0.03, strokeColor: css("--ink"), strokeOpacity: on ? 0.9 : 0.45, strokeWeight: on ? 2.5 : 1.2, zIndex: 0 };
       };
       map.data.setStyle(style);
@@ -733,11 +771,12 @@ async function initLeaflet(cfg) {
     },
     fit(pts) { map.fitBounds(pts.map((pt) => [pt.lat, pt.lng]), { padding: [40, 40], maxZoom: 14 }); },
     panTo(pos) { map.panTo([pos.lat, pos.lng]); },
+    getZoom() { return map.getZoom(); },
     onView(cb) { map.on("zoomend moveend", cb); },
     addWards(gj, onClick) {
       let hi = null;
       const style = (f) => {
-        const on = hi === f.properties.ward;
+        const on = !!hi && hi.has(f.properties.ward);
         return { color: css("--ink"), weight: on ? 2.5 : 1.2, opacity: on ? 0.9 : 0.45, fillColor: css("--fund"), fillOpacity: on ? 0.12 : 0.03 };
       };
       const layer = L.geoJSON(gj, { style, onEachFeature: (f, l) => l.on("click", () => onClick(f.properties.ward)) }).addTo(map);

@@ -1,10 +1,7 @@
 project_id,fy,original,adjusted,label
 rws-sebayeng-dikgale,2025/26,5973406,1027332,IUDG
 rws-sebayeng-dikgale,2025/26,0,5000000,"Own funds (CRR), work-in-progress top-up"
-rws-sebayeng-dikgale,2026/27,6389414,,IUDG (planned)
-rws-sebayeng-dikgale,2027/28,7130435,,IUDG (planned)
 sport-complex-sebayeng-dikgale,2025/26,3024130,3024130,IUDG
-sport-complex-sebayeng-dikgale,2026/27,3478261,,IUDG (planned)
 paving-dikgale-moshate,2025/26,869565,0,IUDG
 paving-solomondale-d3997,2025/26,869565,0,IUDG
 road-tshware-mamotshwa,2025/26,4495843,1115360,IUDG
@@ -26,9 +23,6 @@ prov-edu-maboyane-primary,2026/27,5000000,,Education Infrastructure Grant (plann
 prov-edu-ngwanalaka-secondary,2025/26,2283000,,Education Infrastructure Grant
 prov-eskom-segopye-ext,2027/28,178922,,Eskom (planned)
 prov-eskom-sebayeng,2028/29,839603,,Eskom (planned)
-road-thlatlaganya-paving,2026/27,7500000,,Own funds (CRR)
-road-thlatlaganya-paving,2026/27,5500000,,IUDG
-road-solomondale-rehab,2026/27,10000000,,Own funds (CRR)
 prov-ral-d3997-sebayeng-gamoswedi,total,24370591,,"RAL total project cost (IDP 2025/26 sector table); R28,635,853 spent; VAT not stated"
 prov-ral-d3959-dikgale-regravel,total,9000000,,"RAL total project cost (IDP 2025/26 sector table); R8,859,445 spent; VAT not stated"
 prov-lnw-ebenezer-bulk,total,889000000,,"Budget Facility for Infrastructure (national, via DWS and Lepelle Northern Water), phase 1 total cost; covers the whole Olifantspoort/Ebenezer scheme, not only this cluster"
@@ -45,3 +39,833 @@ road-mamotintane-hospital,2027/28,797101,,IUDG (planned)
 bridge-thabang-ngaleng,2026/27,521739,,IUDG (planned)
 waste-dikgale-transfer-ramp,2024/25,718758,718758,Own funds (CRR)
 waste-makotopong-transfer-electrification,2026/27,600000,,Own funds (CRR) (planned)
+bridge-completion-makatjane,2027/28,12000000,,Own funds (CRR) (planned)
+bridge-ext-44,2025/26,0,680000,Own funds (CRR)
+bridge-ga-mogano,2028/29,3760869,,Own funds (CRR) (planned)
+bridge-kgabo-park,2026/27,365217,,IUDG (planned)
+bridge-koppermyn-thabang,2026/27,1408696,,IUDG (planned)
+bridge-leeukuil-plote,2027/28,1739130,,Own funds (CRR) (planned)
+bridge-linking-koppermyn-schoe,2025/26,0,680000,Own funds (CRR)
+bridge-linking-matlala-juno,2025/26,0,680000,Own funds (CRR)
+bridge-linking-segwashi-maribe,2025/26,0,780000,Own funds (CRR)
+bridge-maja-moshate-mphakanyane,2026/27,365217,,IUDG (planned)
+bridge-makanye-thoka,2025/26,0,680000,Own funds (CRR)
+bridge-maremadi-park,2025/26,0,680000,Own funds (CRR)
+bridge-maripathekong,2025/26,0,540000,Own funds (CRR)
+bridge-masesha,2026/27,608696,,IUDG (planned)
+bridge-mentz-shiloane,2026/27,695652,,IUDG (planned)
+bridge-mentz-shiloane,2027/28,3478261,,Own funds (CRR) (planned)
+bridge-mentz-shiloane,2028/29,3478261,,IUDG (planned)
+bridge-mmaphakane-maripathekong,2026/27,504348,,IUDG (planned)
+bridge-mothapo-tjatjaneng,2025/26,0,1080000,Own funds (CRR)
+bridge-motinti,2026/27,608696,,IUDG (planned)
+bridge-peter-nchabeleng-mabotja,2025/26,0,680000,Own funds (CRR)
+bridge-pietersburg-ext-40-44,2027/28,4695652,,Own funds (CRR) (planned)
+bridge-ramalapa,2026/27,504348,,IUDG (planned)
+bridge-sebati,2026/27,504348,,IUDG (planned)
+bridge-spitzkop,2025/26,0,540000,Own funds (CRR)
+bridge-widening-sandriver-trunk,2025/26,0,15500000,Own funds (CRR)
+bridge-widening-sandriver-trunk,2025/26,5964083,8964083,PTNG
+building-african-market,2026/27,1304348,,Own funds (CRR) (planned)
+building-african-market,2028/29,2173913,,Own funds (CRR) (planned)
+building-council-chamber,2025/26,1900000,1731261,Own funds (CRR)
+building-fencing-mankweng-unit-c-offices,2026/27,1304348,,Own funds (CRR) (planned)
+building-fencing-offices-seshego-zone-1,2026/27,956522,,Own funds (CRR) (planned)
+building-fencing-offices-seshego-zone-3,2026/27,1304348,,Own funds (CRR) (planned)
+building-fencing-offices-seshego-zone-8,2026/27,1043478,,Own funds (CRR) (planned)
+building-fire-offices-ladanna,2028/29,2608696,,Own funds (CRR) (planned)
+building-mankweng-fire-station,2028/29,2608696,,Own funds (CRR) (planned)
+building-provision-disability-access-buildings,2026/27,434783,,Own funds (CRR) (planned)
+building-provision-disability-access-buildings,2027/28,521739,,Own funds (CRR) (planned)
+building-provision-disability-access-buildings,2028/29,608696,,Own funds (CRR) (planned)
+building-renovation-offices-seshego-zone-1,2025/26,500000,420000,Own funds (CRR)
+building-renovation-offices-seshego-zone-3,2025/26,900000,900000,Own funds (CRR)
+building-renovation-offices-seshego-zone-8,2025/26,400000,431000,Own funds (CRR)
+building-renovation-staff-accomodation,2025/26,0,2000000,Own funds (CRR)
+building-renovation-staff-accomodation,2026/27,434783,,Own funds (CRR) (planned)
+building-renovation-staff-accomodation,2027/28,521739,,Own funds (CRR) (planned)
+building-renovation-staff-accomodation,2028/29,434783,,Own funds (CRR) (planned)
+building-revitalisation-mechanical-workshop,2026/27,4347826,,Own funds (CRR) (planned)
+cemetery-development-heroes-acre-silicon,2025/26,500000,500000,Own funds (CRR)
+cemetery-development-heroes-acre-silicon,2026/27,869565,,Own funds (CRR) (planned)
+cemetery-development-heroes-acre-silicon,2028/29,1304348,,Own funds (CRR) (planned)
+cemetery-purchase-land-mankweng,2025/26,700000,700000,Own funds (CRR)
+centre-aganang-cluster-offices-mohlonong,2025/26,800000,557208,Own funds (CRR)
+centre-aganang-hall,2025/26,2000000,2740000,Own funds (CRR)
+centre-civic,2026/27,608696,,Own funds (CRR) (planned)
+centre-civic,2027/28,3043478,,Own funds (CRR) (planned)
+centre-civic,2028/29,3217391,,Own funds (CRR) (planned)
+centre-control,2026/27,3478261,,Own funds (CRR) (planned)
+centre-control,2027/28,1739130,,Own funds (CRR) (planned)
+centre-control,2028/29,695652,,Own funds (CRR) (planned)
+centre-itsoseng,2028/29,3478261,,Own funds (CRR) (planned)
+centre-mankweng-community-hall,2026/27,2608696,,IUDG (planned)
+mankweng-thusong-centre,2026/27,2608696,,Own funds (CRR) (planned)
+mankweng-thusong-centre,2027/28,2739130,,Own funds (CRR) (planned)
+centre-mobile-service-sites-rampheri-village,2028/29,2875652,,Own funds (CRR) (planned)
+centre-nirvana-hall,2026/27,869565,,Own funds (CRR) (planned)
+centre-nirvana-hall,2027/28,434783,,Own funds (CRR) (planned)
+centre-westernburg-hall,2026/27,869565,,Own funds (CRR) (planned)
+centre-westernburg-hall,2027/28,434783,,Own funds (CRR) (planned)
+elec-30-highmast-lights,2026/27,10000000,,Own funds (CRR) (planned)
+elec-30-highmast-lights,2027/28,32000000,,Own funds (CRR) (planned)
+elec-30-highmast-lights,2028/29,32000000,,Own funds (CRR) (planned)
+elec-66kv-line-between-alpha-matlala,2025/26,2500000,6321697,Own funds (CRR)
+elec-66kv-line-between-alpha-matlala,2026/27,7826087,,Own funds (CRR) (planned)
+elec-66kv-line-between-alpha-matlala,2027/28,8695652,,Own funds (CRR) (planned)
+elec-66kv-line-between-alpha-matlala,2028/29,8391304,,Own funds (CRR) (planned)
+elec-bakone-iota-66kv-double-circuit,2028/29,869565,,Own funds (CRR) (planned)
+elec-design-66kv-line-between-matlala,2028/29,869565,,Own funds (CRR) (planned)
+elec-designs-electrification-urban-households-extensions,2025/26,3000000,218423,Own funds (CRR)
+elec-early-warning-online-remote-monitored,2027/28,869565,,Own funds (CRR) (planned)
+elec-early-warning-online-remote-monitored,2028/29,869565,,Own funds (CRR) (planned)
+elec-electricity-prepaid-meters,2026/27,5000000,,Own funds (CRR) (planned)
+elec-electricity-prepaid-meters,2027/28,5000000,,Own funds (CRR) (planned)
+elec-electricity-prepaid-meters,2028/29,5000000,,Own funds (CRR) (planned)
+elec-electrification-urban-household-seshego-zone,2027/28,5688696,,INEP (planned)
+elec-electrification-urban-household-seshego-zone,2028/29,3573043,,INEP (planned)
+elec-electrification-urban-household-seshego-zone-2,2025/26,6134783,6134783,INEP
+elec-electrification-urban-household-seshego-zone-3,2025/26,4086957,4086957,INEP
+elec-electrification-urban-households-inep-top,2025/26,5250000,8031577,Own funds (CRR)
+elec-electrification-urban-households-inep-top,2028/29,1739130,,Own funds (CRR) (planned)
+elec-electrification-urban-households-seshego-zone,2025/26,7500000,0,Own funds (CRR)
+elec-mandela-seshego-retrofitting-grid-powered,2026/27,869565,,Own funds (CRR) (planned)
+elec-mandela-seshego-retrofitting-grid-powered,2027/28,869565,,Own funds (CRR) (planned)
+elec-mandela-seshego-retrofitting-grid-powered,2028/29,869565,,Own funds (CRR) (planned)
+elec-massive-roll-out-streetlights,2026/27,10000000,,Own funds (CRR) (planned)
+elec-massive-roll-out-streetlights,2027/28,20000000,,Own funds (CRR) (planned)
+elec-massive-roll-out-streetlights,2028/29,20000000,,Own funds (CRR) (planned)
+elec-matlala-66-11kv-distribution-substation,2026/27,23913043,,Own funds (CRR) (planned)
+elec-matlala-66-11kv-distribution-substation,2027/28,29565217,,Own funds (CRR) (planned)
+elec-matlala-66-11kv-distribution-substation,2028/29,34782609,,Own funds (CRR) (planned)
+elec-medium-voltage-radial-feeders,2025/26,8750000,8217896,Own funds (CRR)
+elec-medium-voltage-radial-feeders,2026/27,2608696,,Own funds (CRR) (planned)
+elec-medium-voltage-radial-feeders,2027/28,869565,,Own funds (CRR) (planned)
+elec-medium-voltage-radial-feeders,2028/29,1304348,,Own funds (CRR) (planned)
+elec-medium-voltage-switchgear,2026/27,2173913,,Own funds (CRR) (planned)
+elec-medium-voltage-switchgear,2027/28,1304348,,Own funds (CRR) (planned)
+elec-medium-voltage-switchgear,2028/29,1739130,,Own funds (CRR) (planned)
+elec-movement-grid-powered-high-mast,2025/26,2000000,4000000,"Funding not stated (SB19, R thousand)"
+elec-movement-grid-powered-high-mast-2,2025/26,1500000,0,Own funds (CRR)
+elec-peter-mokaba-precinct-area-retrofitting,2026/27,1739130,,Own funds (CRR) (planned)
+elec-peter-mokaba-precinct-area-retrofitting,2027/28,869565,,Own funds (CRR) (planned)
+elec-peter-mokaba-precinct-area-retrofitting,2028/29,869565,,Own funds (CRR) (planned)
+elec-peter-mokaba-solar-panel,2028/29,869565,,Own funds (CRR) (planned)
+elec-power-protection-relays-substations,2025/26,2000000,2750000,Own funds (CRR)
+elec-power-protection-relays-substations,2026/27,1304348,,Own funds (CRR) (planned)
+elec-power-protection-relays-substations,2027/28,1304348,,Own funds (CRR) (planned)
+elec-provision-engineering-services-bakone-malapa,2025/26,18847261,0,IUDG
+elec-replacement-11kv-oil-switchgears-latest,2025/26,2000000,2000000,Own funds (CRR)
+elec-replacement-20mva-power-transformer-sigma,2026/27,4782609,,Own funds (CRR) (planned)
+elec-replacement-20mva-power-transformer-sigma,2027/28,4347826,,Own funds (CRR) (planned)
+elec-replacement-20mva-power-transformer-sigma,2028/29,869565,,Own funds (CRR) (planned)
+elec-replacement-conventional-meter-boxes-protective,2025/26,8750000,12000000,Own funds (CRR)
+elec-replacement-conventional-meter-boxes-protective,2026/27,1739130,,Own funds (CRR) (planned)
+elec-replacement-conventional-meter-boxes-protective,2027/28,1739130,,Own funds (CRR) (planned)
+elec-replacement-conventional-meter-boxes-protective,2028/29,869565,,Own funds (CRR) (planned)
+elec-replacement-fences-around-66kv-substations,2026/27,434783,,Own funds (CRR) (planned)
+elec-replacement-fences-around-66kv-substations,2027/28,434783,,Own funds (CRR) (planned)
+elec-replacement-fences-around-66kv-substations,2028/29,869565,,Own funds (CRR) (planned)
+elec-retrofit-existing-grid-powered-high,2025/26,2000000,0,Own funds (CRR)
+elec-retrofit-high-mast-lights-solar,2025/26,1250000,448000,Own funds (CRR)
+elec-retrofit-streetlights-solar-powered-light,2025/26,2000000,1820000,Own funds (CRR)
+elec-retrofit-streetlights-solar-powered-light,2026/27,1739130,,Own funds (CRR) (planned)
+elec-retrofit-streetlights-solar-powered-light,2027/28,1739130,,Own funds (CRR) (planned)
+elec-retrofit-streetlights-solar-powered-light,2028/29,869565,,Own funds (CRR) (planned)
+elec-retrofitting-grid-powered-streetlight-fittings,2026/27,1739130,,Own funds (CRR) (planned)
+elec-retrofitting-grid-powered-streetlight-fittings,2027/28,1304348,,Own funds (CRR) (planned)
+elec-retrofitting-streetlights-solar-powered-light,2025/26,1500000,1300000,Own funds (CRR)
+elec-scada,2028/29,869565,,Own funds (CRR) (planned)
+elec-solar-high-mast-lights-city,2025/26,2250000,1960000,Own funds (CRR)
+elec-solar-high-mast-lights-extension,2025/26,500000,500000,Own funds (CRR)
+elec-solar-high-mast-lights-rural,2025/26,7500000,10662407,Own funds (CRR)
+elec-solar-high-mast-lights-rural,2026/27,11308263,,IUDG (planned)
+elec-solar-high-mast-lights-rural,2027/28,8695652,,IUDG (planned)
+elec-solar-high-mast-lights-rural,2028/29,8695652,,IUDG (planned)
+elec-traffic-lights-gilead-mohlala-intersection,2027/28,869565,,IUDG (planned)
+elec-traffic-lights-penina-park-r37,2027/28,869565,,IUDG (planned)
+elec-x108-design-implementation-engineering-services,2025/26,4517391,4517391,NDPG
+elec-x108-design-implementation-engineering-services,2028/29,1739130,,NDPG (planned)
+housing-ext-72-stands,2026/27,869565,,IUDG (planned)
+housing-ext-72-stands,2027/28,797101,,IUDG (planned)
+housing-ext-72-stands,2028/29,8884688,,IUDG (planned)
+housing-land-acquisition,2025/26,5000000,3750000,Own funds (CRR)
+housing-land-acquisition,2026/27,4347826,,Own funds (CRR) (planned)
+housing-land-acquisition,2027/28,5043478,,Own funds (CRR) (planned)
+housing-streetscape-design-access-pedestrian-walkways,2025/26,0,3487031,NDPG
+housing-streetscape-design-access-pedestrian-walkways,2026/27,5784348,,NDPG (planned)
+housing-township-establishment-eco-estate-game,2025/26,1000000,2000000,Own funds (CRR)
+housing-township-establishment-eco-estate-game,2026/27,869565,,Own funds (CRR) (planned)
+housing-township-establishment-eco-estate-game,2027/28,1913043,,Own funds (CRR) (planned)
+housing-township-establishment-eco-estate-game,2028/29,2173913,,Own funds (CRR) (planned)
+housing-township-establishment-farm-portions,2026/27,6956522,,Own funds (CRR) (planned)
+housing-township-establishment-farm-portions,2027/28,7565217,,Own funds (CRR) (planned)
+housing-township-establishment-farm-portions,2028/29,5443478,,Own funds (CRR) (planned)
+library-sda1,2026/27,1000000,,Own funds (CRR) (planned)
+library-sda1,2027/28,8000000,,Own funds (CRR) (planned)
+library-sda1,2028/29,2500000,,Own funds (CRR) (planned)
+library-seshego,2026/27,869565,,Own funds (CRR) (planned)
+park-development-regional-parks-rural-areas,2025/26,1739130,1739130,IUDG
+park-development-regional-parks-rural-areas,2026/27,869565,,IUDG (planned)
+park-development-regional-parks-rural-areas,2027/28,2911153,,IUDG (planned)
+park-development-regional-parks-rural-areas,2028/29,4782609,,IUDG (planned)
+park-fencing-outdoor-gym,2026/27,3000000,,Own funds (CRR) (planned)
+park-game-reserve,2025/26,2000000,1980000,Own funds (CRR)
+park-game-reserve,2026/27,1739130,,Own funds (CRR) (planned)
+park-game-reserve,2027/28,1739130,,Own funds (CRR) (planned)
+park-game-reserve,2028/29,3043478,,Own funds (CRR) (planned)
+park-greening-programme,2025/26,2608696,2608696,IUDG
+park-greening-programme,2026/27,2911153,,IUDG (planned)
+park-greening-programme,2027/28,2911153,,IUDG (planned)
+park-greening-programme,2028/29,4608696,,IUDG (planned)
+park-greening-programme-disteneng,2025/26,869565,869565,IUDG
+park-greening-programme-sda-1,2026/27,1512287,,IUDG (planned)
+park-greening-programme-sda-1,2027/28,1858853,,IUDG (planned)
+park-mankweng-unit-c,2026/27,1739130,,IUDG (planned)
+park-mankweng-unit-c,2027/28,1739130,,Own funds (CRR) (planned)
+park-mankweng-unit-c,2028/29,2260870,,IUDG (planned)
+park-nursery,2025/26,0,100000,Own funds (CRR)
+park-tom-naude,2025/26,3478261,3478261,IUDG
+park-triangle,2025/26,5347826,3530641,NDPG
+paving-solomondale-d3997,2028/29,869565,,IUDG (planned)
+road-access-feke,2025/26,2707435,2705077,IUDG
+road-access-feke,2028/29,869565,,IUDG (planned)
+road-access-ga-thaba-molepo-chuene,2026/27,7782693,,IUDG (planned)
+road-access-ga-thaba-molepo-chuene,2028/29,869565,,IUDG (planned)
+road-akl-rdp-section-sda1-luthuli,2026/27,4347826,,IUDG (planned)
+road-arterial-d3355-monotwane-matlala-clinic,2025/26,3815292,4531211,IUDG
+road-arterial-d3355-monotwane-matlala-clinic,2026/27,7000004,,Own funds (CRR) (planned)
+road-arterial-d3355-monotwane-matlala-clinic,2027/28,9000000,,Own funds (CRR) (planned)
+road-arterial-d3355-monotwane-matlala-clinic,2028/29,869565,,IUDG (planned)
+road-arterial-d3383-setumong-mahoai-kgomo,2025/26,3424461,1170816,IUDG
+road-arterial-d3383-setumong-mahoai-kgomo,2028/29,869565,,IUDG (planned)
+road-arterial-d3413-ramakgaphola-gilead-d3390,2027/28,797101,,IUDG (planned)
+road-arterial-d3472-ga-setati-mashobohleng,2025/26,869565,869565,IUDG
+road-arterial-d3472-ga-setati-mashobohleng,2025/26,0,7000000,Own funds (CRR)
+road-arterial-d3472-ga-setati-mashobohleng,2026/27,9304348,,IUDG (planned)
+road-arterial-d3472-ga-setati-mashobohleng,2026/27,1671832,,Own funds (CRR) (planned)
+road-arterial-ditshweneng-maja-moshate,2025/26,2869565,2300983,IUDG
+road-arterial-ditshweneng-maja-moshate,2025/26,1165798,1165798,IUDG
+road-arterial-magongwa-village-d3378-d19,2025/26,6895652,6895652,IUDG
+road-arterial-magongwa-village-d3378-d19,2028/29,869565,,IUDG (planned)
+road-arterial-moetagare-setumong-d3382,2025/26,2617276,1222544,IUDG
+road-arterial-moetagare-setumong-d3382,2028/29,869565,,IUDG (planned)
+road-arterial-phuti-tjatjaneng,2027/28,797101,,IUDG (planned)
+road-arterial-r37-thokgwaneng-rdp,2027/28,797101,,IUDG (planned)
+road-bendor-penina-park-flora-westenburg,2025/26,1678999,1633653,IUDG
+road-bendor-penina-park-flora-westenburg,2026/27,4388905,,IUDG (planned)
+road-bendor-penina-park-flora-westenburg,2027/28,3478261,,IUDG (planned)
+road-bendor-pierre-neethling-rhodesdrift,2025/26,5000000,5000000,Own funds (CRR)
+road-benharris-zebediela-d19-08,2026/27,4347826,,IUDG (planned)
+road-beryl-gravel-asphalt-surfacing-parallel,2025/26,1000000,1800000,Own funds (CRR)
+road-beryl-gravel-asphalt-surfacing-parallel,2027/28,8695652,,IUDG (planned)
+road-beryl-gravel-asphalt-surfacing-parallel,2028/29,1739130,,IUDG (planned)
+road-beryl-veldspaat-mangnesiet,2027/28,8524095,,IUDG (planned)
+road-bloodriver-main-mulautsi-high-school,2028/29,1000000,,IUDG (planned)
+road-bok,2025/26,313043,1313043,IUDG
+road-bok-thabo-mbeki-deve,2025/26,0,5546234,Own funds (CRR)
+road-boom-devenish-excelsior,2025/26,1069565,881512,IUDG
+road-boshoff-marshall-mcdonalds,2025/26,0,6333409,Own funds (CRR)
+road-burger,2025/26,97230,97225,IUDG
+road-burger,2026/27,1739130,,IUDG (planned)
+road-burger,2027/28,869565,,IUDG (planned)
+road-bus-r71-dinokeng-between-mshongoville,2025/26,88245,88245,IUDG
+road-bus-r71-dinokeng-between-mshongoville,2026/27,6826087,,IUDG (planned)
+road-bus-r71-dinokeng-between-mshongoville,2028/29,869565,,IUDG (planned)
+road-campell,2025/26,3000000,2924587,Own funds (CRR)
+road-ceres-45,2028/29,869565,,IUDG (planned)
+road-city-traffic-licensing-centre,2025/26,1000000,2000000,Own funds (CRR)
+road-compensatie,2026/27,3043478,,IUDG (planned)
+road-completion-links-sanral-network,2025/26,334783,1182808,IUDG
+road-completion-links-sanral-network,2026/27,14000000,,Own funds (CRR) (planned)
+road-completion-links-sanral-network,2027/28,10000000,,Own funds (CRR) (planned)
+road-completion-links-sanral-network,2028/29,11342155,,IUDG (planned)
+road-completion-malesa-motsepe,2027/28,869565,,IUDG (planned)
+road-completion-mamotintane,2027/28,14000000,,Own funds (CRR) (planned)
+road-d3432-ga-mosi-gilead-se,2025/26,3422240,3419491,IUDG
+road-d3432-ga-mosi-gilead-se,2028/29,869565,,IUDG (planned)
+road-d3989-ga-mamabolo-itireleng,2027/28,797101,,IUDG (planned)
+road-d3989-ga-mamabolo-itireleng,2028/29,10964083,,IUDG (planned)
+road-damaged-signage-city-cbd,2025/26,1000000,1000000,Own funds (CRR)
+road-damaged-signage-city-cbd,2026/27,869565,,Own funds (CRR) (planned)
+road-damaged-signage-city-cbd,2027/28,1304348,,Own funds (CRR) (planned)
+road-damaged-signage-city-cbd,2028/29,1739130,,Own funds (CRR) (planned)
+road-dendron-dr-robot-witklip-market,2026/27,1739130,,Own funds (CRR) (planned)
+road-dendron-dr-robot-witklip-market,2026/27,7826087,,IUDG (planned)
+road-dendron-dr-robot-witklip-market,2027/28,2608696,,Own funds (CRR) (planned)
+road-dendron-dr-robot-witklip-market,2027/28,4347826,,IUDG (planned)
+road-dendron-dr-robot-witklip-market,2028/29,2173913,,Own funds (CRR) (planned)
+road-dewet-outspan-diemee,2025/26,0,5521217,Own funds (CRR)
+road-disteneng,2026/27,6000000,,IUDG (planned)
+road-disteneng,2028/29,1000000,,IUDG (planned)
+road-dorp,2025/26,13844,13838,IUDG
+road-dorp,2026/27,2646503,,IUDG (planned)
+road-dorp,2028/29,4347826,,IUDG (planned)
+road-dual-carriageway-access-mankweng,2025/26,0,19493916,Own funds (CRR)
+road-dual-carriageway-access-mankweng,2025/26,869565,11301833,IUDG
+road-dual-carriageway-access-mankweng,2026/27,8695652,,IUDG (planned)
+road-dual-carriageway-access-mankweng,2027/28,19130435,,IUDG (planned)
+road-dwars-connecting-ext-40-78,2028/29,869565,,IUDG (planned)
+road-dwars-zebediela-greenside-primary-school,2026/27,3800000,,Own funds (CRR) (planned)
+road-emerald,2026/27,1739130,,IUDG (planned)
+road-extension-106-main-taxi-14,2027/28,869565,,IUDG (planned)
+road-extension-75-14,2027/28,869565,,IUDG (planned)
+road-ga-makgoba-access,2028/29,869565,,IUDG (planned)
+road-ga-mamphaka-spitzkop-34,2025/26,7837870,8637870,IUDG
+road-ga-mamphaka-spitzkop-34,2028/29,869565,,IUDG (planned)
+road-ga-rankhuwe,2028/29,869565,,IUDG (planned)
+road-ga-thoka-reservoir-makanye-4034,2025/26,5782435,5782435,IUDG
+road-ga-thoka-reservoir-makanye-4034,2028/29,869565,,IUDG (planned)
+road-ga-ujane-d3363-40,2025/26,634132,0,IUDG
+road-ga-ujane-d3363-40,2028/29,869565,,IUDG (planned)
+road-general-joubert-between-suid-marshal,2025/26,0,800000,Own funds (CRR)
+road-gravel-tar-28th-zone-seshego,2025/26,3478261,5564849,NDPG
+road-gravel-tar-29th-zone-seshego,2025/26,3478261,5564849,NDPG
+road-gravel-tar-30th-zone-seshego,2025/26,3478261,5564849,NDPG
+road-hospital-link,2025/26,869565,1709867,NDPG
+road-hospital-view-1-2,2025/26,1739130,2956260,NDPG
+road-hospital-view-additional,2025/26,1739130,1880869,NDPG
+road-industrial-areas-opposite,2027/28,4347826,,IUDG (planned)
+road-industrial-areas-opposite,2028/29,8695652,,IUDG (planned)
+road-jorrisen-munnik-ave-dahl,2025/26,395761,395116,IUDG
+road-jorrisen-munnik-ave-dahl,2026/27,3478261,,IUDG (planned)
+road-jorrisen-munnik-ave-dahl,2028/29,869565,,IUDG (planned)
+road-kgaka-duif-uil,2025/26,0,3663433,Own funds (CRR)
+road-kopermyn-ga-maja,2028/29,869565,,IUDG (planned)
+road-ladanna,2026/27,7500000,,Own funds (CRR) (planned)
+road-ladanna-annadale-pietersburg,2026/27,3043478,,IUDG (planned)
+road-ladanna-annadale-pietersburg,2027/28,4347826,,IUDG (planned)
+road-landross-mare,2026/27,5217391,,IUDG (planned)
+road-leokama-moshung,2027/28,797101,,IUDG (planned)
+road-leokama-moshung,2028/29,11833649,,IUDG (planned)
+road-linking-r101-roodepoort-kuschke-agricultural,2025/26,0,3043478,MDRG
+road-lonsdale-percy-clinic-flora,2025/26,4496000,1115000,"Funding not stated (SB19, R thousand)"
+road-mankgaile-ga-mokoatedi-d4040-until,2025/26,333913,333913,IUDG
+road-mankgaile-ga-mokoatedi-d4040-until,2026/27,9739130,,IUDG (planned)
+road-mankgaile-ga-mokoatedi-d4040-until,2028/29,869565,,IUDG (planned)
+road-mankgaile-ga-mokoatedi-d4040-until-2,2025/26,0,4000000,Own funds (CRR)
+road-mankweng-traffic-licensing-testing-centre,2025/26,4000000,4000000,Own funds (CRR)
+road-mankweng-traffic-licensing-testing-centre,2026/27,8695652,,IUDG (planned)
+road-mankweng-traffic-licensing-testing-centre,2027/28,8695652,,IUDG (planned)
+road-mankweng-traffic-licensing-testing-centre,2028/29,7826087,,IUDG (planned)
+road-mankweng-unit-pulamadibogo-lg,2026/27,6956522,,IUDG (planned)
+road-mankweng-unit-pulamadibogo-lg,2028/29,869565,,IUDG (planned)
+road-matobole-silicon,2025/26,434783,425960,IUDG
+road-matobole-silicon,2028/29,869565,,IUDG (planned)
+road-meteor-munnik-pierre,2025/26,0,3869309,Own funds (CRR)
+road-mohlonong-kalkspruit,2025/26,2778594,2778594,IUDG
+road-mohlonong-kalkspruit,2028/29,869565,,IUDG (planned)
+road-moletjie-ga-makibelo-hlahla-ring,2028/29,869565,,IUDG (planned)
+road-monyoaneng-lonsdale,2025/26,489617,62142,IUDG
+road-monyoaneng-lonsdale,2028/29,869565,,IUDG (planned)
+road-mountain-view-2,2026/27,7000000,,Own funds (CRR) (planned)
+road-mountain-view-2,2027/28,8000000,,Own funds (CRR) (planned)
+road-names-boards-city-cbd,2025/26,1500000,1500000,Own funds (CRR)
+road-names-boards-city-cbd,2026/27,1652174,,Own funds (CRR) (planned)
+road-names-boards-city-cbd,2027/28,1565217,,Own funds (CRR) (planned)
+road-names-boards-city-cbd,2028/29,1739130,,Own funds (CRR) (planned)
+road-nirvana-extension,2025/26,1400000,1400000,"Funding not stated (SB19, R thousand)"
+road-nirvana-extension,2028/29,869565,,IUDG (planned)
+road-nobody-mothapo,2025/26,3200000,2000000,IUDG
+road-nobody-mothapo,2028/29,869565,,IUDG (planned)
+road-oost,2025/26,4500000,3162000,Own funds (CRR)
+road-oost,2026/27,1739130,,Own funds (CRR) (planned)
+road-phomolong-makgwareng,2025/26,9498517,10030775,IUDG
+road-phomolong-makgwareng,2028/29,869565,,IUDG (planned)
+road-planning-service-dalmada,2028/29,869565,,IUDG (planned)
+road-ptng-nelson-mandela-rissik-sandriver,2025/26,0,13755488,IUDG
+road-ptng-nelson-mandela-rissik-sandriver,2025/26,0,6439177,PTNG
+road-r71-link-n1-pass,2026/27,1000000,,IUDG (planned)
+road-rabie,2025/26,1259540,207000,IUDG
+road-railway,2026/27,1342155,,IUDG (planned)
+road-railway,2027/28,4347826,,IUDG (planned)
+road-ralema-primary-school-krukutje-ga,2026/27,6956522,,IUDG (planned)
+road-ralema-primary-school-krukutje-ga,2027/28,1594203,,IUDG (planned)
+road-ralema-primary-school-krukutje-ga,2028/29,869565,,IUDG (planned)
+road-ridge-connecting-ivy-park-ivydale,2027/28,869565,,IUDG (planned)
+road-ring-university-toronto,2028/29,869565,,IUDG (planned)
+road-sehwibidung-anglican-church,2026/27,15000000,,Own funds (CRR) (planned)
+road-sekoala-mehlakong,2028/29,869565,,IUDG (planned)
+road-sengatane-d3330-chebeng-09,2025/26,3732209,4632209,IUDG
+road-sengatane-d3330-chebeng-09,2028/29,869565,,IUDG (planned)
+road-seshego,2026/27,7500000,,Own funds (CRR) (planned)
+road-seshego-cluster,2026/27,4347826,,IUDG (planned)
+road-seshego-cluster,2027/28,4347826,,IUDG (planned)
+road-seshego-cluster,2028/29,3043478,,IUDG (planned)
+road-seshego-zone-1,2026/27,869565,,IUDG (planned)
+road-seshego-zone-1,2027/28,8695652,,IUDG (planned)
+road-seshego-zone-2,2025/26,1692557,0,IUDG
+road-seshego-zone-2,2027/28,5871022,,IUDG (planned)
+road-seshego-zone-2,2028/29,869565,,IUDG (planned)
+road-seshego-zone-3,2025/26,2311704,0,IUDG
+road-seshego-zone-3,2028/29,869565,,IUDG (planned)
+road-seshego-zone-4,2028/29,869565,,IUDG (planned)
+road-seshego-zone-5,2025/26,580783,0,IUDG
+road-seshego-zone-6,2025/26,1083925,895560,IUDG
+road-seshego-zone-6,2028/29,869565,,IUDG (planned)
+road-seshego-zone-8,2025/26,1652174,1652174,IUDG
+road-seshego-zone-8,2028/29,869565,,IUDG (planned)
+road-showground,2025/26,0,3043000,"Funding not stated (SB19, R thousand)"
+road-side-walk-city-cbd,2026/27,1304348,,IUDG (planned)
+road-side-walk-city-cbd,2027/28,2608696,,IUDG (planned)
+road-side-walk-city-cbd,2028/29,4282208,,IUDG (planned)
+road-solomondale-rehab,2026/27,10000000,,Own funds (CRR) (planned)
+road-spitzkop-segwasi,2025/26,6219321,6219321,IUDG
+road-spitzkop-segwasi,2028/29,869565,,IUDG (planned)
+road-tshebela-moshate,2025/26,6507931,3026094,IUDG
+road-tshebela-moshate,2025/26,5787966,5621139,Own funds (CRR)
+road-tshebela-moshate,2025/26,0,10000000,Own funds (CRR)
+road-tshebela-moshate,2026/27,8565217,,IUDG (planned)
+road-tshebela-moshate,2026/27,4347826,,Own funds (CRR) (planned)
+road-tshebela-moshate,2027/28,12926906,,IUDG (planned)
+road-tshebela-moshate,2027/28,4156884,,Own funds (CRR) (planned)
+road-tshebela-moshate,2028/29,1739130,,IUDG (planned)
+road-tshebela-moshate,2028/29,4725243,,Own funds (CRR) (planned)
+road-thakgalang,2028/29,869565,,IUDG (planned)
+road-thlathlanganya,2027/28,797101,,IUDG (planned)
+road-thlatlaganya-paving,2026/27,7500000,,Own funds (CRR) (planned)
+road-thlatlaganya-paving,2026/27,5500000,,IUDG (planned)
+road-titibe-makgoba,2028/29,869565,,IUDG (planned)
+road-traffic-court-ladana,2027/28,2956522,,Own funds (CRR) (planned)
+road-traffic-court-ladana,2028/29,5008696,,Own funds (CRR) (planned)
+road-tshware-mamotshwa,2028/29,869565,,IUDG (planned)
+road-university-makanye-primary-school-07,2025/26,260870,0,IUDG
+road-university-makanye-primary-school-07,2028/29,869565,,IUDG (planned)
+road-veldspad,2026/27,12000000,,Own funds (CRR) (planned)
+road-voortrekker,2026/27,2608696,,IUDG (planned)
+road-westernburg-rdp-section,2026/27,3869565,,IUDG (planned)
+road-zebediela-ext-44,2025/26,0,14347826,MDRG
+rws-sebayeng-dikgale,2026/27,5556012,,IUDG (planned)
+rws-sebayeng-dikgale,2027/28,6200378,,IUDG (planned)
+rws-sebayeng-dikgale,2028/29,7710453,,IUDG (planned)
+sanitation-ablution-mankweng-parks-25-26,2025/26,1304348,1304348,IUDG
+sanitation-ablution-mankweng-parks-25-26,2026/27,1398866,,IUDG (planned)
+sanitation-ablution-mankweng-parks-25-26,2027/28,1739130,,IUDG (planned)
+sanitation-emergency-mankweng-wwtw,2025/26,0,3822941,IUDG
+sanitation-public-toilets,2026/27,1304348,,Own funds (CRR) (planned)
+sanitation-public-toilets,2027/28,1391304,,Own funds (CRR) (planned)
+sanitation-public-toilets,2028/29,1391304,,Own funds (CRR) (planned)
+sanitation-regional-waste-treatment-plant-2b,2025/26,44574185,48395882,RBIG
+sanitation-regional-waste-treatment-plant-2b,2026/27,598347826,,RBIG (planned)
+sanitation-regional-waste-treatment-plant-2b,2027/28,756173913,,RBIG (planned)
+sanitation-regional-waste-treatment-plant-2b,2028/29,487652174,,RBIG (planned)
+sanitation-regional-waste-treatment-plant-2c,2025/26,8891493,6569796,RBIG
+sanitation-regional-waste-treatment-plant-outfall,2025/26,0,17391304,RBIG
+sanitation-regional-waste-treatment-plant-outfall,2026/27,434783,,Own funds (CRR) (planned)
+sanitation-seshego-wwtw-2,2025/26,6086957,4586957,RBIG
+sanitation-seshego-wwtw-2,2026/27,4180090,,Own funds (CRR) (planned)
+sanitation-seshego-wwtw-2,2028/29,5304348,,Own funds (CRR) (planned)
+sanitation-wwtw-2,2025/26,6956522,6956522,RBIG
+sanitation-x108-design-implementation-engineering-services,2025/26,4430435,-1243478,NDPG
+sanitation-x108-design-implementation-engineering-services,2028/29,1739130,,NDPG (planned)
+sport-chuene-maja-sports-complex,2025/26,1000000,1000000,Own funds (CRR)
+sport-chuene-maja-sports-complex,2026/27,10000000,,Own funds (CRR) (planned)
+sport-chuene-maja-sports-complex,2026/27,608696,,IUDG (planned)
+sport-chuene-maja-sports-complex,2027/28,1869565,,Own funds (CRR) (planned)
+sport-chuene-maja-sports-complex,2027/28,3000000,,Own funds (CRR) (planned)
+sport-chuene-maja-sports-complex,2028/29,1739130,,IUDG (planned)
+sport-complex-sebayeng-dikgale,2026/27,4729236,,IUDG (planned)
+sport-complex-sebayeng-dikgale,2027/28,5304348,,IUDG (planned)
+sport-complex-sebayeng-dikgale,2028/29,4347826,,IUDG (planned)
+sport-courts-netball-volley-ball,2026/27,869565,,IUDG (planned)
+sport-eastern-pavilion-seshego-stadium,2026/27,434783,,Own funds (CRR) (planned)
+sport-eastern-pavilion-seshego-stadium,2027/28,2173913,,Own funds (CRR) (planned)
+sport-eastern-pavilion-seshego-stadium,2028/29,4347826,,Own funds (CRR) (planned)
+sport-ext-44-78-sports-recreation,2025/26,0,4000000,IUDG
+sport-laastehoop-complex,2025/26,1739130,1739130,IUDG
+sport-mankweng-stadium,2025/26,8695652,8695652,IUDG
+sport-mankweng-stadium,2026/27,24500000,,Own funds (CRR) (planned)
+sport-mankweng-stadium,2026/27,8733459,,IUDG (planned)
+sport-mankweng-stadium,2027/28,30000000,,Own funds (CRR) (planned)
+sport-mankweng-stadium,2027/28,13648393,,IUDG (planned)
+sport-mankweng-stadium,2028/29,13043478,,IUDG (planned)
+sport-mohlonong-stadium,2025/26,1500000,1500000,IUDG
+sport-mohlonong-stadium,2026/27,3000000,,Own funds (CRR) (planned)
+sport-mohlonong-stadium,2027/28,4000000,,Own funds (CRR) (planned)
+sport-mohlonong-stadium,2027/28,2782609,,IUDG (planned)
+sport-mohlonong-stadium,2028/29,4668696,,IUDG (planned)
+sport-nirvana-stadium,2025/26,1500000,1500000,Own funds (CRR)
+sport-nirvana-stadium,2026/27,869565,,IUDG (planned)
+sport-nirvana-stadium,2027/28,1739130,,Own funds (CRR) (planned)
+sport-nirvana-stadium,2028/29,1739130,,IUDG (planned)
+sport-procurement-conference-tables-chairs-peter,2026/27,869565,,Own funds (CRR) (planned)
+sport-procurement-conference-tables-chairs-peter,2027/28,869565,,Own funds (CRR) (planned)
+sport-procurement-conference-tables-chairs-peter,2028/29,869565,,Own funds (CRR) (planned)
+sport-seshego-swimming-pool,2026/27,260870,,IUDG (planned)
+showground-upgrade,2026/27,869565,,IUDG (planned)
+sport-softball-stadium-city-cluster,2025/26,40755652,36755652,IUDG
+sport-softball-stadium-city-cluster,2026/27,44197734,,Own funds (CRR) (planned)
+sport-softball-stadium-city-cluster,2026/27,6848798,,IUDG (planned)
+sport-softball-stadium-city-cluster,2027/28,17391304,,Own funds (CRR) (planned)
+sport-softball-stadium-city-cluster,2028/29,35180435,,Own funds (CRR) (planned)
+sport-softball-stadium-city-cluster,2028/29,8297826,,IUDG (planned)
+sport-tibane-stadium,2026/27,8000000,,Own funds (CRR) (planned)
+sport-tibane-stadium,2027/28,5000000,,Own funds (CRR) (planned)
+stormwater-canal,2025/26,0,453828,NDPG
+stormwater-canal-extension-44-1-2,2026/27,4000000,,Own funds (CRR) (planned)
+stormwater-canal-extension-44-1-2,2027/28,5000000,,Own funds (CRR) (planned)
+stormwater-canal-extension-73,2026/27,5000000,,Own funds (CRR) (planned)
+stormwater-canal-extension-78,2027/28,5000000,,Own funds (CRR) (planned)
+stormwater-channel-thutu-seshego-zone-4,2026/27,2782609,,IUDG (planned)
+stormwater-completion-legae-la-batho,2025/26,0,319343,Own funds (CRR)
+stormwater-drainage-stores-ladanna,2026/27,1304348,,Own funds (CRR) (planned)
+stormwater-ext-76,2025/26,0,536557,IUDG
+stormwater-flood-repair-futura-sandriver-stream,2025/26,4143478,4143478,MDRG
+stormwater-flood-repair-futura-sandriver-stream,2025/26,2000000,1865521,Own funds (CRR)
+stormwater-flood-repair-futura-sandriver-stream,2025/26,17391304,0,RBIG
+stormwater-ga-semenya,2028/29,25217391,,IUDG (planned)
+stormwater-ivypark-emperor,2025/26,2500000,3300000,Own funds (CRR)
+stormwater-ivypark-emperor,2027/28,3478261,,IUDG (planned)
+stormwater-makanye,2026/27,869565,,IUDG (planned)
+stormwater-makanye,2027/28,4347826,,Own funds (CRR) (planned)
+stormwater-makanye,2028/29,4347826,,IUDG (planned)
+stormwater-mankweng,2026/27,7000000,,Own funds (CRR) (planned)
+stormwater-mankweng,2027/28,8000000,,Own funds (CRR) (planned)
+stormwater-mankweng-unit-g-next-lg,2026/27,869565,,IUDG (planned)
+stormwater-mankweng-unit-g-next-lg,2027/28,4347826,,IUDG (planned)
+stormwater-mankweng-unit-g-next-lg,2028/29,4347826,,IUDG (planned)
+stormwater-mdrg-city,2025/26,0,1000000,Own funds (CRR)
+stormwater-mdrg-city,2025/26,0,8695652,MDRG
+stormwater-mdrg-city,2026/27,7907307,,IUDG (planned)
+stormwater-mdrg-city,2027/28,18914500,,IUDG (planned)
+stormwater-mdrg-city,2028/29,10377217,,IUDG (planned)
+stormwater-seshego,2025/26,6000000,6500000,Own funds (CRR)
+stormwater-seshego,2026/27,4241211,,IUDG (planned)
+stormwater-seshego,2027/28,4347826,,Own funds (CRR) (planned)
+stormwater-seshego,2028/29,4347826,,IUDG (planned)
+stormwater-sterpark-flora-park-fauna,2026/27,4347826,,IUDG (planned)
+stormwater-sterpark-flora-park-fauna,2027/28,8695652,,IUDG (planned)
+transport-bus-stops-2,2027/28,2253308,,PTNG (planned)
+transport-bus-stops-2,2028/29,3913043,,PTNG (planned)
+transport-daytime-layover,2025/26,434783,434783,PTNG
+transport-leeto-la-bus-route,2026/27,14347826,,PTNG (planned)
+transport-leeto-la-bus-route,2027/28,4347826,,PTNG (planned)
+transport-leeto-la-bus-route,2028/29,4347826,,PTNG (planned)
+transport-non-motorised,2028/29,5652174,,PTNG (planned)
+transport-provision-bus-stop-shelters,2025/26,5000000,5000000,PTNG
+transport-pt-indian-centre,2025/26,11908329,20032038,PTNG
+transport-transit-mall,2025/26,13755198,12755198,PTNG
+transport-transit-mall,2027/28,8252292,,PTNG (planned)
+waste-aganang-landfill-fence,2026/27,2173913,,IUDG (planned)
+waste-aganang-landfill-fence,2027/28,2173913,,Own funds (CRR) (planned)
+waste-aganang-landfill-fence,2028/29,2050000,,IUDG (planned)
+waste-extension-landfill-site-weltevreden,2025/26,8695652,8695652,IUDG
+waste-extension-landfill-site-weltevreden,2026/27,14093950,,IUDG (planned)
+waste-extension-landfill-site-weltevreden,2027/28,34334745,,IUDG (planned)
+waste-extension-landfill-site-weltevreden,2028/29,17391304,,IUDG (planned)
+waste-ga-chuene-transfer-station-planning,2025/26,3478261,2978261,IUDG
+waste-ga-chuene-transfer-station-planning,2026/27,4120983,,IUDG (planned)
+waste-ga-chuene-transfer-station-planning,2027/28,1304348,,IUDG (planned)
+waste-ga-maja-transfer-station-planning,2025/26,3478261,2378261,IUDG
+waste-ga-maja-transfer-station-planning,2026/27,4415878,,IUDG (planned)
+waste-ga-maja-transfer-station-planning,2027/28,1304348,,IUDG (planned)
+waste-gates-parameter-fence-webster-depot,2025/26,500000,916212,Own funds (CRR)
+waste-management-offices-ladanna,2026/27,1739130,,Own funds (CRR) (planned)
+waste-management-offices-ladanna,2027/28,869565,,Own funds (CRR) (planned)
+waste-mankweng-transfer-station,2028/29,869565,,Own funds (CRR) (planned)
+waste-mashashane-transfer-station,2026/27,956522,,IUDG (planned)
+waste-mashashane-transfer-station,2027/28,3191191,,IUDG (planned)
+waste-mashashane-transfer-station,2028/29,4347826,,IUDG (planned)
+waste-molepo-transfer-station,2025/26,4173913,4173913,IUDG
+waste-molepo-transfer-station,2026/27,3780718,,IUDG (planned)
+waste-seshego-transfer-station,2025/26,2608696,3158696,IUDG
+waste-weltevreden-landfill-site,2025/26,4347826,4347826,IUDG
+waste-weltevreden-landfill-site,2026/27,4385633,,IUDG (planned)
+waste-weltevreden-landfill-site,2027/28,13475397,,IUDG (planned)
+waste-weltevreden-landfill-site,2028/29,8695652,,IUDG (planned)
+waste-westenburg-transfer-station,2025/26,1739130,2789130,IUDG
+water-aganang-bulk-transfer-scheme,2025/26,2000000,1813847,Own funds (CRR)
+water-aganang-bulk-transfer-scheme,2027/28,1739130,,Own funds (CRR) (planned)
+water-aganang-bulk-transfer-scheme,2028/29,4347826,,Own funds (CRR) (planned)
+water-aganang-rws-2-madietane,2025/26,7329334,5129334,IUDG
+water-aganang-rws-2-madietane,2026/27,5309443,,IUDG (planned)
+water-aganang-rws-2-madietane,2027/28,5992250,,IUDG (planned)
+water-aganang-rws-2-madietane,2028/29,6956522,,IUDG (planned)
+water-aganang-rws-2-phetole,2026/27,1043478,,IUDG (planned)
+water-aganang-rws-2-phetole,2027/28,3913043,,IUDG (planned)
+water-aganang-rws-2-phetole,2028/29,599228,,IUDG (planned)
+water-aganang-rws-2-rammobola,2025/26,0,3108898,Own funds (CRR)
+water-aganang-rws-2-rammobola,2025/26,1940774,5838334,IUDG
+water-aganang-rws-2-rampuru,2026/27,1043478,,IUDG (planned)
+water-aganang-rws-2-rampuru,2027/28,4761526,,IUDG (planned)
+water-aganang-rws-3-ga-piet,2027/28,9300567,,WSIG (planned)
+water-aganang-rws-3-ga-piet,2028/29,13043478,,WSIG (planned)
+water-aganang-rws-3-kgabo-park,2025/26,7262406,3394048,WSIG
+water-aganang-rws-3-mabiloane,2027/28,9300567,,WSIG (planned)
+water-aganang-rws-3-mabiloane,2028/29,13043478,,WSIG (planned)
+water-aganang-rws-3-rapitsi,2025/26,542780,2844519,WSIG
+water-aganang-rws-3-wash-bank,2025/26,2629737,1282774,WSIG
+water-aganang-rws-3-wash-bank,2026/27,13162653,,WSIG (planned)
+water-aganang-rws-3-wash-bank,2027/28,5954631,,WSIG (planned)
+water-aganang-rws-3-wash-bank,2028/29,9186520,,WSIG (planned)
+water-badimong-rws,2025/26,2085970,0,WSIG
+water-badimong-rws,2026/27,4719550,,IUDG (planned)
+water-badimong-rws,2027/28,1739130,,IUDG (planned)
+water-badimong-rws,2028/29,2608696,,IUDG (planned)
+water-bakone-rws-2-boratapelo,2026/27,13858148,,WSIG (planned)
+water-bakone-rws-2-boratapelo,2027/28,7561437,,WSIG (planned)
+water-bakone-rws-2-boratapelo,2028/29,8695652,,WSIG (planned)
+water-bakone-rws-2-ga-phoffu,2025/26,1256190,3053665,WSIG
+water-bakone-rws-2-moetagare,2026/27,13648393,,WSIG (planned)
+water-bakone-rws-2-moetagare,2027/28,7561437,,WSIG (planned)
+water-bakone-rws-2-moetagare,2028/29,8695652,,WSIG (planned)
+water-bakone-rws-2-ntlolane,2025/26,17366206,7014851,WSIG
+water-bakone-rws-3-ramokadikadi,2025/26,6463385,7092041,IUDG
+water-bakone-rws-3-ramokadikadi,2026/27,7068299,,IUDG (planned)
+water-bakone-rws-3-ramokadikadi,2027/28,1391304,,IUDG (planned)
+water-bakone-rws-3-ramokadikadi,2028/29,6956522,,IUDG (planned)
+water-boyne-rws,2025/26,5833812,3833812,IUDG
+water-boyne-rws,2026/27,6978220,,IUDG (planned)
+water-boyne-rws,2027/28,1822306,,IUDG (planned)
+water-boyne-rws,2028/29,6956522,,IUDG (planned)
+water-bulk-sandriver-north-wellfields,2025/26,0,18693478,Own funds (CRR)
+water-bulk-sandriver-north-wellfields,2025/26,22678334,22678334,RBIG
+water-bulk-sandriver-north-wellfields,2026/27,434783,,Own funds (CRR) (planned)
+water-bulk-sandriver-south-wellfields,2026/27,434783,,Own funds (CRR) (planned)
+water-bulk-sandriver-treatment-works,2025/26,0,26390036,Own funds (CRR)
+water-bulk-sandriver-treatment-works,2025/26,28646422,28646422,RBIG
+water-bulk-sandriver-treatment-works,2026/27,434783,,Own funds (CRR) (planned)
+water-chuene-maja-fynbos,2025/26,3478261,20224787,WSIG
+water-chuene-maja-fynbos,2026/27,10540119,,WSIG (planned)
+water-chuene-maja-fynbos,2027/28,5356825,,WSIG (planned)
+water-chuene-maja-fynbos,2028/29,6956522,,WSIG (planned)
+water-chuene-maja-rws,2025/26,8678885,7078885,IUDG
+water-chuene-maja-rws,2026/27,5358757,,IUDG (planned)
+water-chuene-maja-rws,2027/28,7561444,,IUDG (planned)
+water-chuene-maja-rws,2028/29,4347826,,IUDG (planned)
+water-conservation-demand-management-rezoning,2025/26,2000000,2000000,Own funds (CRR)
+water-development-malmane-wellfields,2028/29,1739130,,Own funds (CRR) (planned)
+water-drilling-boreholes-clusters,2025/26,0,11000000,Own funds (CRR)
+water-drilling-boreholes-clusters,2025/26,5944539,11944539,IUDG
+water-drilling-boreholes-clusters,2026/27,11134216,,IUDG (planned)
+water-drilling-boreholes-clusters,2027/28,8977431,,IUDG (planned)
+water-drilling-boreholes-clusters,2028/29,6956522,,IUDG (planned)
+water-drilling-boreholes-sebati-village,2025/26,2000000,2000000,IUDG
+water-ground-protocol,2028/29,9293126,,IUDG (planned)
+water-houtriver-rws,2025/26,6024492,5024492,IUDG
+water-houtriver-rws,2026/27,6016274,,IUDG (planned)
+water-houtriver-rws,2027/28,7561437,,IUDG (planned)
+water-houtriver-rws,2028/29,7391304,,IUDG (planned)
+water-kalkspruit-aganang-42,2025/26,7348979,6458019,IUDG
+water-kalkspruit-aganang-42,2026/27,4860070,,IUDG (planned)
+water-kalkspruit-aganang-42,2027/28,6478261,,IUDG (planned)
+water-kalkspruit-aganang-42,2028/29,7652174,,IUDG (planned)
+water-laastehoop-rws,2025/26,5678766,3550187,IUDG
+water-laastehoop-rws,2026/27,5565204,,IUDG (planned)
+water-laastehoop-rws,2027/28,7603796,,IUDG (planned)
+water-laastehoop-rws,2028/29,8298123,,IUDG (planned)
+water-mankweng-rws,2025/26,0,8911054,Own funds (CRR)
+water-mankweng-rws,2025/26,7573597,5792048,IUDG
+water-mankweng-rws,2026/27,7739462,,IUDG (planned)
+water-mankweng-rws,2027/28,7812816,,IUDG (planned)
+water-mankweng-rws,2028/29,7717935,,IUDG (planned)
+water-mankweng-rws-top-up,2025/26,3500000,0,Own funds (CRR)
+water-mashashane-works-scheme,2025/26,4873377,24750758,IUDG
+water-mashashane-works-scheme,2026/27,4554705,,IUDG (planned)
+water-mashashane-works-scheme,2027/28,5822306,,IUDG (planned)
+water-mashashane-works-scheme,2028/29,7826087,,IUDG (planned)
+water-molepo-rws,2025/26,0,2000000,Own funds (CRR)
+water-molepo-rws,2025/26,6285497,7173247,IUDG
+water-molepo-rws,2026/27,5465649,,IUDG (planned)
+water-molepo-rws,2027/28,6295006,,IUDG (planned)
+water-molepo-rws,2028/29,7324452,,IUDG (planned)
+water-molepo-treatment-plant,2025/26,2000000,1604550,IUDG
+water-molepo-treatment-plant,2026/27,1304348,,IUDG (planned)
+water-molepo-treatment-plant,2027/28,2260869,,IUDG (planned)
+water-molepo-treatment-plant,2028/29,4347826,,IUDG (planned)
+water-moletjie-east-rws-2,2025/26,0,5000000,Own funds (CRR)
+water-moletjie-east-rws-2,2025/26,8378894,10041191,IUDG
+water-moletjie-east-rws-2,2026/27,5652276,,IUDG (planned)
+water-moletjie-east-rws-2,2027/28,8291871,,IUDG (planned)
+water-moletjie-east-rws-2,2028/29,7647826,,IUDG (planned)
+water-moletjie-north-rws,2025/26,7033164,0,WSIG
+water-moletjie-north-rws,2026/27,9067377,,WSIG (planned)
+water-moletjie-north-rws,2027/28,10186768,,WSIG (planned)
+water-moletjie-north-rws,2028/29,7925654,,WSIG (planned)
+water-moletjie-south-rws-bellingsgate-sepanapudi,2025/26,6956522,8575000,WSIG
+water-moletjie-south-rws-bellingsgate-sepanapudi,2026/27,13196867,,WSIG (planned)
+water-moletjie-south-rws-bellingsgate-sepanapudi,2027/28,12381096,,WSIG (planned)
+water-moletjie-south-rws-bellingsgate-sepanapudi,2028/29,6956522,,WSIG (planned)
+water-moletjie-south-rws-vaalkop,2025/26,7809650,9505081,WSIG
+water-moletjie-south-rws-vaalkop,2026/27,13502096,,WSIG (planned)
+water-moletjie-south-rws-vaalkop,2027/28,6275992,,WSIG (planned)
+water-moletjie-south-rws-vaalkop,2028/29,6956522,,WSIG (planned)
+water-mothapo-rws,2025/26,0,2000000,Own funds (CRR)
+water-mothapo-rws,2025/26,5276101,3495175,IUDG
+water-mothapo-rws,2026/27,6825430,,IUDG (planned)
+water-mothapo-rws,2027/28,7104213,,IUDG (planned)
+water-mothapo-rws,2028/29,7353727,,IUDG (planned)
+water-olifantspoort-rws-mmotong-perekisi,2025/26,2636174,1125719,IUDG
+water-olifantspoort-rws-mmotong-perekisi,2026/27,5797321,,IUDG (planned)
+water-olifantspoort-rws-mmotong-perekisi,2027/28,7561437,,IUDG (planned)
+water-olifantspoort-rws-mmotong-perekisi,2028/29,6956522,,IUDG (planned)
+water-prepaid-meters,2026/27,25000000,,Own funds (CRR) (planned)
+water-prepaid-meters,2027/28,25000000,,Own funds (CRR) (planned)
+water-prepaid-meters,2028/29,25000000,,Own funds (CRR) (planned)
+water-prepaid-meters-city-seshego-mankweng,2025/26,6464525,5500000,Own funds (CRR)
+water-prepaid-meters-city-seshego-mankweng,2026/27,2007742,,Own funds (CRR) (planned)
+water-prepaid-meters-city-seshego-mankweng,2027/28,9565217,,Own funds (CRR) (planned)
+water-prepaid-meters-city-seshego-mankweng,2028/29,9565217,,Own funds (CRR) (planned)
+water-replacement-ac-pipes-2,2025/26,2000000,3368073,Own funds (CRR)
+water-replacement-ac-pipes-2,2025/26,0,2539130,NDPG
+water-replacement-ac-pipes-2,2026/27,10613304,,NDPG (planned)
+water-replacement-ac-pipes-2,2027/28,1739130,,Own funds (CRR) (planned)
+water-replacement-ac-pipes-2,2027/28,10434782,,NDPG (planned)
+water-replacement-ac-pipes-2,2028/29,1739130,,Own funds (CRR) (planned)
+water-rooderpoort-reservoir,2028/29,8695652,,Own funds (CRR) (planned)
+water-sebayeng-diepriver,2028/29,1739130,,Own funds (CRR) (planned)
+water-securing-sand-river-south-north,2026/27,4862606,,Own funds (CRR) (planned)
+water-securing-sand-river-south-north,2027/28,6956522,,Own funds (CRR) (planned)
+water-segwasi-rws,2025/26,100854,627015,WSIG
+water-segwasi-rws,2027/28,9073723,,WSIG (planned)
+water-segwasi-rws,2028/29,5217391,,WSIG (planned)
+water-x108-design-implementation-engineering-services,2025/26,4460869,2013043,NDPG
+water-x108-design-implementation-engineering-services,2028/29,1739130,,NDPG (planned)
+prov-edu-mariphu-primary,2026/27,2650000,,Equitable share (planned)
+prov-edu-nnatile-primary,2026/27,2927862,,Education Infrastructure Grant (planned)
+prov-edu-mmamarama-secondary,2025/26,5000000,,Education Infrastructure Grant
+prov-edu-mmamarama-secondary,2026/27,2000000,,Education Infrastructure Grant (planned)
+prov-edu-mmaphuti-manamela-secondary,2025/26,1500000,,Education Infrastructure Grant
+prov-edu-mmaphuti-manamela-secondary,2026/27,1230000,,Education Infrastructure Grant (planned)
+prov-edu-thabakgone-primary,2025/26,1000000,,Education Infrastructure Grant
+prov-edu-thabakgone-primary,2026/27,1000000,,Education Infrastructure Grant (planned)
+prov-edu-piet-hugo-primary,2025/26,1000000,,Education Infrastructure Grant
+prov-edu-piet-hugo-primary,2026/27,194364,,Education Infrastructure Grant (planned)
+prov-edu-ralema-primary,2025/26,1437000,,Education Infrastructure Grant
+prov-edu-thaba-dora-primary,2025/26,18000000,,Education Infrastructure Grant
+prov-edu-thaba-dora-primary,2026/27,15133205,,Education Infrastructure Grant (planned)
+prov-edu-thaba-dora-primary,2027/28,15000000,,Education Infrastructure Grant (planned)
+prov-edu-mmasesha-primary,2025/26,5200000,,Education Infrastructure Grant
+prov-edu-mmasesha-primary,2026/27,7200000,,Education Infrastructure Grant (planned)
+prov-edu-joel-sibasa-secondary,2025/26,20000000,,Education Infrastructure Grant
+prov-edu-joel-sibasa-secondary,2027/28,15000000,,Education Infrastructure Grant (planned)
+prov-edu-makgongoana-secondary,2025/26,1981000,,Education Infrastructure Grant
+prov-edu-makgofe-secondary,2027/28,22000000,,Education Infrastructure Grant (planned)
+prov-edu-nkgopoleng-bakone-secondary,2026/27,25000000,,Education Infrastructure Grant (planned)
+prov-edu-mmaphekgo-primary,2026/27,3500000,,Education Infrastructure Grant (planned)
+prov-edu-phoffu-primary,2025/26,5000000,,Education Infrastructure Grant
+prov-edu-phoffu-primary,2026/27,5000000,,Education Infrastructure Grant (planned)
+prov-edu-tibanefontein-primary,2026/27,4500000,,Education Infrastructure Grant (planned)
+prov-edu-utjane-primary,2026/27,14947346,,Education Infrastructure Grant (planned)
+prov-edu-laaste-hoop-primary,2026/27,8000000,,Education Infrastructure Grant (planned)
+prov-edu-dibeng-primary,2025/26,1573000,,Education Infrastructure Grant
+prov-edu-dibeng-primary,2026/27,6000000,,Education Infrastructure Grant (planned)
+prov-edu-dibeng-primary,2027/28,23000000,,Education Infrastructure Grant (planned)
+prov-edu-ivy-park-primary,2026/27,4000000,,Education Infrastructure Grant (planned)
+prov-edu-ivy-park-primary,2027/28,12000000,,Education Infrastructure Grant (planned)
+prov-edu-emdo-secondary,2025/26,2000000,,ECD Infrastructure component (EIG)
+prov-edu-emdo-secondary,2026/27,5000000,,ECD Infrastructure component (EIG) (planned)
+prov-edu-emdo-secondary,2027/28,5000000,,ECD Infrastructure component (EIG) (planned)
+prov-edu-alf-makaleng-primary,total,996768,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-april-makgakga-primary,total,1701983,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-bk-matlala-secondary,total,40931,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-jh-moloto-secondary,total,5619948,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-kgakoa-primary,total,7000000,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-kgalaka-primary,total,4088536,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-mapangula-primary,total,22067872,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-mmanthe-primary,total,39955109,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-monyong-secondary,total,34894700,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-mphareng-primary,total,44699330,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-mphetsebe-secondary,total,3456741,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-phuti-makibelo-primary,total,8148837,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-seshego-high,total,18792360,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-edu-tlakale-mashashane-secondary,total,5634870,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-health-sovenga-nursing-residence,2025/26,8500000,,Health Facility Revitalisation Grant
+prov-health-sovenga-nursing-residence,2026/27,9250000,,Health Facility Revitalisation Grant (planned)
+prov-health-sovenga-nursing-residence,2027/28,17600000,,Health Facility Revitalisation Grant (planned)
+prov-health-pietersburg-mcce-phase-b,2025/26,4290000,,Health Facility Revitalisation Grant
+prov-health-pietersburg-mcce-phase-b,2026/27,6500000,,Health Facility Revitalisation Grant (planned)
+prov-health-pietersburg-mcce-phase-b,2027/28,6500000,,Health Facility Revitalisation Grant (planned)
+prov-health-pietersburg-water,2025/26,2500000,,Health Facility Revitalisation Grant
+prov-health-pietersburg-icu-ward-f,total,29644298,,Total project cost (IDP 2025/26 sector table); VAT not stated
+prov-health-pietersburg-helipad,2026/27,2529000,,Health Facility Revitalisation Grant (planned)
+prov-health-pietersburg-helipad,2027/28,2800000,,Health Facility Revitalisation Grant (planned)
+prov-health-mankweng-bulk-water,2025/26,7500000,,Health Facility Revitalisation Grant
+prov-health-mankweng-bulk-water,2026/27,700000,,Health Facility Revitalisation Grant (planned)
+prov-health-mankweng-helipad,2026/27,2529000,,Health Facility Revitalisation Grant (planned)
+prov-health-mankweng-helipad,2027/28,2800000,,Health Facility Revitalisation Grant (planned)
+prov-health-mankweng-ems-washbays,2026/27,564500,,Health Facility Revitalisation Grant (planned)
+prov-health-mankweng-ems-washbays,2027/28,620000,,Health Facility Revitalisation Grant (planned)
+prov-health-wf-knobel-mhcu,2026/27,2400000,,Health Facility Revitalisation Grant (planned)
+prov-health-wf-knobel-mhcu,2027/28,10000000,,Health Facility Revitalisation Grant (planned)
+prov-health-limpopo-central-hospital,total,5047849183,,Project value (CDM IDP 2026/27 DDM catalytic projects); national Department of Health; VAT not stated
+prov-dsd-polokwane-welfare-complex,2025/26,1651000,,Equitable share
+prov-dsd-seshego-treatment-centre,2025/26,1850000,,Equitable share
+prov-dsd-andrew-mehlape-borehole,2025/26,650000,,Equitable share
+prov-transport-seshego-dltc,2025/26,19000000,,Equitable share
+prov-transport-seshego-garage,2025/26,12000000,,Equitable share
+prov-transport-seshego-garage,2026/27,10000000,,Equitable share (planned)
+prov-transport-32-schoeman-street,2025/26,2000000,,Equitable share
+prov-dpwri-suid-street-ledet,2025/26,10325000,,Equitable share
+prov-dpwri-parliamentary-village,2025/26,6300000,,Equitable share: Security upgrade
+prov-dpwri-parliamentary-village,2025/26,1350000,,Equitable share: Paving
+prov-dpwri-parliamentary-village,2025/26,15000000,,Equitable share: Civil construction
+prov-dpwri-parliamentary-village,2025/26,10000000,,Equitable share: Maintenance of parliamentary houses
+prov-dpwri-parliamentary-village,2025/26,15000000,,Equitable share: White House
+prov-dpwri-groblers-street,2025/26,10000000,,Equitable share
+prov-sac-provincial-theatre,2025/26,216000000,81000000,Equitable share; adjusted = original less R135.0m surrendered for slow progress (Adjusted EPRE 2025/26)
+prov-sac-provincial-theatre,2026/27,60000000,,Equitable share (planned)
+prov-sac-provincial-archives,2025/26,10000000,,Equitable share
+prov-sac-provincial-archives,2026/27,5000000,,Equitable share (planned)
+prov-sac-olympic-towers,2025/26,170000,,Equitable share
+prov-sac-olympic-towers,2026/27,100000,,Equitable share (planned)
+prov-sac-olympic-towers,2027/28,100000,,Equitable share (planned)
+prov-sac-olympic-towers,2028/29,100000,,Equitable share (planned)
+prov-coghsta-bakone-tc-office,2025/26,1109000,,Equitable share
+prov-coghsta-mankweng-tc-office,2026/27,6650000,,CoGHSTA (planned)
+prov-coghsta-mankweng-tc-office,2027/28,7050000,,CoGHSTA (planned)
+prov-coghsta-mankweng-tc-office,2028/29,4200150,,CoGHSTA (planned)
+prov-agric-seshego-office,2025/26,1000000,,Equitable share
+prov-agric-seshego-office,2026/27,50000,,Equitable share (planned)
+prov-agric-seshego-storeroom,2025/26,1500000,,Equitable share
+prov-agric-seshego-storeroom,2026/27,79000,,Equitable share (planned)
+prov-agric-mosengoana-irrigation,2025/26,566000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-ntsete-cooperative,2025/26,300000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-ntsete-cooperative,2026/27,500000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-ntsete-cooperative,2027/28,450000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-ramahwibidi,2025/26,3384000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-ramahwibidi,2026/27,350000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-mohau-le-molebogeng,2028/29,9000000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-we-can-women,2025/26,300000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-we-can-women,2026/27,4000000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-we-can-women,2027/28,200000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-nthekge,2025/26,2511000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-nthekge,2026/27,5000000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-nthekge,2027/28,250000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-malapa-farming,2026/27,250000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-agric-ground-stone,2025/26,4100000,,Comprehensive Agricultural Support Programme Grant
+prov-agric-ground-stone,2026/27,500000,,Comprehensive Agricultural Support Programme Grant (planned)
+prov-ral-t1033a-d19,total,22999900,,RAL total project cost (IDP 2025/26 sector table); R22 474 628 spent; VAT not stated
+prov-ral-t1033c-d19,2027/28,1000,,RAL equitable share (planned)
+prov-ral-t1052-ramoshwane,2025/26,21752000,,RAL equitable share
+prov-ral-t1135-d2424,2027/28,14070000,,RAL equitable share (planned)
+prov-ral-t1263-d4032,2025/26,2406000,,RAL equitable share
+prov-ral-t1289-d1809-nobody,2025/26,1000000,,RAL equitable share
+prov-ral-t1298-d23-makubung,2025/26,3810000,,RAL equitable share
+prov-ral-t1301-d19-mamehlabe,2025/26,1931000,,RAL equitable share
+prov-ral-t1302-d3397,2025/26,690000,,RAL equitable share
+prov-ral-t1322-st-engenas,2025/26,125000000,,RAL equitable share
+prov-ral-d3377-limburg-matlala,total,28454450,,RAL total project cost (IDP 2025/26 sector table); R29 330 910 spent; VAT not stated
+prov-roads-d3363-mashashane-clinic,2025/26,18000000,,Provincial Roads Maintenance Grant
+prov-roads-d3363-mashashane-clinic,2026/27,12000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d3363-mashashane-clinic,2027/28,20000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d3371-sebora-matlapa,2025/26,18500000,,Provincial Roads Maintenance Grant
+prov-roads-d3371-sebora-matlapa,2026/27,12000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d3371-sebora-matlapa,2027/28,26331000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d4016-mentz-mamabolo,2025/26,15000000,,Provincial Disaster Relief Grant
+prov-roads-d4016-mentz-mamabolo,2026/27,15000000,,Provincial Disaster Relief Grant (planned)
+prov-roads-d4016-mentz-mamabolo,2027/28,20000000,,Provincial Disaster Relief Grant (planned)
+prov-roads-d4037-thabakgone-viking,2025/26,15000000,,Provincial Disaster Relief Grant
+prov-roads-d4037-thabakgone-viking,2026/27,10000000,,Provincial Disaster Relief Grant (planned)
+prov-roads-d4037-thabakgone-viking,2027/28,20000000,,Provincial Disaster Relief Grant (planned)
+prov-roads-d544-percy-fyfe-mashashane,2025/26,27500000,,Provincial Roads Maintenance Grant
+prov-roads-d544-percy-fyfe-mashashane,2026/27,7000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d544-percy-fyfe-mashashane,2027/28,5500000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-p18-2-r101-r518,2025/26,25000000,,Provincial Roads Maintenance Grant
+prov-roads-p18-2-r101-r518,2026/27,29000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-p18-2-r101-r518,2027/28,15000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d3422-mokgokong-makgakga,2025/26,29810000,,Provincial Roads Maintenance Grant
+prov-roads-d3422-mokgokong-makgakga,2026/27,43000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d1481-silicon,2025/26,37000000,,Provincial Roads Maintenance Grant
+prov-roads-d1481-silicon,2026/27,14000000,,Provincial Roads Maintenance Grant (planned)
+prov-roads-d1481-silicon,2027/28,14300000,,Provincial Roads Maintenance Grant (planned)

@@ -8,11 +8,13 @@ data/projects.csv      one row per project
 data/budget_lines.csv  one row per year or funding source, linked by project_id
 data/history.csv       optional: what each budget or plan document said, over time
 data/routes.geojson    optional: road lines, one feature per project (properties.project_id)
-data/wards.geojson     ward boundaries (Municipal Demarcation Board)
+data/wards.geojson     ward boundaries (Municipal Demarcation Board, 2020/21 wards)
+data/clusters.csv      optional: Polokwane's clusters and their wards (cluster,wards,source)
 
 Amounts are rands excluding VAT. Leave `adjusted` empty for planned years.
 """
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -79,6 +81,20 @@ def ward_at(wards, lat, lon):
             if point_in_ring(lon, lat, poly[0]) and not any(point_in_ring(lon, lat, h) for h in poly[1:]):
                 return f["properties"]["ward"]
     return None
+
+
+def stamp_versions():
+    """Add ?v=<hash> to the files index.html loads, so browsers fetch a new copy
+    after each change instead of mixing a cached app.js with new data."""
+    index = ROOT / "index.html"
+    html = index.read_text(encoding="utf-8")
+    files = ["style.css", "app.js", "data/projects.js", "data/wards.js"] + sorted(
+        str(t.relative_to(ROOT)) for t in (ROOT / "themes").glob("*.css"))
+    digest = hashlib.sha1(b"".join((ROOT / f).read_bytes() for f in files)).hexdigest()[:8]
+    for f in ["style.css", "app.js", "data/projects.js", "data/wards.js"]:
+        html = re.sub(r'(["\'])' + re.escape(f) + r'(\?v=[0-9a-f]*)?(["\'])', rf"\g<1>{f}?v={digest}\g<3>", html)
+    html = re.sub(r"(themes/' \+ t \+ '\.css)(\?v=[0-9a-f]*)?", rf"\g<1>?v={digest}", html)
+    index.write_text(html, encoding="utf-8")
 
 
 def main():
@@ -193,13 +209,30 @@ def main():
         for p in projects.values():
             p["history"].sort(key=lambda h: (h["date"], h["fy"]))
 
+    # Clusters: each project gets the clusters its wards (or its pin's ward) fall in.
+    clusters = []
+    cpath = DATA / "clusters.csv"
+    if cpath.exists():
+        with open(cpath, newline="", encoding="utf-8") as f:
+            for i, row in enumerate(csv.DictReader(f), start=2):
+                name = (row.get("cluster") or "").strip()
+                wards_in = parse_wards(row.get("wards"))
+                if not name or not wards_in:
+                    sys.exit(f"clusters.csv line {i}: needs a cluster name and its wards")
+                clusters.append({"name": name, "wards": sorted(wards_in), "source": (row.get("source") or "").strip()})
+    for p in projects.values():
+        ws = parse_wards(p["ward"]) | ({p["mapWard"]} if p["mapWard"] else set())
+        p["clusters"] = [c["name"] for c in clusters if ws & set(c["wards"])]
+
     (DATA / "wards.js").write_text("window.WARDS = " + json.dumps(wards, separators=(",", ":")) + ";\n", encoding="utf-8")
 
     out = DATA / "projects.json"
     text = json.dumps(list(projects.values()), indent=2, ensure_ascii=False)
     out.write_text(text, encoding="utf-8")
     # Same data as a script, so index.html also works when opened from file://.
-    (DATA / "projects.js").write_text(f"window.PROJECTS = {text};\n", encoding="utf-8")
+    compact = json.dumps(list(projects.values()), separators=(",", ":"), ensure_ascii=False)
+    (DATA / "projects.js").write_text(f"window.PROJECTS = {compact};\nwindow.CLUSTERS = {json.dumps(clusters, ensure_ascii=False)};\n", encoding="utf-8")
+    stamp_versions()
     print(f"Wrote {len(projects)} projects to {out.relative_to(ROOT)} and data/projects.js")
 
 

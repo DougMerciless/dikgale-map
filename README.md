@@ -1,6 +1,6 @@
-# Sebayeng/Dikgale cluster projects map
+# Polokwane projects map
 
-An interactive map of government projects in wards 24 and 29 to 33 of Polokwane Municipality. It shows each project's status, its budget per year (original vs adjusted), and whether money was added or cut.
+An interactive map of government projects across all 45 wards of Polokwane Municipality, Limpopo. It shows each project's status, its budget per year (original vs adjusted), whether money was added or cut, and who built it. The Sebayeng/Dikgale cluster (wards 24 and 29 to 33) has the most detail: every project there was traced through budgets, IDPs and performance reports.
 
 The map is a static site: HTML, CSS and JavaScript on the [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript). It has no backend and no build step. You can switch between road, satellite (hybrid) and terrain views on the map.
 
@@ -45,7 +45,8 @@ data/projects.json      generated data file
 data/projects.js        the same data as a script, so the page works from file://
 data/history.csv        what each budget or plan document said about each project, over time (optional)
 data/routes.geojson     road lines for road projects, from OpenStreetMap (optional)
-data/wards.geojson      boundaries of wards 24 and 29 to 33 (Municipal Demarcation Board, 2020/21)
+data/wards.geojson      boundaries of all 45 Polokwane wards (Municipal Demarcation Board, 2020/21 wards)
+data/clusters.csv       Polokwane's clusters and the wards in each (cluster,wards,source)
 data/wards.js           the same boundaries as a script (generated)
 data/excluded.csv       projects checked and left out, with the reason (not shown on the map)
 tools/build_data.py     builds projects.json from the two CSVs
@@ -129,6 +130,10 @@ The detail panel lists these entries by date and marks with ▲ or ▼ when a ye
 
 A project can have several lines for the same year when it has more than one funding source. The map compares the sum of original amounts against the sum of adjusted amounts to decide whether money was added or cut.
 
+## Cache
+
+`tools/build_data.py` stamps `?v=<hash>` on the CSS, script and data files in `index.html`. Browsers then fetch new copies after each change instead of mixing an old `app.js` with new data. Run the build script before every commit.
+
 ## Links and downloads
 
 The address keeps the open project and the filters, so you can share a view:
@@ -139,6 +144,8 @@ The address keeps the open project and the filters, so you can share a view:
 | `q` | `?q=Titibe` searches |
 | `status` | `?status=deferred,funded` |
 | `sector`, `ward`, `level`, `money` | `?ward=32&money=cut` |
+| `cluster` | `?cluster=Sebayeng/Dikgale` shows one cluster |
+| `contractor` | `?contractor=Makeyise Trading and Projects` |
 | `theme` | `?theme=clean`, `editorial` or `civic` |
 
 The detail panel has a **Copy link to this project** button. **Download as CSV** saves the projects that match the current filters, with their headline figure, budget change, budget lines, link and sources.
