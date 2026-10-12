@@ -16,87 +16,212 @@
 <meta property="og:image:alt" content="Map of Polokwane's 45 wards with project pins, next to the title Where the money went in Polokwane">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500..800&display=swap">
-<link rel="stylesheet" href="style.css?v=9d74a4cf">
+<link id="baseFont" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Inter+Tight:wght@500..800&display=swap">
+<link id="themeFont" rel="stylesheet" href="">
+<link rel="stylesheet" href="style.css?v=e0dc2d3c">
+<link id="themeCss" rel="stylesheet" href="">
 <script>
-  // Optional look: index.html?theme=clean | editorial | civic (default: newsroom).
+  // Theme & mode loader: supports ?theme=clean|editorial|civic & ?mode=dark|light
   (function () {
     var fonts = {
-      clean: "DM+Sans:opsz,wght@9..40,400..700",
-      editorial: "Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Source+Sans+3:wght@400..700",
-      civic: "Public+Sans:wght@400..800"
+      clean: "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap",
+      editorial: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Source+Sans+3:wght@400..700&display=swap",
+      civic: "https://fonts.googleapis.com/css2?family=Public+Sans:wght@400..800&display=swap"
     };
-    var t = new URLSearchParams(location.search).get("theme");
-    if (!fonts[t]) return;
-    document.write('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=' + fonts[t] + '&display=swap">');
-    document.write('<link rel="stylesheet" href="themes/' + t + '.css?v=9d74a4cf">');
+    var params = new URLSearchParams(location.search);
+    var t = params.get("theme") || localStorage.getItem("dikgale_theme") || "";
+    var mode = params.get("mode") || localStorage.getItem("dikgale_mode") || "";
+    if (mode === "dark" || mode === "light") {
+      document.documentElement.setAttribute("data-theme-mode", mode);
+    }
+    if (fonts[t]) {
+      var tf = document.getElementById("themeFont");
+      if (tf) tf.href = fonts[t];
+      var tc = document.getElementById("themeCss");
+      if (tc) tc.href = 'themes/' + t + '.css?v=e0dc2d3c';
+    }
   })();
 </script>
 </head>
 <body>
-<div class="strip"><span>Polokwane Projects Ledger</span><span>Polokwane Municipality · Limpopo</span></div>
-<header class="mast">
-  <p class="kicker">All 45 wards · Budgets 2024/25 to 2026/31</p>
-  <h1>Where the money went in Polokwane</h1>
-  <p class="dek">Government projects across Polokwane Municipality: municipal roads, water and community facilities, provincial schools, clinics and roads, national power and bulk water. Where each one is, how far it got, and whether its money grew or was cut along the way.</p>
-  <div class="tally" id="tally"></div>
+<!-- Sticky Top Navigation Bar -->
+<header class="strip">
+  <div class="strip-brand">
+    <span class="strip-title">Polokwane Projects Ledger</span>
+    <span class="strip-sub">Polokwane Municipality · Limpopo</span>
+  </div>
+  <div class="strip-controls">
+    <div class="nav-tabs" role="tablist" aria-label="Views">
+      <button type="button" id="tabExplorer" class="nav-tab active" role="tab" aria-selected="true" aria-controls="viewExplorer">
+        <span class="tab-icon">🗺️</span> Map &amp; Explorer
+      </button>
+      <button type="button" id="tabAnalytics" class="nav-tab" role="tab" aria-selected="false" aria-controls="areas">
+        <span class="tab-icon">📊</span> Cluster Analytics
+      </button>
+    </div>
+    <div class="strip-actions">
+      <div class="theme-picker-wrap">
+        <label for="themeSelect" class="sr-only">Visual Theme</label>
+        <select id="themeSelect" class="theme-select" title="Switch visual theme">
+          <option value="">Theme: Newsroom</option>
+          <option value="clean">Theme: Clean Modern</option>
+          <option value="editorial">Theme: Editorial</option>
+          <option value="civic">Theme: Civic Portal</option>
+        </select>
+      </div>
+      <button type="button" id="modeToggle" class="mode-btn" title="Toggle dark / light mode" aria-label="Toggle dark mode">
+        <span id="modeIcon" class="mode-icon">🌙</span>
+      </button>
+    </div>
+  </div>
 </header>
 
-<section class="areas" id="areas" aria-label="Money by cluster"></section>
+<!-- Header / Hero section with compact toggle option -->
+<section class="mast" id="masthead">
+  <div class="mast-top">
+    <p class="kicker">All 45 wards · Budgets 2024/25 to 2026/31</p>
+    <button type="button" id="toggleMasthead" class="collapse-btn" title="Toggle compact header for more map space" aria-expanded="true">
+      <span class="collapse-text">Compact view</span> <span class="collapse-icon">▲</span>
+    </button>
+  </div>
+  <div class="mast-content">
+    <h1>Where the money went in Polokwane</h1>
+    <p class="dek">Government projects across Polokwane Municipality: municipal roads, water and community facilities, provincial schools, clinics and roads, national power and bulk water. Where each one is, how far it got, and whether its money grew or was cut along the way.</p>
+  </div>
+  <div class="tally" id="tally"></div>
+</section>
 
-<main>
+<!-- Cluster Analytics Section -->
+<section class="areas hidden" id="areas" aria-label="Money by cluster"></section>
+
+<!-- Main Explorer View -->
+<main id="viewExplorer">
   <section class="mapwrap" aria-label="Project map">
+    <div class="map-toolbar">
+      <div class="map-toolbar-left">
+        <button type="button" id="fitAllBtn" class="map-ctrl-btn" title="Fit map to visible projects">
+          <span class="ctrl-icon">⤢</span> Reset view
+        </button>
+        <button type="button" id="shade" class="map-ctrl-btn" aria-pressed="false" title="Shade wards by 2025/26 budget">
+          <span class="ctrl-icon">🎨</span> Shade wards
+        </button>
+      </div>
+      <div id="mapFilterPill" class="map-filter-pill hidden"></div>
+    </div>
     <div id="map"></div>
     <p id="mapnote" class="mapnote hidden"></p>
-    <div class="legend">
-      <span><i class="sw" style="background:var(--ok)"></i>Complete</span>
-      <span><i class="sw" style="background:var(--prog)"></i>In progress</span>
-      <span><i class="sw" style="background:var(--fund)"></i>Funded</span>
-      <span><i class="sw" style="background:var(--cut)"></i>Deferred or cut</span>
-      <span><i class="swr"></i>More money added</span>
-      <span><i class="swc"></i>Budget reduced</span>
-      <span><i class="swroad"></i>Road project (line follows the road)</span>
-      <span><i class="swapprox"></i>Approximate: pin marks the village</span>
-      <span><i class="swward"></i>Ward boundary (click a ward to filter)</span>
+    <div class="legend-wrap">
+      <button type="button" id="toggleLegend" class="legend-toggle" aria-expanded="true">
+        <span>Map Legend</span> <span class="legend-chevron">▾</span>
+      </button>
+      <div id="legendBody" class="legend">
+        <span><i class="sw" style="background:var(--ok)"></i>Complete</span>
+        <span><i class="sw" style="background:var(--prog)"></i>In progress</span>
+        <span><i class="sw" style="background:var(--fund)"></i>Funded</span>
+        <span><i class="sw" style="background:var(--cut)"></i>Deferred or cut</span>
+        <span><i class="swr"></i>More money added</span>
+        <span><i class="swc"></i>Budget reduced</span>
+        <span><i class="swroad"></i>Road project line</span>
+        <span><i class="swapprox"></i>Approx. village pin</span>
+        <span><i class="swward"></i>Ward boundary</span>
+      </div>
     </div>
-    <div class="shadebar"><button type="button" id="shade" class="chip" aria-pressed="false">Shade wards by budget</button>
-      <div id="shadeLegend" class="legend shadeleg hidden"></div></div>
+    <div id="shadeLegend" class="legend shadeleg hidden"></div>
   </section>
 
-  <section class="side">
-    <h3 class="sect">The projects</h3>
-    <input type="search" id="q" class="search" placeholder="Search projects, villages, wards, contractors (e.g. Seshego, D844)" aria-label="Search projects" autocomplete="off">
-    <div class="filters" id="statusChips" aria-label="Filter by status"></div>
-    <div class="row">
-      <select id="sector" aria-label="Filter by sector"></select>
-      <select id="cluster" class="hidden" aria-label="Filter by cluster"></select>
-      <select id="ward" aria-label="Filter by ward"></select>
-      <select id="level" aria-label="Filter by level of government"></select>
-      <select id="money" aria-label="Filter by budget change">
-        <option value="all">Any budget change</option>
-        <option value="more">More money added</option>
-        <option value="new">Added mid-year</option>
-        <option value="cut">Budget reduced</option>
-        <option value="same">Unchanged</option>
-      </select>
-      <select id="contractor" class="hidden" aria-label="Filter by contractor"></select>
+  <section class="side" id="sidePanel">
+    <div class="side-header">
+      <h3 class="sect">The projects</h3>
+      <span id="headerProjectCount" class="count-badge"></span>
     </div>
+
+    <!-- Enhanced search input with keyboard shortcut & clear button -->
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="search" id="q" class="search" placeholder="Search projects, villages, wards, contractors (e.g. Seshego, D844)" aria-label="Search projects" autocomplete="off">
+      <button type="button" id="clearSearch" class="search-clear hidden" aria-label="Clear search" title="Clear search">✕</button>
+      <span class="search-kbd" title="Press / to search">/</span>
+    </div>
+
+    <!-- Status filter chips with count badges -->
+    <div class="filters" id="statusChips" aria-label="Filter by status"></div>
+
+    <!-- Dropdown filters -->
+    <div class="row filter-grid">
+      <div class="select-wrapper">
+        <select id="sector" aria-label="Filter by sector"></select>
+      </div>
+      <div class="select-wrapper hidden" id="clusterWrapper">
+        <select id="cluster" aria-label="Filter by cluster"></select>
+      </div>
+      <div class="select-wrapper">
+        <select id="ward" aria-label="Filter by ward"></select>
+      </div>
+      <div class="select-wrapper">
+        <select id="level" aria-label="Filter by level of government"></select>
+      </div>
+      <div class="select-wrapper">
+        <select id="money" aria-label="Filter by budget change">
+          <option value="all">Any budget change</option>
+          <option value="more">More money added</option>
+          <option value="new">Added mid-year</option>
+          <option value="cut">Budget reduced</option>
+          <option value="same">Unchanged</option>
+        </select>
+      </div>
+      <div class="select-wrapper hidden" id="contractorWrapper">
+        <select id="contractor" aria-label="Filter by contractor"></select>
+      </div>
+    </div>
+
+    <!-- Active filter tags row -->
+    <div id="activeFilters" class="active-filters hidden"></div>
+
+    <!-- Toolbar -->
     <div class="toolbar">
       <span id="count" class="count" aria-live="polite"></span>
-      <select id="sort" aria-label="Sort the list"></select>
-      <button type="button" id="clear" class="linkbtn hidden">Clear filters</button>
-      <button type="button" id="csv" class="chip">Download as CSV</button>
+      <div class="toolbar-right">
+        <select id="sort" class="sort-select" aria-label="Sort the list"></select>
+        <button type="button" id="clear" class="linkbtn hidden">Clear filters</button>
+        <button type="button" id="csv" class="chip dl-chip">Download CSV</button>
+      </div>
     </div>
+
     <div id="notice" class="notice hidden"></div>
+
+    <!-- Detail Panel with backdrop overlay -->
+    <div id="detailBackdrop" class="detail-backdrop hidden"></div>
     <article class="detail hidden" id="detail" aria-live="polite"></article>
+
+    <!-- Projects List -->
     <ul class="list" id="list"></ul>
   </section>
 </main>
-<footer class="foot">Sources: Polokwane Municipality budgets, IDPs, SDBIPs and performance reports, Limpopo Treasury (EPRE), Roads Agency Limpopo, Capricorn District Municipality, DBE school register, Municipal Demarcation Board, Census 2011. Each project lists its own sources. Approximate pins show the village, not the site. Road lines © OpenStreetMap contributors (ODbL).</footer>
 
-<script src="data/projects.js?v=9d74a4cf"></script>
-<script src="data/wards.js?v=9d74a4cf"></script>
+<!-- Mobile Navigation Bar -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+  <button type="button" class="mobile-nav-btn active" data-view="map">
+    <span class="m-icon">🗺️</span>
+    <span class="m-label">Map</span>
+  </button>
+  <button type="button" class="mobile-nav-btn" data-view="list">
+    <span class="m-icon">📋</span>
+    <span class="m-label">Projects</span>
+    <span id="mobileCountBadge" class="m-badge"></span>
+  </button>
+  <button type="button" class="mobile-nav-btn" data-view="analytics">
+    <span class="m-icon">📊</span>
+    <span class="m-label">Analytics</span>
+  </button>
+</nav>
+
+<footer class="foot">
+  Sources: Polokwane Municipality budgets, IDPs, SDBIPs and performance reports, Limpopo Treasury (EPRE), Roads Agency Limpopo, Capricorn District Municipality, DBE school register, Municipal Demarcation Board, Census 2011. Each project lists its own sources. Approximate pins show the village, not the site. Road lines © OpenStreetMap contributors (ODbL).
+</footer>
+
+<script src="data/projects.js?v=e0dc2d3c"></script>
+<script src="data/wards.js?v=e0dc2d3c"></script>
 <script src="config.js" onerror="window.MAP_CONFIG = window.MAP_CONFIG || {}"></script>
-<script src="app.js?v=9d74a4cf"></script>
+<script src="app.js?v=e0dc2d3c"></script>
 </body>
 </html>

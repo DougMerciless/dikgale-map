@@ -1,4 +1,4 @@
-// Sebayeng/Dikgale cluster projects map.
+// Polokwane projects map & ledger.
 // Reads data/projects.json (built from the CSVs by tools/build_data.py).
 
 const STATUS = {
@@ -27,7 +27,23 @@ const PIN_TEXT = {
   route: "Line shows the road",
 };
 
-const state = { projects: [], selected: null, status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", sort: "name", shade: false, q: "", listMax: LIST_STEP };
+const state = {
+  projects: [],
+  selected: null,
+  status: new Set(),
+  sector: "all",
+  level: "all",
+  ward: "all",
+  money: "all",
+  contractor: "all",
+  cluster: "all",
+  sort: "name",
+  shade: false,
+  q: "",
+  listMax: LIST_STEP,
+  activeView: "explorer",
+};
+
 const $ = (id) => document.getElementById(id);
 const css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 
@@ -102,9 +118,6 @@ function isVisible(p) {
 }
 
 // ---------- map ----------
-// Two backends behind one small interface: Google Maps when config.js has an
-// API key, otherwise Leaflet with free satellite/street tiles. Pins are the
-// same HTML element in both, so they share the page's CSS colours.
 let mapApi = null;   // { addMarker(pos, el, title, onClick) -> setZ(z), addRoute(lines, title, onClick) -> setStyle(s), fit(points), panTo(pos), onView(cb) }
 const markers = {};  // id -> { setZ, el, setRoute }
 
@@ -122,7 +135,6 @@ function drawMarkers() {
   for (const p of state.projects.filter(hasLoc)) {
     let entry = markers[p.id];
     if (!entry) {
-      // Nudge projects that share a location so both stay clickable.
       const key = p.lat.toFixed(4) + "," + p.lon.toFixed(4);
       const n = (seen[key] = (seen[key] || 0) + 1);
       const el = markerEl(p);
@@ -143,21 +155,18 @@ function drawMarkers() {
   requestAnimationFrame(declutter);
 }
 
-// Keep labels from overlapping each other, the pins, the map edge and the map
-// controls: try each label on the right of its pin, then left, above and
-// below, else hide it (it shows again on hover). Selected and visible pins get
-// first pick. On a narrow map only the selected pin keeps its label.
 function declutter() {
-  const box = $("map").getBoundingClientRect();
+  const mapEl = $("map");
+  if (!mapEl) return;
+  const box = mapEl.getBoundingClientRect();
   const narrow = box.width < 560;
-  // Many pins: no labels until zoomed in, so the overview stays readable.
   const zoomedOut = Object.keys(markers).length > 60 && mapApi?.getZoom && mapApi.getZoom() < LABEL_ZOOM;
-  $("map").dataset.zoomedOut = zoomedOut ? "1" : "";
-  $("map").classList.toggle("far", !!(mapApi?.getZoom && mapApi.getZoom() < 12));
+  mapEl.dataset.zoomedOut = zoomedOut ? "1" : "";
+  mapEl.classList.toggle("far", !!(mapApi?.getZoom && mapApi.getZoom() < 12));
   const order = state.projects.filter((p) => markers[p.id])
     .sort((a, b) => (b.id === state.selected) - (a.id === state.selected) || isVisible(b) - isVisible(a));
   const taken = order.map((p) => markers[p.id].el.querySelector(".dot").getBoundingClientRect());
-  for (const c of $("map").querySelectorAll(".leaflet-control, .gmnoprint, .gm-fullscreen-control")) taken.push(c.getBoundingClientRect());
+  for (const c of mapEl.querySelectorAll(".leaflet-control, .gmnoprint, .gm-fullscreen-control")) taken.push(c.getBoundingClientRect());
   const hits = (r) => r.left < box.left + 4 || r.right > box.right - 4 || r.top < box.top + 4 || r.bottom > box.bottom - 4 ||
     taken.some((t) => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top);
   const spots = ["", "left", "up", "down"];
@@ -175,7 +184,6 @@ function declutter() {
   }
 }
 
-// Label point for a ward: area-weighted centroid of its largest ring.
 function wardCentre(geom) {
   const polys = geom.type === "MultiPolygon" ? geom.coordinates : [geom.coordinates];
   let best = null, bestA = 0;
@@ -204,9 +212,6 @@ function fitTo(list) {
 const fitAll = () => fitTo(state.cluster !== "all" ? state.projects.filter(isVisible) : state.projects);
 
 // ---------- money by area ----------
-// A project's 2025/26 budget: the adjusted figure where there is one, else the
-// original. A project listed in several wards is split equally between them,
-// so ward and cluster totals add up to the municipal total.
 function budget2526(p) {
   return (p.budget || []).filter((r) => r.fy === "2025/26").reduce((t, r) => t + (r.adjusted != null ? +r.adjusted || 0 : +r.original || 0), 0);
 }
@@ -215,7 +220,7 @@ function shareWards(p) {
   const w = [...parseWards(p.ward)].filter((n) => ALL_WARDS.includes(n));
   return w.length ? w : p.mapWard ? [p.mapWard] : [];
 }
-// Every filter except ward and cluster, so the table compares areas.
+
 function visibleAnyArea(p) {
   const keep = [state.ward, state.cluster];
   state.ward = state.cluster = "all";
@@ -223,6 +228,7 @@ function visibleAnyArea(p) {
   [state.ward, state.cluster] = keep;
   return v;
 }
+
 function moneyByWard() {
   const by = new Map(ALL_WARDS.map((w) => [w, { amount: 0, added: 0, cut: 0, planned: 0, n: 0 }]));
   const none = { amount: 0, added: 0, cut: 0, planned: 0, n: 0 };
@@ -237,6 +243,8 @@ function moneyByWard() {
 }
 
 function renderAreas() {
+  const areasEl = $("areas");
+  if (!areasEl) return;
   const { by, none } = (wardCache = moneyByWard());
   const shown = state.projects.filter(visibleAnyArea);
   const nIn = (ws) => shown.filter((p) => shareWards(p).some((w) => ws.includes(w))).length;
@@ -244,24 +252,32 @@ function renderAreas() {
   const rows = CLUSTERS.map((c) => ({ name: c.name, ...sum(c.wards), n: nIn(c.wards) })).sort((a, b) => b.amount - a.amount);
   const total = rows.reduce((t, r) => ({ ...t, amount: t.amount + r.amount, added: t.added + r.added, cut: t.cut + r.cut, planned: t.planned + r.planned }), { ...none, n: shown.length });
   const max = Math.max(1, ...rows.map((r) => r.amount));
-  const row = (r, cls = "") => `<tr class="${cls}"${r.name && cls !== "tot" && cls !== "nw" ? ` data-cluster="${esc(r.name)}" tabindex="0"` : ""}>
+  const row = (r, cls = "") => `<tr class="${cls}"${r.name && cls !== "tot" && cls !== "nw" ? ` data-cluster="${esc(r.name)}" tabindex="0" title="Click to view ${esc(r.name)} on map"` : ""}>
       <th scope="row">${esc(r.name)}</th>
       <td class="n">${r.n ?? ""}</td>
       <td class="n">${fmt(r.amount)}${cls === "tot" || cls === "nw" ? "" : `<div class="bar"><i style="width:${(r.amount / max * 100).toFixed(1)}%;background:var(--fund)"></i></div>`}</td>
       <td class="n up">${r.added ? "+" + fmt(r.added) : "–"}</td>
       <td class="n">${r.cut ? "−" + fmt(-r.cut) : "–"}</td>
       <td class="n">${fmt(r.planned)}</td></tr>`;
-  $("areas").innerHTML = `
+  areasEl.innerHTML = `
     <h3 class="sect">Where the money goes</h3>
-    <p class="hint">2025/26 budget per cluster for the projects matching your filters (sector, level, status). Click a cluster to show it on the map.</p>
+    <p class="hint">2025/26 budget per cluster for projects matching your sector, level and status filters. Click any cluster to open it directly on the interactive map.</p>
     <div class="tablewrap"><table class="budget areatable">
       <thead><tr><th>Cluster</th><th class="n">Projects</th><th class="n">2025/26 budget</th><th class="n">Added mid-year</th><th class="n">Cut mid-year</th><th class="n">2026/27 planned</th></tr></thead>
       <tbody>${rows.map((r) => row(r, r.name === state.cluster ? "sel" : "")).join("")}
         ${row({ name: "No ward given (municipality-wide)", ...none }, "nw")}
         ${row({ name: "Total", ...total }, "tot")}</tbody></table></div>
-    <p class="hint">2025/26 budget is the adjusted amount where the adjustments budget gives one, otherwise the original. A project in several wards is split equally between them, so a project counts in every cluster it touches but its money is not counted twice. Projects with no ward are shown separately.</p>`;
-  for (const tr of $("areas").querySelectorAll("tr[data-cluster]")) {
-    const go = () => { state.cluster = state.cluster === tr.dataset.cluster ? "all" : tr.dataset.cluster; state.ward = "all"; render(); fitAll(); $("map").scrollIntoView({ behavior: "smooth", block: "center" }); };
+    <p class="hint">2025/26 budget is the adjusted amount where the adjustments budget gives one, otherwise original. Multi-ward projects are split equally across wards.</p>`;
+
+  for (const tr of areasEl.querySelectorAll("tr[data-cluster]")) {
+    const go = () => {
+      state.cluster = state.cluster === tr.dataset.cluster ? "all" : tr.dataset.cluster;
+      state.ward = "all";
+      setView("explorer");
+      render();
+      fitAll();
+      $("map").scrollIntoView({ behavior: "smooth", block: "center" });
+    };
     tr.onclick = go;
     tr.onkeydown = (e) => { if (e.key === "Enter") go(); };
   }
@@ -269,7 +285,6 @@ function renderAreas() {
   renderShadeLegend(by);
 }
 
-// Sequential ramp: one hue (--fund) from light to dark, mixed with the page colour.
 function hex(c) { const m = c.replace("#", ""); return [0, 2, 4].map((i) => parseInt(m.slice(i, i + 2), 16)); }
 function mix(a, b, t) { const A = hex(a), B = hex(b); return "#" + A.map((v, i) => Math.round(v + (B[i] - v) * t).toString(16).padStart(2, "0")).join(""); }
 let shadeBins = [];
@@ -282,18 +297,20 @@ function renderShadeLegend(by) {
   const vals = [...by.values()].map((x) => x.amount).filter((v) => v > 0).sort((a, b) => a - b);
   shadeBins = [0.2, 0.4, 0.6, 0.8, 1].map((q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length) - (q === 1 ? 1 : 0))] || 0);
   const box = $("shadeLegend");
+  if (!box) return;
   box.classList.toggle("hidden", !state.shade);
   let lo = 0;
   box.innerHTML = "Ward 2025/26 budget: " + shadeBins.map((b, i) => {
     const t = `<span><i class="sw sq" style="background:${mix(css("--paper"), css("--fund"), [0.18, 0.36, 0.54, 0.72, 0.92][i])}"></i>${fmt(lo)}–${fmt(b)}</span>`;
     lo = b; return t;
   }).join("") + '<span><i class="sw sq none"></i>none</span>';
-  $("shade").setAttribute("aria-pressed", state.shade);
-  $("shade").textContent = state.shade ? "Hide ward shading" : "Shade wards by budget";
+  if ($("shade")) {
+    $("shade").setAttribute("aria-pressed", state.shade);
+    $("shade").innerHTML = `<span class="ctrl-icon">🎨</span> ${state.shade ? "Hide ward shading" : "Shade wards"}`;
+  }
 }
 
 // ---------- sorting ----------
-// Latest document date that mentions the project (history is sorted by date).
 const lastSeen = (p) => (p.history || []).reduce((d, h) => (h.date > d ? h.date : d), "");
 const SORTS = {
   name:    { label: "Name (A to Z)",           cmp: (a, b) => a.name.localeCompare(b.name) },
@@ -302,14 +319,10 @@ const SORTS = {
   cut:     { label: "Biggest cut",             cmp: (a, b) => gain(a) - gain(b) },
   recent:  { label: "Most recently reported",  cmp: (a, b) => lastSeen(b).localeCompare(lastSeen(a)) },
 };
-// Change at the mid-year adjustment in rands (negative for a cut, 0 when none).
 const gain = (p) => { const m = moneyChange(p); return m.kind === "none" || m.kind === "same" ? 0 : m.delta; };
 const sorted = (list) => list.slice().sort((a, b) => (SORTS[state.sort] || SORTS.name).cmp(a, b) || a.name.localeCompare(b.name));
 
-// ---------- side panel ----------
-// The money figure uses the same rule as the "Where the money goes" table:
-// each project's 2025/26 budget, adjusted where it was revised mid-year,
-// otherwise the original.
+// ---------- interactive tally cards ----------
 function renderTally() {
   let more = 0, cut = 0, total = 0;
   for (const p of state.projects) {
@@ -322,30 +335,57 @@ function renderTally() {
   const caption = ["2025/26 budgets across all levels of government (adjusted where revised mid-year)",
     noFigs ? `${noFigs} project${noFigs > 1 ? "s" : ""} with no figures yet` : ""].filter(Boolean).join("; ");
   const levels = new Set(state.projects.map((p) => p.level)).size;
+
+  const isMoreActive = state.money === "more" || state.money === "new";
+  const isCutActive = state.money === "cut";
+
   $("tally").innerHTML = state.projects.length
-    ? `<div class="stat"><b>${state.projects.length}</b><span>projects tracked across ${levels} levels of government</span></div>
-       <div class="stat"><b>${fmt(total)}</b><span>${esc(caption)}</span></div>
-       <div class="stat more"><b>▲ ${more}</b><span>got more money mid-year</span></div>
-       <div class="stat cut"><b>▼ ${cut}</b><span>were cut, some to nothing</span></div>`
+    ? `<div class="stat" id="statAll" role="button" tabindex="0" title="Click to view all projects">
+         <b>${state.projects.length}</b><span>projects tracked across ${levels} levels of government</span>
+       </div>
+       <div class="stat" id="statBudget" role="button" tabindex="0" title="Click to sort by largest budget">
+         <b>${fmt(total)}</b><span>${esc(caption)}</span>
+       </div>
+       <div class="stat more${isMoreActive ? " active" : ""}" id="statMore" role="button" tabindex="0" title="Click to filter projects with budget increases">
+         <b>▲ ${more}</b><span>got more money mid-year</span>
+       </div>
+       <div class="stat cut${isCutActive ? " active" : ""}" id="statCut" role="button" tabindex="0" title="Click to filter projects with budget cuts">
+         <b>▼ ${cut}</b><span>were cut, some to nothing</span>
+       </div>`
     : "";
+
+  if ($("statAll")) $("statAll").onclick = clearFilters;
+  if ($("statBudget")) $("statBudget").onclick = () => { state.sort = "budget"; renderList(); writeUrl(); };
+  if ($("statMore")) $("statMore").onclick = () => {
+    state.money = (state.money === "more" || state.money === "new") ? "all" : "more";
+    $("money").value = state.money;
+    render();
+  };
+  if ($("statCut")) $("statCut").onclick = () => {
+    state.money = (state.money === "cut") ? "all" : "cut";
+    $("money").value = state.money;
+    render();
+  };
 }
 
+// ---------- filters & active pills ----------
 function renderFilters() {
   const box = $("statusChips");
   box.innerHTML = "";
   for (const [key, s] of Object.entries(STATUS)) {
-    if (!state.projects.some((p) => p.status === key)) continue;
+    const totalCount = state.projects.filter((p) => p.status === key).length;
+    if (!totalCount) continue;
     const b = document.createElement("button");
     b.type = "button";
     b.className = "chip";
-    b.textContent = s.label;
+    b.innerHTML = `${esc(s.label)} <span class="chip-count">${totalCount}</span>`;
     b.setAttribute("aria-pressed", state.status.has(key));
     b.onclick = () => { state.status.has(key) ? state.status.delete(key) : state.status.add(key); render(); };
     box.appendChild(b);
   }
   const sectors = [...new Set(state.projects.map((p) => p.sector).filter(Boolean))].sort();
   $("sector").innerHTML = '<option value="all">All sectors</option>' +
-    sectors.map((s) => `<option ${s === state.sector ? "selected" : ""}>${esc(s)}</option>`).join("");
+    sectors.map((s) => `<option value="${esc(s)}" ${s === state.sector ? "selected" : ""}>${esc(s)}</option>`).join("");
   const count = (k) => state.projects.filter((p) => p.level === k).length;
   $("level").innerHTML = '<option value="all">All government levels</option>' +
     Object.entries(LEVELS).filter(([k]) => count(k))
@@ -353,7 +393,7 @@ function renderFilters() {
   const wcount = (w) => state.projects.filter((p) => projectWards(p).has(w)).length;
   const names = [...new Set(state.projects.flatMap(firms))].sort((a, b) => a.localeCompare(b));
   const fcount = (n) => state.projects.filter((p) => firms(p).includes(n)).length;
-  $("contractor").classList.toggle("hidden", !names.length);
+  if ($("contractorWrapper")) $("contractorWrapper").classList.toggle("hidden", !names.length);
   $("contractor").innerHTML = '<option value="all">All contractors</option>' +
     names.map((n) => `<option value="${esc(n)}" ${n === state.contractor ? "selected" : ""}>${esc(n)} (${fcount(n)})</option>`).join("");
   const inCluster = state.cluster === "all" ? null : clusterWards(state.cluster);
@@ -361,31 +401,100 @@ function renderFilters() {
     ALL_WARDS.filter((w) => !inCluster || inCluster.has(w))
       .map((w) => `<option value="${w}" ${String(w) === state.ward ? "selected" : ""}>Ward ${w} (${wcount(w)})</option>`).join("");
   const ccount = (n) => state.projects.filter((p) => (p.clusters || []).includes(n)).length;
-  $("cluster").classList.toggle("hidden", !CLUSTERS.length);
+  if ($("clusterWrapper")) $("clusterWrapper").classList.toggle("hidden", !CLUSTERS.length);
   $("cluster").innerHTML = '<option value="all">All clusters</option>' +
     CLUSTERS.map((c) => `<option value="${esc(c.name)}" ${c.name === state.cluster ? "selected" : ""}>${esc(c.name)} (${ccount(c.name)})</option>`).join("");
 }
 
+function renderActiveFilters() {
+  const box = $("activeFilters");
+  if (!box) return;
+  const pills = [];
+
+  if (state.q) {
+    pills.push({ label: `Search: "${state.q}"`, remove: () => { state.q = ""; $("q").value = ""; $("clearSearch")?.classList.add("hidden"); } });
+  }
+  for (const st of state.status) {
+    pills.push({ label: `Status: ${STATUS[st]?.label || st}`, remove: () => state.status.delete(st) });
+  }
+  if (state.sector !== "all") {
+    pills.push({ label: `Sector: ${state.sector}`, remove: () => { state.sector = "all"; $("sector").value = "all"; } });
+  }
+  if (state.cluster !== "all") {
+    pills.push({ label: `Cluster: ${state.cluster}`, remove: () => { state.cluster = "all"; $("cluster").value = "all"; } });
+  }
+  if (state.ward !== "all") {
+    pills.push({ label: `Ward ${state.ward}`, remove: () => { state.ward = "all"; $("ward").value = "all"; } });
+  }
+  if (state.level !== "all") {
+    pills.push({ label: `Level: ${LEVELS[state.level]}`, remove: () => { state.level = "all"; $("level").value = "all"; } });
+  }
+  if (state.money !== "all") {
+    const moneyLabels = { more: "More money added", new: "Added mid-year", cut: "Budget reduced", same: "Unchanged" };
+    pills.push({ label: `Budget: ${moneyLabels[state.money] || state.money}`, remove: () => { state.money = "all"; $("money").value = "all"; } });
+  }
+  if (state.contractor !== "all") {
+    pills.push({ label: `Contractor: ${state.contractor}`, remove: () => { state.contractor = "all"; $("contractor").value = "all"; } });
+  }
+
+  if (!pills.length) {
+    box.classList.add("hidden");
+    box.innerHTML = "";
+    if ($("mapFilterPill")) $("mapFilterPill").classList.add("hidden");
+    return;
+  }
+
+  box.classList.remove("hidden");
+  box.innerHTML = pills.map((p, i) => `<span class="active-pill">${esc(p.label)}<button type="button" class="active-pill-remove" data-idx="${i}" aria-label="Remove filter">✕</button></span>`).join("") +
+    '<button type="button" class="active-clear-btn">Clear all</button>';
+
+  for (const btn of box.querySelectorAll(".active-pill-remove")) {
+    btn.onclick = () => { pills[+btn.dataset.idx].remove(); render(); };
+  }
+  box.querySelector(".active-clear-btn").onclick = clearFilters;
+
+  // Map floating filter pill
+  const mapPill = $("mapFilterPill");
+  if (mapPill) {
+    if (state.ward !== "all") {
+      mapPill.classList.remove("hidden");
+      mapPill.innerHTML = `Filtering: Ward ${state.ward} <button type="button" title="Clear ward filter">✕</button>`;
+      mapPill.querySelector("button").onclick = () => { state.ward = "all"; $("ward").value = "all"; render(); };
+    } else if (state.cluster !== "all") {
+      mapPill.classList.remove("hidden");
+      mapPill.innerHTML = `Filtering: ${esc(state.cluster)} <button type="button" title="Clear cluster filter">✕</button>`;
+      mapPill.querySelector("button").onclick = () => { state.cluster = "all"; $("cluster").value = "all"; render(); };
+    } else {
+      mapPill.classList.add("hidden");
+    }
+  }
+}
+
+// ---------- project list & cards ----------
 function renderList() {
   const ul = $("list");
   ul.innerHTML = "";
   const visible = sorted(state.projects.filter(isVisible));
   $("sort").innerHTML = Object.entries(SORTS).map(([k, v]) => `<option value="${k}" ${k === state.sort ? "selected" : ""}>Sort: ${v.label}</option>`).join("");
   if (!visible.length) {
-    ul.innerHTML = '<li class="empty">No projects match these filters. Clear a filter to see more.</li>';
+    ul.innerHTML = '<li class="empty">No projects match these filters. <button type="button" class="linkbtn" onclick="clearFilters()">Clear filters</button> to see all projects.</li>';
     return;
   }
   for (const p of visible.slice(0, state.listMax)) {
     const m = moneyChange(p);
     const st = STATUS[p.status] || STATUS.planned;
-    const meta = [LEVELS[p.level], p.village, p.ward ? "Ward " + p.ward : "", !hasLoc(p) ? "not on map yet" : p.pin === "village" ? "approximate pin" : ""].filter(Boolean).join(", ");
+    const meta = [LEVELS[p.level], p.village, p.ward ? "Ward " + p.ward : "", !hasLoc(p) ? "not on map" : p.pin === "village" ? "approximate pin" : ""].filter(Boolean).join(" · ");
     const li = document.createElement("li");
     const h = headline(p);
+    const pProgress = pct(p.progress);
+
     li.innerHTML = `<button type="button" class="item${state.selected === p.id ? " sel" : ""}" style="--c:var(${st.color})">
       <span class="body">
-        <span class="kick">${esc(p.sector)} · <i>${st.label}</i></span>
+        <span class="kick"><span class="tag" style="border-color:var(${st.color});color:var(${st.color})"><i>●</i> ${st.label}</span> <span>${esc(p.sector)}</span></span>
         <span class="t">${esc(p.name)}</span>
-        <span class="m">${esc(meta)}</span>${badges(p)}
+        <span class="m">${esc(meta)}</span>
+        ${pProgress != null ? `<div class="card-prog-wrap"><div class="card-prog-bar"><div class="card-prog-fill" style="width:${pProgress}%;background:var(${pProgress >= 100 ? "--ok" : "--prog"})"></div></div><span class="card-prog-txt">${esc(p.progress)} done</span></div>` : ""}
+        ${badges(p)}
       </span>
       <span class="fig">
         ${h ? `<b>${fmt(h.amount)}</b><small>${esc(h.fy)} ${h.kind}</small>` : '<small>no figures</small>'}
@@ -403,8 +512,6 @@ function renderList() {
   }
 }
 
-// One headline figure per project: the latest adjusted budget if there is
-// one, otherwise the first year's original amount.
 function headline(p) {
   const rows = p.budget || [];
   const adj = rows.filter((r) => r.adjusted != null);
@@ -417,16 +524,14 @@ function headline(p) {
     const fy = yearly[0].fy;
     return { amount: yearly.filter((r) => r.fy === fy).reduce((t, r) => t + (+r.original || 0), 0), fy, kind: "planned" };
   }
-  // Some documents give only a total project cost, with no yearly split.
   if (rows.length) return { amount: rows.reduce((t, r) => t + (+r.original || 0), 0), fy: "Total", kind: "project cost" };
   return null;
 }
 
 function badges(p) {
   const b = [];
-  if (p.progress) b.push(`<span class="tag">${esc(p.progress)} done</span>`);
   if (p.dataIssue) b.push('<span class="tag warn">Figures disputed</span>');
-  return b.length ? `<br>${b.join("")}` : "";
+  return b.length ? `<span style="margin-top:2px;display:block">${b.join("")}</span>` : "";
 }
 
 function pct(text) {
@@ -434,13 +539,10 @@ function pct(text) {
   return m ? Math.min(100, +m[1]) : null;
 }
 
-// What each document said over time. The summary shows one line per
-// financial year: each document's figure in date order, with ▲/▼ against the
-// previous figure on the same VAT basis. The full list sits underneath.
+// ---------- detail panel & history ----------
 function historyTable(p) {
   const rows = p.history || [];
   if (!rows.length) return "";
-  // One step per document, year and VAT basis: add up a document's funding lines.
   const byFy = {}, seen = {};
   for (const h of rows) {
     if (h.amount == null || !h.fy) continue;
@@ -472,16 +574,12 @@ function historyTable(p) {
     <h4>How the budget moved</h4>
     ${lines || '<p class="hint">No amounts on record, only progress notes.</p>'}
     ${progress ? `<ul class="milestones">${progress}</ul>` : ""}
-    <p class="hint">Each figure is one document, oldest first.${chart ? " The charts share one scale and one timeline; each step is a new document." : ""} Hover for the document name. ▲ ▼ compare with the previous figure for the same year. <sup>incl</sup> means VAT included.</p>
+    <p class="hint">Each figure is one document, oldest first.${chart ? " The charts share one scale and one timeline; each step is a new document." : ""} Hover for document details. ▲ ▼ compare with the previous figure. <sup>incl</sup> means VAT included.</p>
     <details><summary>All ${rows.length} entries, with page references</summary>
       <table class="budget"><thead><tr><th>Date</th><th>Document</th><th>Year</th><th class="n">Amount</th></tr></thead><tbody>${body}</tbody></table>
     </details></section>`;
 }
 
-// One small step chart per financial year, all on the same money scale and
-// timeline, so a year that was cut reads as lower than one that grew. A step
-// up is red, a step down grey. Only drawn when some year has two or more
-// documents to compare.
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const month = (d) => { const [y, m] = String(d).split("-").map(Number); return y * 12 + (m || 1) - 1; };
 const monthText = (n) => MONTHS[n % 12] + " " + Math.floor(n / 12);
@@ -506,7 +604,7 @@ function historyChart(byFy, fys) {
         const prev = i ? pts[i - 1].amount : null;
         const cls = prev == null || prev === h.amount ? "" : h.amount > prev ? " up" : " down";
         const tip = `${h.document} (${monthText(month(h.date))}): ${fmt(h.amount)}${basis === "incl" ? " incl. VAT" : ""}` +
-          (prev == null || prev === h.amount ? "" : ` · ${h.amount > prev ? "+" : "−"}${fmt(Math.abs(h.amount - prev))} on the previous document`);
+          (prev == null || prev === h.amount ? "" : ` · ${h.amount > prev ? "+" : "−"}${fmt(Math.abs(h.amount - prev))} on previous document`);
         parts.push(`<circle cx="${x(h).toFixed(1)}" cy="${y(h.amount).toFixed(1)}" r="4" class="pt${cls}${basis === "incl" ? " incl" : ""}"/>` +
           `<circle cx="${x(h).toFixed(1)}" cy="${y(h.amount).toFixed(1)}" r="11" class="hit" tabindex="0" data-tip="${esc(tip)}" aria-label="${esc(tip)}"/>`);
       });
@@ -518,14 +616,20 @@ function historyChart(byFy, fys) {
   return { svg, axis };
 }
 
-// A company name in the detail panel filters the list to that company's projects.
+const noteText = (p, st) => p.statusNote.replace(new RegExp("^" + st.label + "\\s*:\\s*", "i"), "");
 const firmLink = (n) => `<button type="button" class="linkbtn firm" data-firm="${esc(n)}">${esc(n)}</button>`;
 
 function renderDetail() {
   const box = $("detail");
+  const backdrop = $("detailBackdrop");
   const p = state.projects.find((x) => x.id === state.selected);
-  if (!p) { box.classList.add("hidden"); return; }
+  if (!p) {
+    box.classList.add("hidden");
+    if (backdrop) backdrop.classList.add("hidden");
+    return;
+  }
   box.classList.remove("hidden");
+  if (backdrop && window.innerWidth < 900) backdrop.classList.remove("hidden");
 
   const st = STATUS[p.status] || STATUS.planned;
   const m = moneyChange(p);
@@ -548,10 +652,13 @@ function renderDetail() {
   const h = headline(p);
   box.style.setProperty("--c", `var(${st.color})`);
   box.innerHTML = `
-    <button type="button" class="close" aria-label="Close project">×</button>
+    <div class="detail-top-nav">
+      <button type="button" class="detail-back-btn">← Back to list</button>
+      <button type="button" class="close" aria-label="Close project">×</button>
+    </div>
     <span class="kick">${esc(p.sector)} · ${LEVELS[p.level] || ""}${p.ward ? " · Ward " + esc(p.ward) : ""}</span>
     <h2>${esc(p.name)}</h2>
-    <span class="status"><i class="sw" style="background:var(${st.color})"></i>${st.label}${p.statusNote ? ": " + esc(p.statusNote) : ""}</span>
+    <span class="status"><i class="sw" style="background:var(${st.color})"></i>${st.label}${p.statusNote ? ": " + esc(noteText(p, st)) : ""}</span>
     ${h ? `<div class="bigfig"><div><b>${fmt(h.amount)}</b><span>${h.fy === "Total" ? "total project cost" : esc(h.fy) + " " + h.kind + " budget"}</span></div>
       ${deltaText(m) ? `<div class="delta ${m.kind}"><b>${deltaText(m)}</b><span>change at mid-year adjustment</span></div>` : ""}</div>` : ""}
     ${p.dataIssue ? `<p class="issue"><b>Figures disputed:</b> ${esc(p.dataIssue)}</p>` : ""}
@@ -578,15 +685,20 @@ function renderDetail() {
       <button type="button" class="btn copy">Copy link to this project</button>
       ${hasLoc(p) ? `<a class="btn alt" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}">Open in Google Maps ↗</a>` : ""}
     </div>`;
-  box.querySelector(".close").onclick = () => { state.selected = null; render(); };
+
+  const closeDetail = () => {
+    state.selected = null;
+    render();
+    if (backdrop) backdrop.classList.add("hidden");
+  };
+  box.querySelector(".close").onclick = closeDetail;
+  box.querySelector(".detail-back-btn").onclick = closeDetail;
+  if (backdrop) backdrop.onclick = closeDetail;
   box.querySelector(".copy").onclick = (e) => copyLink(e.currentTarget, projectUrl(p.id));
   for (const b of box.querySelectorAll(".firm")) b.onclick = () => { state.contractor = b.dataset.firm; render(); };
 }
 
-// ---------- shareable links ----------
-// The filters and the open project live in the address, e.g.
-// ?p=road-titibe-makgoba or ?ward=32&status=deferred. Other parameters
-// (such as theme) are kept.
+// ---------- shareable links & view state ----------
 function readUrl() {
   const u = new URLSearchParams(location.search);
   state.selected = u.get("p") || null;
@@ -595,6 +707,7 @@ function readUrl() {
   for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) state[k] = u.get(k) || "all";
   state.sort = SORTS[u.get("sort")] ? u.get("sort") : "name";
   state.shade = u.get("shade") === "1";
+  if (u.get("view") === "analytics") state.activeView = "analytics";
   $("q").value = state.q;
   $("money").value = state.money;
 }
@@ -608,6 +721,7 @@ function writeUrl() {
   for (const k of ["sector", "ward", "level", "money", "contractor", "cluster"]) set(k, state[k] === "all" ? "" : state[k]);
   set("sort", state.sort === "name" ? "" : state.sort);
   set("shade", state.shade ? "1" : "");
+  if (state.activeView === "analytics") set("view", "analytics"); else set("view", "");
   const qs = u.toString().replace(/%2C/g, ",");
   history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + location.hash);
 }
@@ -645,7 +759,7 @@ function downloadCsv() {
   const text = "\uFEFF" + [head, ...rows].map((r) => r.map(csvCell).join(",")).join("\r\n");
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([text], { type: "text/csv;charset=utf-8" }));
-  a.download = "sebayeng-dikgale-projects.csv";
+  a.download = "polokwane-projects.csv";
   a.click();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
@@ -653,6 +767,8 @@ function downloadCsv() {
 function renderCount() {
   const n = state.projects.filter(isVisible).length;
   $("count").textContent = n === state.projects.length ? `All ${n} projects` : `Showing ${n} of ${state.projects.length} projects`;
+  if ($("headerProjectCount")) $("headerProjectCount").textContent = `${n} of ${state.projects.length}`;
+  if ($("mobileCountBadge")) $("mobileCountBadge").textContent = n;
   $("csv").textContent = `Download ${n === state.projects.length ? "all" : "these " + n} as CSV`;
   $("csv").disabled = !n;
   $("clear").classList.toggle("hidden", n === state.projects.length && !state.q);
@@ -661,10 +777,11 @@ function renderCount() {
 function clearFilters() {
   Object.assign(state, { status: new Set(), sector: "all", level: "all", ward: "all", money: "all", contractor: "all", cluster: "all", q: "", listMax: LIST_STEP });
   $("q").value = ""; $("money").value = "all";
+  if ($("clearSearch")) $("clearSearch").classList.add("hidden");
   render();
 }
 
-// ---------- tooltip for chart points ----------
+// ---------- tooltips ----------
 const tip = document.createElement("div");
 tip.className = "tip hidden";
 tip.setAttribute("role", "tooltip");
@@ -678,7 +795,7 @@ function showTip(e) {
   tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
   tip.style.top = (r.top + scrollY - tip.offsetHeight - 6) + "px";
 }
-// Ward hover: number, cluster and its share of the 2025/26 budget.
+
 let wardCache = null;
 function wardTip(w, ev) {
   if (!ev) return;
@@ -696,9 +813,179 @@ $("detail").addEventListener("focusin", showTip);
 $("detail").addEventListener("mouseout", hideTip);
 $("detail").addEventListener("focusout", hideTip);
 
+// ---------- view switcher ----------
+function setView(viewName) {
+  state.activeView = viewName;
+  const isExplorer = viewName === "explorer";
+  $("tabExplorer")?.classList.toggle("active", isExplorer);
+  $("tabExplorer")?.setAttribute("aria-selected", isExplorer);
+  $("tabAnalytics")?.classList.toggle("active", !isExplorer);
+  $("tabAnalytics")?.setAttribute("aria-selected", !isExplorer);
+
+  $("viewExplorer")?.classList.toggle("hidden", !isExplorer);
+  $("areas")?.classList.toggle("hidden", isExplorer);
+
+  if (!isExplorer) {
+    renderAreas();
+    $("areas")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    setTimeout(() => {
+      window.dispatchEvent(new Event("resize"));
+      if (mapApi && state.projects.length) {
+        fitTo(state.cluster !== "all" ? state.projects.filter(isVisible) : state.projects);
+      }
+    }, 100);
+  }
+  writeUrl();
+}
+
+function initNavigation() {
+  $("tabExplorer")?.addEventListener("click", () => setView("explorer"));
+  $("tabAnalytics")?.addEventListener("click", () => setView("analytics"));
+
+  if ($("fitAllBtn")) {
+    $("fitAllBtn").onclick = () => fitAll();
+  }
+
+  // Masthead collapse toggle
+  const mast = $("masthead");
+  const mastBtn = $("toggleMasthead");
+  if (mast && mastBtn) {
+    const isCompact = localStorage.getItem("dikgale_masthead_compact") === "true";
+    if (isCompact) {
+      mast.classList.add("compact");
+      mastBtn.querySelector(".collapse-text").textContent = "Full overview";
+      mastBtn.setAttribute("aria-expanded", "false");
+    }
+    mastBtn.onclick = () => {
+      const compact = mast.classList.toggle("compact");
+      mastBtn.querySelector(".collapse-text").textContent = compact ? "Full overview" : "Compact view";
+      mastBtn.setAttribute("aria-expanded", String(!compact));
+      localStorage.setItem("dikgale_masthead_compact", String(compact));
+      setTimeout(() => window.dispatchEvent(new Event("resize")), 150);
+    };
+  }
+
+  // Legend collapse toggle
+  const legBtn = $("toggleLegend");
+  const legBody = $("legendBody");
+  if (legBtn && legBody) {
+    legBtn.onclick = () => {
+      const hidden = legBody.classList.toggle("hidden");
+      legBtn.querySelector(".legend-chevron").textContent = hidden ? "▸" : "▾";
+      legBtn.setAttribute("aria-expanded", String(!hidden));
+    };
+  }
+
+  // Clear search button
+  if ($("clearSearch")) {
+    $("clearSearch").onclick = () => {
+      state.q = "";
+      $("q").value = "";
+      $("clearSearch").classList.add("hidden");
+      render();
+    };
+  }
+
+  // Keyboard navigation: / to search, Esc to clear / close
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "/" && !["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName)) {
+      e.preventDefault();
+      $("q")?.focus();
+      $("q")?.select();
+    } else if (e.key === "Escape") {
+      if (state.selected) {
+        state.selected = null;
+        render();
+      } else if (state.q) {
+        state.q = "";
+        if ($("q")) $("q").value = "";
+        render();
+      }
+    }
+  });
+
+  // Mobile navigation
+  const mobileNav = $("mobileNav");
+  if (mobileNav) {
+    const btns = mobileNav.querySelectorAll(".mobile-nav-btn");
+    btns.forEach((btn) => {
+      btn.onclick = () => {
+        btns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const v = btn.dataset.view;
+        document.body.setAttribute("data-mobile-view", v);
+        if (v === "analytics") {
+          setView("analytics");
+        } else {
+          setView("explorer");
+          if (v === "map") {
+            setTimeout(() => window.dispatchEvent(new Event("resize")), 100);
+          }
+        }
+      };
+    });
+  }
+}
+
+function initThemeAndMode() {
+  const themeFonts = {
+    clean: "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&display=swap",
+    editorial: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Source+Sans+3:wght@400..700&display=swap",
+    civic: "https://fonts.googleapis.com/css2?family=Public+Sans:wght@400..800&display=swap"
+  };
+
+  const currentTheme = new URLSearchParams(location.search).get("theme") || localStorage.getItem("dikgale_theme") || "";
+  if ($("themeSelect")) {
+    $("themeSelect").value = currentTheme;
+    $("themeSelect").onchange = (e) => {
+      const t = e.target.value;
+      localStorage.setItem("dikgale_theme", t);
+      const u = new URLSearchParams(location.search);
+      if (t) u.set("theme", t); else u.delete("theme");
+      history.replaceState(null, "", location.pathname + (u.toString() ? "?" + u.toString() : "") + location.hash);
+
+      const tf = $("themeFont");
+      if (tf) tf.href = themeFonts[t] || "";
+      const tc = $("themeCss");
+      if (tc) tc.href = t ? `themes/${t}.css?v=e0de8a42` : "";
+
+      requestAnimationFrame(() => {
+        render();
+        drawMarkers();
+      });
+    };
+  }
+
+  const updateModeIcon = (mode) => {
+    if ($("modeIcon")) $("modeIcon").textContent = mode === "dark" ? "☀️" : "🌙";
+  };
+
+  const savedMode = localStorage.getItem("dikgale_mode") ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  document.documentElement.setAttribute("data-theme-mode", savedMode);
+  updateModeIcon(savedMode);
+
+  if ($("modeToggle")) {
+    $("modeToggle").onclick = () => {
+      const current = document.documentElement.getAttribute("data-theme-mode") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme-mode", next);
+      localStorage.setItem("dikgale_mode", next);
+      updateModeIcon(next);
+      drawMarkers();
+      if (mapApi?.highlightWard) {
+        mapApi.highlightWard(state.ward !== "all" ? new Set([+state.ward]) : state.cluster !== "all" ? clusterWards(state.cluster) : null);
+      }
+    };
+  }
+}
+
+// ---------- render & interaction ----------
 function render() {
   renderTally();
   renderFilters();
+  renderActiveFilters();
   renderCount();
   renderList();
   renderDetail();
@@ -707,6 +994,9 @@ function render() {
   writeUrl();
   if (mapApi && mapApi.highlightWard) {
     mapApi.highlightWard(state.ward !== "all" ? new Set([+state.ward]) : state.cluster !== "all" ? clusterWards(state.cluster) : null);
+  }
+  if ($("clearSearch")) {
+    $("clearSearch").classList.toggle("hidden", !state.q);
   }
 }
 
@@ -740,7 +1030,6 @@ $("shade").onclick = () => { state.shade = !state.shade; renderAreas(); writeUrl
 $("sort").onchange = (e) => { state.sort = e.target.value; state.listMax = LIST_STEP; renderList(); writeUrl(); };
 $("cluster").onchange = (e) => {
   state.cluster = e.target.value;
-  // A ward outside the new cluster would hide everything.
   if (state.ward !== "all" && state.cluster !== "all" && !clusterWards(state.cluster).has(+state.ward)) state.ward = "all";
   render();
   if (mapApi && state.cluster !== "all") fitTo(state.projects.filter(isVisible));
@@ -748,20 +1037,17 @@ $("cluster").onchange = (e) => {
 $("csv").onclick = downloadCsv;
 $("clear").onclick = clearFilters;
 
-// ---------- load ----------
+// ---------- notifications ----------
 function notice(text) {
   const n = $("notice");
+  if (!n) return;
   n.textContent = text;
   n.classList.remove("hidden");
 }
 
-// Google calls this when the API key is rejected (wrong key, API not enabled,
-// or this site's address is not in the key's allowed referrers).
 window.gm_authFailure = () =>
-  notice("Google Maps rejected the API key. Check the key in config.js, that the Maps JavaScript API is enabled, and that this address is an allowed referrer.");
+  notice("Google Maps rejected the API key. Check key in config.js, that Maps JavaScript API is enabled, and this address is an allowed referrer.");
 
-// Google's dynamic loader: defines google.maps.importLibrary without loading
-// anything until the first call. https://developers.google.com/maps/documentation/javascript/load-maps-js-api
 function loadGoogle(key) {
   ((g) => {
     var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window;
@@ -793,7 +1079,7 @@ async function initGoogle(cfg) {
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   const map = new Map($("map"), {
     center: { lat: -23.77, lng: 29.74 }, zoom: 12,
-    mapId: cfg.mapId || "DEMO_MAP_ID",  // AdvancedMarkers need a map ID
+    mapId: cfg.mapId || "DEMO_MAP_ID",
     mapTypeId: cfg.mapType || "roadmap",
     mapTypeControl: true,
     mapTypeControlOptions: { mapTypeIds: ["roadmap", "hybrid", "terrain"] },
@@ -808,7 +1094,6 @@ async function initGoogle(cfg) {
       mk.addListener("click", onClick);
       return (z) => { mk.zIndex = z; };
     },
-    // A road: a white casing under a line in the status colour.
     addRoute(lines, title, onClick) {
       const parts = lines.map((line) => {
         const path = line.map(([lat, lng]) => ({ lat, lng }));
@@ -853,6 +1138,24 @@ async function initGoogle(cfg) {
   };
 }
 
+function mapLock(map) {
+  if (!window.matchMedia("(pointer: coarse)").matches) return;
+  const el = map.getContainer();
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "maplock";
+  el.append(btn);
+  L.DomEvent.disableClickPropagation(btn);
+  const set = (locked) => {
+    for (const h of [map.dragging, map.touchZoom, map.doubleClickZoom]) locked ? h.disable() : h.enable();
+    el.classList.toggle("locked", locked);
+    btn.textContent = locked ? "Move map" : "Done";
+    btn.setAttribute("aria-pressed", String(!locked));
+  };
+  btn.onclick = () => set(!el.classList.contains("locked"));
+  set(true);
+}
+
 async function initLeaflet(cfg) {
   const sheet = document.createElement("link");
   sheet.rel = "stylesheet";
@@ -860,6 +1163,7 @@ async function initLeaflet(cfg) {
   document.head.append(sheet);
   await loadScript("https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js");
   const map = L.map("map").setView([-23.77, 29.74], 12);
+  mapLock(map);
   const street = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19, className: "tiles-street", attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   });
@@ -920,7 +1224,6 @@ async function initMap() {
   await initBackend();
   mapApi.onView(() => requestAnimationFrame(declutter));
   if (window.WARDS) {
-    // Clicking a ward toggles the ward filter.
     mapApi.addWards(window.WARDS, (w) => { state.ward = state.ward === String(w) ? "all" : String(w); render(); });
   }
 }
@@ -936,6 +1239,10 @@ async function initBackend() {
   }
 }
 
+// ---------- boot ----------
+initNavigation();
+initThemeAndMode();
+
 Promise.all([
   window.PROJECTS ? Promise.resolve(window.PROJECTS)
     : fetch("data/projects.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
@@ -945,9 +1252,10 @@ Promise.all([
     state.projects = data;
     readUrl();
     if (!data.some((p) => p.id === state.selected)) state.selected = null;
+    setView(state.activeView);
     render();
-    fitAll();
     const p = data.find((x) => x.id === state.selected);
-    if (p) setTimeout(() => select(p.id, false), 300);
+    if (p && hasLoc(p)) select(p.id, false);
+    else fitAll();
   })
-  .catch(() => notice("Couldn't load the project data. Run python3 tools/build_data.py to create data/projects.js."));
+  .catch(() => notice("Couldn't load project data. Run python3 tools/build_data.py to create data/projects.js."));

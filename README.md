@@ -149,8 +149,16 @@ The address keeps the open project and the filters, so you can share a view:
 | `sort` | `?sort=budget`, `added`, `cut` or `recent` (default: name) |
 | `shade` | `?shade=1` shades the wards by 2025/26 budget |
 | `theme` | `?theme=clean`, `editorial` or `civic` |
+| `mode` | `?mode=dark` or `light` |
+| `view` | `?view=analytics` opens cluster comparison table directly |
 
-The detail panel has a **Copy link to this project** button. **Download as CSV** saves the projects that match the current filters, with their headline figure, budget change, budget lines, link and sources.
+The page features an in-app **Theme Picker** and **Dark/Light Mode toggle** in the top bar. You can toggle between **Compact view** and **Full overview** on the header, click tally cards to filter, press `/` to instantly focus search, and use the mobile tab bar for fast switching between Map, Projects and Analytics on phones.
+
+The detail panel has a **Copy link to this project** button. **Download CSV** saves the projects that match the current filters, with their headline figure, budget change, budget lines, link and sources.
+
+## Phones & Mobile View
+
+On mobile phones, a bottom navigation bar allows instantaneous switching between **Map**, **Projects (with live count)**, and **Analytics**. On touch screens the free map starts locked, so a swipe over it scrolls the page and pins can still be tapped. **Move map** unlocks dragging and pinch zoom; **Done** locks it again. Google Maps does the same with `gestureHandling: "cooperative"` (two fingers to move).
 
 ## Where the money goes
 
