@@ -1,4 +1,4 @@
-// Polokwane projects map & ledger.
+// Polokwane projects map & ledger — Buttery Smooth Modern Explorer.
 // Reads data/projects.json (built from the CSVs by tools/build_data.py).
 
 const STATUS = {
@@ -11,13 +11,10 @@ const STATUS = {
 
 const LEVELS = { municipal: "Municipal", district: "District", provincial: "Provincial", national: "National" };
 
-// Every ward in the boundary file (all 45 of Polokwane), and the clusters
-// (groups of wards) from data/clusters.csv.
 const ALL_WARDS = (window.WARDS?.features || []).map((f) => f.properties.ward).sort((a, b) => a - b);
 const CLUSTERS = window.CLUSTERS || [];
 const clusterWards = (name) => new Set(CLUSTERS.find((c) => c.name === name)?.wards || []);
 
-// With many pins, labels only show from this zoom level (or on the selected pin).
 const LABEL_ZOOM = 13;
 const LIST_STEP = 60;
 
@@ -65,7 +62,6 @@ function esc(s) {
 
 const hasLoc = (p) => typeof p.lat === "number" && typeof p.lon === "number";
 
-// Compare original vs adjusted across the budget lines that have been adjusted.
 function moneyChange(p) {
   const rows = (p.budget || []).filter((r) => r.adjusted != null);
   if (!rows.length) return { kind: "none", delta: 0 };
@@ -84,7 +80,6 @@ function deltaText(m) {
   return "";
 }
 
-// "24, 29 to 33" -> [24, 29, 30, 31, 32, 33]
 function parseWards(text) {
   const out = new Set();
   for (const part of String(text || "").split(/[,;]/)) {
@@ -96,7 +91,6 @@ function parseWards(text) {
 }
 const projectWards = (p) => { const w = parseWards(p.ward); if (p.mapWard) w.add(p.mapWard); return w; };
 
-// Every company named on a project: contractors and consultants.
 const firms = (p) => [...(p.contractor || []), ...(p.consultant || [])];
 
 function matchesQuery(p) {
@@ -117,9 +111,9 @@ function isVisible(p) {
   return true;
 }
 
-// ---------- map ----------
-let mapApi = null;   // { addMarker(pos, el, title, onClick) -> setZ(z), addRoute(lines, title, onClick) -> setStyle(s), fit(points), panTo(pos), onView(cb) }
-const markers = {};  // id -> { setZ, el, setRoute }
+// ---------- map engine ----------
+let mapApi = null;
+const markers = {};
 
 function markerEl(p) {
   const el = document.createElement("div");
@@ -152,7 +146,14 @@ function drawMarkers() {
     el.classList.toggle("sel", state.selected === p.id);
     entry.setZ(state.selected === p.id ? 1000 : isVisible(p) ? 10 : 1);
   }
-  requestAnimationFrame(declutter);
+  scheduleDeclutter();
+}
+
+// Highly optimized, zero-DOM-thrashing declutter
+let declutterTimer = null;
+function scheduleDeclutter() {
+  if (declutterTimer) cancelAnimationFrame(declutterTimer);
+  declutterTimer = requestAnimationFrame(declutter);
 }
 
 function declutter() {
@@ -163,24 +164,59 @@ function declutter() {
   const zoomedOut = Object.keys(markers).length > 60 && mapApi?.getZoom && mapApi.getZoom() < LABEL_ZOOM;
   mapEl.dataset.zoomedOut = zoomedOut ? "1" : "";
   mapEl.classList.toggle("far", !!(mapApi?.getZoom && mapApi.getZoom() < 12));
+
   const order = state.projects.filter((p) => markers[p.id])
     .sort((a, b) => (b.id === state.selected) - (a.id === state.selected) || isVisible(b) - isVisible(a));
-  const taken = order.map((p) => markers[p.id].el.querySelector(".dot").getBoundingClientRect());
-  for (const c of mapEl.querySelectorAll(".leaflet-control, .gmnoprint, .gm-fullscreen-control")) taken.push(c.getBoundingClientRect());
+
+  const taken = [];
+  for (const c of mapEl.querySelectorAll(".leaflet-control, .gmnoprint, .gm-fullscreen-control")) {
+    taken.push(c.getBoundingClientRect());
+  }
+
   const hits = (r) => r.left < box.left + 4 || r.right > box.right - 4 || r.top < box.top + 4 || r.bottom > box.bottom - 4 ||
     taken.some((t) => r.left < t.right && r.right > t.left && r.top < t.bottom && r.bottom > t.top);
-  const spots = ["", "left", "up", "down"];
+
   for (const p of order) {
     const el = markers[p.id].el;
-    el.classList.remove("left", "up", "down", "nolbl");
-    if ((narrow || zoomedOut) && p.id !== state.selected) { el.classList.add("nolbl"); continue; }
-    const spot = spots.find((c) => {
-      el.classList.remove("left", "up", "down");
-      if (c) el.classList.add(c);
-      return !hits(el.querySelector(".lbl").getBoundingClientRect());
-    });
-    if (spot === undefined) { el.classList.remove("left", "up", "down"); el.classList.add("nolbl"); continue; }
-    taken.push(el.querySelector(".lbl").getBoundingClientRect());
+    const dotEl = el.querySelector(".dot");
+    const dotRect = dotEl ? dotEl.getBoundingClientRect() : null;
+
+    if (!dotRect || dotRect.right < box.left - 50 || dotRect.left > box.right + 50 || dotRect.bottom < box.top - 50 || dotRect.top > box.bottom + 50) {
+      el.classList.add("nolbl");
+      continue;
+    }
+
+    taken.push(dotRect);
+
+    const baseClass = "pin" + (p.pin === "village" ? " approx" : "") + (p.pin === "route" ? " onroute" : "") +
+      (state.selected === p.id ? " sel" : "") + (!isVisible(p) ? " dim" : "");
+
+    if ((narrow || zoomedOut) && p.id !== state.selected) {
+      el.className = baseClass + " nolbl";
+      continue;
+    }
+
+    const lbl = el.querySelector(".lbl");
+    const lw = lbl?.offsetWidth || 70;
+    const lh = lbl?.offsetHeight || 20;
+    const cx = dotRect.left + dotRect.width / 2;
+    const cy = dotRect.top + dotRect.height / 2;
+
+    const candidates = [
+      { name: "", r: { left: dotRect.right + 6, right: dotRect.right + 6 + lw, top: cy - lh / 2, bottom: cy + lh / 2 } },
+      { name: "left", r: { left: dotRect.left - 6 - lw, right: dotRect.left - 6, top: cy - lh / 2, bottom: cy + lh / 2 } },
+      { name: "up", r: { left: cx - lw / 2, right: cx + lw / 2, top: dotRect.top - 6 - lh, bottom: dotRect.top - 6 } },
+      { name: "down", r: { left: cx - lw / 2, right: cx + lw / 2, top: dotRect.bottom + 6, bottom: dotRect.bottom + 6 + lh } },
+    ];
+
+    const best = candidates.find((c) => !hits(c.r));
+
+    if (!best) {
+      el.className = baseClass + " nolbl";
+    } else {
+      el.className = baseClass + (best.name ? " " + best.name : "");
+      taken.push(best.r);
+    }
   }
 }
 
@@ -453,7 +489,6 @@ function renderActiveFilters() {
   }
   box.querySelector(".active-clear-btn").onclick = clearFilters;
 
-  // Map floating filter pill
   const mapPill = $("mapFilterPill");
   if (mapPill) {
     if (state.ward !== "all") {
@@ -539,7 +574,7 @@ function pct(text) {
   return m ? Math.min(100, +m[1]) : null;
 }
 
-// ---------- detail panel & history ----------
+// ---------- detail drawer & history ----------
 function historyTable(p) {
   const rows = p.history || [];
   if (!rows.length) return "";
@@ -623,13 +658,17 @@ function renderDetail() {
   const box = $("detail");
   const backdrop = $("detailBackdrop");
   const p = state.projects.find((x) => x.id === state.selected);
+
   if (!p) {
-    box.classList.add("hidden");
-    if (backdrop) backdrop.classList.add("hidden");
+    box.classList.remove("open");
+    backdrop?.classList.remove("open");
+    document.body.classList.remove("drawer-open");
     return;
   }
-  box.classList.remove("hidden");
-  if (backdrop && window.innerWidth < 900) backdrop.classList.remove("hidden");
+
+  box.classList.add("open");
+  backdrop?.classList.add("open");
+  if (window.innerWidth < 640) document.body.classList.add("drawer-open");
 
   const st = STATUS[p.status] || STATUS.planned;
   const m = moneyChange(p);
@@ -654,7 +693,7 @@ function renderDetail() {
   box.innerHTML = `
     <div class="detail-top-nav">
       <button type="button" class="detail-back-btn">← Back to list</button>
-      <button type="button" class="close" aria-label="Close project">×</button>
+      <button type="button" class="close" aria-label="Close project">✕</button>
     </div>
     <span class="kick">${esc(p.sector)} · ${LEVELS[p.level] || ""}${p.ward ? " · Ward " + esc(p.ward) : ""}</span>
     <h2>${esc(p.name)}</h2>
@@ -688,8 +727,10 @@ function renderDetail() {
 
   const closeDetail = () => {
     state.selected = null;
+    box.classList.remove("open");
+    backdrop?.classList.remove("open");
+    document.body.classList.remove("drawer-open");
     render();
-    if (backdrop) backdrop.classList.add("hidden");
   };
   box.querySelector(".close").onclick = closeDetail;
   box.querySelector(".detail-back-btn").onclick = closeDetail;
@@ -896,6 +937,9 @@ function initNavigation() {
     } else if (e.key === "Escape") {
       if (state.selected) {
         state.selected = null;
+        $("detail")?.classList.remove("open");
+        $("detailBackdrop")?.classList.remove("open");
+        document.body.classList.remove("drawer-open");
         render();
       } else if (state.q) {
         state.q = "";
@@ -948,7 +992,7 @@ function initThemeAndMode() {
       const tf = $("themeFont");
       if (tf) tf.href = themeFonts[t] || "";
       const tc = $("themeCss");
-      if (tc) tc.href = t ? `themes/${t}.css?v=e0de8a42` : "";
+      if (tc) tc.href = t ? `themes/${t}.css?v=e0dc2d3c` : "";
 
       requestAnimationFrame(() => {
         render();
@@ -981,7 +1025,7 @@ function initThemeAndMode() {
   }
 }
 
-// ---------- render & interaction ----------
+// ---------- render loop ----------
 function render() {
   renderTally();
   renderFilters();
@@ -989,7 +1033,9 @@ function render() {
   renderCount();
   renderList();
   renderDetail();
-  renderAreas();
+  if (state.activeView === "analytics" || state.shade) {
+    renderAreas();
+  }
   drawMarkers();
   writeUrl();
   if (mapApi && mapApi.highlightWard) {
@@ -1008,14 +1054,23 @@ function select(id, fromMap) {
     if (p.route && mapApi.fit) mapApi.fit(p.route.flat().map(([lat, lng]) => ({ lat, lng })));
     else mapApi.panTo({ lat: p.lat, lng: p.lon });
   }
-  if (state.selected && window.matchMedia("(max-width: 899px)").matches) {
-    $("detail").scrollIntoView({ block: "start", behavior: "smooth" });
-  }
 }
 
 $("sector").onchange = (e) => { state.sector = e.target.value; render(); };
 $("ward").onchange = (e) => { state.ward = e.target.value; render(); };
-$("q").oninput = (e) => { state.q = e.target.value.trim(); render(); };
+
+// Debounced search for completely lag-free typing
+let searchTimer = null;
+$("q").oninput = (e) => {
+  const val = e.target.value.trim();
+  $("clearSearch")?.classList.toggle("hidden", !val);
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    state.q = val;
+    render();
+  }, 100);
+};
+
 $("q").onkeydown = (e) => {
   if (e.key === "Enter") {
     const hit = sorted(state.projects.filter(isVisible))[0];
@@ -1222,7 +1277,7 @@ async function initLeaflet(cfg) {
 
 async function initMap() {
   await initBackend();
-  mapApi.onView(() => requestAnimationFrame(declutter));
+  mapApi.onView(() => scheduleDeclutter());
   if (window.WARDS) {
     mapApi.addWards(window.WARDS, (w) => { state.ward = state.ward === String(w) ? "all" : String(w); render(); });
   }
